@@ -1,0 +1,17 @@
+<?php include_once('inc/functions.php') ?>
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>INSPINIA | Main view</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="fontawesome/css/fontawesome.css" rel="stylesheet">
+    <link href="fontawesome/css/brands.css" rel="stylesheet">
+    <link href="fontawesome/css/solid.css" rel="stylesheet">
+
+    <!-- <link href="css/animate.css" rel="stylesheet"> -->
+    <link href="css/style.css" rel="stylesheet">
+
+</head>

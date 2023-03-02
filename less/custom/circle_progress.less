@@ -1,0 +1,87 @@
+.progress-ing5 {
+  position: relative;
+  &::after {
+    display: inline-block;
+    content: "%";
+    position: absolute;
+    font-size: 18px;
+    left: 50%;
+    top: 50%;
+    margin-top: -30px;
+    margin-left: 15px;
+    color: @blue;
+  }
+  .circle-progress-text {
+   
+    
+  }
+}
+.circle-progress {
+  z-index: 1;
+  width: 150px;
+  height: auto;
+}
+
+.circle-progress-value {
+  stroke-width: 9px;
+  stroke: @blue;
+}
+.circle-progress-circle {
+  stroke: rgba(255, 255, 255, 1);
+  stroke-width: 8px;
+  fill: rgba(255, 255, 255, 0.0.15);
+}
+.ibox-progress-circle-white {
+  &.ibox-progress-circle-white-60 {
+    fill: rgba(255, 255, 255, 0.60);
+  }
+  .progress-ing5 {
+    &::after {
+      color: #fff;
+    }
+    .circle-progress-text {
+      fill: #fff;
+    }
+  }
+}
+
+.ibox-progress-circle-yellow {
+  .circle-progress-value {
+    stroke: @yellow;
+  }
+  .progress-ing5 {
+    &::after {
+      color: @yellow;
+    }
+    .circle-progress-text {
+      fill:  @yellow;
+    }
+  }
+}
+
+.ibox-progress-circle-blue {
+    .circle-progress-circle {
+        stroke: rgba(255, 255, 255, 1);
+      stroke-width: 8px;
+
+    }
+    .circle-progress-value {
+ 
+      stroke: @blue;
+    }
+    .progress-ing5 {
+      &::after {
+        color: #FFF;
+      }
+      .circle-progress-text {
+        fill: #FFF;
+      }
+    }
+  }
+
+.circle-progress-text {
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 600;
+  fill: @blue;
+}
