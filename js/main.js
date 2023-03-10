@@ -8,18 +8,6 @@
         event.preventDefault();
 
     // $(".minimalize-styl-2 .fa-chevron-left ").toggleClass("fa-rotate-180");
-   
-
-    // Search Modal
-      // Modal Search
-      const modalSearch = document.getElementById('modalSearch');
-      // const myInput = document.getElementById('myInput')
-  
-      modalSearch.addEventListener('shown.bs.modal', () => {
-      // myInput.focus()
-      });
-
-
 
     });
 })(jQuery);

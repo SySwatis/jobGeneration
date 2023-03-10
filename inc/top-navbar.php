@@ -5,29 +5,20 @@
                     <i class="fa-solid fa-bars"></i>
                 </a>
                 
-                <div class="navbar-header">
-                    <!-- <form role="search" class="navbar-form-custom" method="post" action="#">
-                        <div class="input-group">
-                            <input type="search" placeholder="Rechercher dans le menu" class="form-control me-2" name="top-search" id="top-search">
-                            <span class="input-group-text border-0" id="search-addon">
-                                <i class="fas fa-search"></i>
-                            </span>
-                        </div>
-                    </form> -->
-
-                        <form class="d-flex" role="search" data-bs-toggle="modal" data-bs-target="#searchModal">
-                            <input class="form-control me-2" type="search" placeholder="Rechercher dans le menu" aria-label="Search">
-                            <span class="input-group-text border-0 bg-transparent" id="search-addon">
-                                <i class="fas fa-search"></i>
-                            </span>
-                        </form>
+                <div class="navbar-header  float-sm-end">
+                    <form class="d-flex" role="search" data-bs-toggle="modal" data-bs-target="#searchModal">
+                        <input class="form-control me-2 d-none d-sm-block" type="search" placeholder="Rechercher dans le menu" aria-label="Search">
+                        <span class="input-group-text border-0 bg-transparent" id="search-addon">
+                            <i class="fas fa-search"></i>
+                        </span>
+                    </form>
                 </div>
 
 
                 <ul class="nav navbar-top-links navbar-right">
                     <li>
                         <a href="#">
-                            <i class="fa fa-sign-out"></i> Se déconnecter
+                            <i class="fa fa-sign-out"></i><span class="px-2 d-none d-sm-inline-block">Se déconnecter</span>
                         </a>
                     </li>
                 </ul>
