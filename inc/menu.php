@@ -1,4 +1,4 @@
-<ul class="nav metismenu" id="side-menu">
+            <ul class="nav metismenu" id="side-menu">
                 <li class="nav-header">
                     <img src="img/logo_small.png" alt="Logo" srcset="">
 
