@@ -11,7 +11,7 @@
     <link href="fontawesome/css/brands.css" rel="stylesheet">
     <link href="fontawesome/css/solid.css" rel="stylesheet">
 
-    <!-- <link href="css/animate.css" rel="stylesheet"> -->
+    <link href="css/animate.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
 
 </head>

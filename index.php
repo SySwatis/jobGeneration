@@ -17,7 +17,7 @@
         
         <?php include_once('inc/top-navbar.php') ?>
 
-        <div class="wrapper wrapper-content animated fadeInRight">    
+        <div class="wrapper wrapper-content">    
             <?php include_once('inc/dashboard.php') ?>
         </div>
         
