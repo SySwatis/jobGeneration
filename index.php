@@ -3,17 +3,17 @@
 
 <?php include_once('inc/head.php'); ?>
 
-<body>
+<body class="fixed-sidebar-sticky"  style="background-image:url('img/AdobeStock_526910736_Preview.webp');background-repeat:no-repeat;background-size:cover;background-attachement:fixed;">
 
 <div id="wrapper">
 
-    <nav class="navbar-default navbar-static-side" role="navigation">
+    <nav class="navbar-default navbar-static-side overflow-auto" role="navigation">
         <div class="sidebar-collapse">
             <?php include_once('inc/menu.php') ?>
         </div>
     </nav>
 
-    <div id="page-wrapper" class="gray-bg"   style="background-image:url('img/AdobeStock_526910736_Preview.webp');background-repeat:no-repeat;background-size:cover;">
+    <div id="page-wrapper">
         
         <?php include_once('inc/top-navbar.php') ?>
 

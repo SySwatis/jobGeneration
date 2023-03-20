@@ -1,24 +1,53 @@
-            <ul class="nav metismenu" id="side-menu">
-                <li class="nav-header">
-                    <img src="img/logo_small.png" alt="Logo" srcset="">
-
-                    <div class="dropdown profile-element">
-                        <!-- <a data-toggle="dropdown" class="dropdown-toggle" href="#">
-                            <span class="block m-t-xs font-bold">Example user</span>
-                            <span class="text-muted text-xs block">menu <b class="caret"></b></span>
-                        </a>
-                        <ul class="dropdown-menu animated fadeInRight m-t-xs">
-                            <li><a class="dropdown-item" href="login.html">Logout</a></li>
-                        </ul> -->
-                    </div>
-                    <div class="logo-element">
-                        JG+
-                    </div>
-                </li>
-                <?php $menu = get_menu() ?>
-                <?php foreach ($menu as $item) : ?>
-                <li class="<?php // echo get_active() ?>">
-                    <a href="<?php echo $item[2] ?>.php"><i class="fa fa-<?php echo $item[1] ?>"></i> <span class="nav-label"><?php echo $item[0] ?></span></a>
-                </li>
-                <?php endforeach ?>
-            </ul>
+<ul class="nav flex-column">
+    <li class="nav-item nav-header p-2">
+        <img src="img/logo_small.png" alt="Logo" srcset="">
+    </li>
+    <li class="nav-item active">
+        <a class="nav-link" aria-current="page" aria-expanded="true" href="#">
+            <i class="fa fa-house"></i>
+            <span class="nav-label">Accueil</span>
+        </a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" aria-current="page" aria-expanded="true" href="#">
+            <i class="fa fa-calendar"></i>
+            <span class="nav-label">Agenda</span>
+            <span class="fa arrow"></span>
+        </a>
+        <ul class="nav flex-column nav-second-level">
+            <li class="nav-item"><a class="nav-link">Agenda Ateliers</a></li>
+            <li class="nav-item"><a class="nav-link">Gestion Session</a></li>
+            <li class="nav-item"><a class="nav-link">VSI Prog.</a></li>
+            <li class="nav-item"><a class="nav-link">VSI modules à la carte</a></li>
+            <li class="nav-item"><a class="nav-link">ACL Atelier obligatoire</a></li>
+        </ul>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" aria-current="page" aria-expanded="true" href="#">
+            <i class="fa fa-users"></i>
+            <span class="nav-label">Bénéficiaires</span>
+            <span class="fa arrow"></span>
+        </a>
+        <ul class="nav flex-column nav-second-level">
+            <li class="nav-item"><a class="nav-link">Rechercher</a></li>
+            <li class="nav-item"><a class="nav-link">Ajouter</a></li>
+        </ul>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" aria-current="page" aria-expanded="true" href="#">
+            <i class="fa fa-gear"></i>
+            <span class="nav-label">Gestion</span>
+        </a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" aria-current="page" aria-expanded="true" href="#">
+            <i class="fa fa-list-check"></i>
+            <span class="nav-label">Outils</span>
+            <span class="fa arrow"></span>
+        </a>
+        <ul class="nav flex-column nav-second-level">
+            <li class="nav-item"><a class="nav-link">Forum</a></li>
+            <li class="nav-item"><a class="nav-link">Recherche de CV VSI</a></li>
+        </ul>
+    </li>
+</ul>

@@ -21,7 +21,7 @@ $(function () {
     }
 
     // MetisMenu
-    var sideMenu = $('#side-menu').metisMenu();
+    // var sideMenu = $('#side-menu').metisMenu();
 
     // Collapse ibox function
     $('.collapse-link').on('click', function (e) {
@@ -122,10 +122,10 @@ $(function () {
     });
 
     // Tooltips demo
-    $('.tooltip-demo').tooltip({
-        selector: "[data-toggle=tooltip]",
-        container: "body"
-    });
+    // $('.tooltip-demo').tooltip({
+    //     selector: "[data-toggle=tooltip]",
+    //     container: "body"
+    // });
 
 
     // Move right sidebar top after scroll
@@ -138,8 +138,7 @@ $(function () {
         }
     });
 
-    $("[data-toggle=popover]")
-        .popover();
+    // $("[data-toggle=popover]").popover();
 
     // Add slimscroll to element
     // $('.full-height-scroll').slimscroll({
@@ -157,14 +156,14 @@ $(window).on("resize", function () {
 });
 
 // Fixed Sidebar
-$(window).on("load", function () {
-    if ($("body").hasClass('fixed-sidebar')) {
-        $('.sidebar-collapse').slimScroll({
-            height: '100%',
-            railOpacity: 0.9
-        });
-    }
-});
+// $(window).on("load", function () {
+//     if ($("body").hasClass('fixed-sidebar')) {
+//         $('.sidebar-collapse').slimScroll({
+//             height: '100%',
+//             railOpacity: 0.9
+//         });
+//     }
+// });
 
 
 // check if browser support HTML5 local storage
