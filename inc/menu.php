@@ -29,7 +29,7 @@
             <span class="fa arrow"></span>
         </a>
         <ul class="nav flex-column nav-second-level">
-            <li class="nav-item"><a class="nav-link">Rechercher</a></li>
+            <li class="nav-item"><a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#searchBenModal">Rechercher</a></li>
             <li class="nav-item"><a class="nav-link">Ajouter</a></li>
         </ul>
     </li>

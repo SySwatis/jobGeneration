@@ -4,7 +4,7 @@
 <?php include_once('inc/head.php'); ?>
 
 <body class="fixed-sidebar-sticky"  style="background-image:url('img/AdobeStock_526910736_Preview.webp');background-repeat:no-repeat;background-size:cover;background-attachment:fixed;">
-
+<?php include_once('inc/top-navbar.php') ?>
 <div id="wrapper">
 
     <nav class="navbar-default navbar-static-side overflow-auto" role="navigation">
@@ -13,9 +13,9 @@
         </div>
     </nav>
 
+
     <div id="page-wrapper">
         
-        <?php include_once('inc/top-navbar.php') ?>
 
         <div class="wrapper wrapper-content">    
             <?php include_once('inc/dashboard.php') ?>
@@ -25,7 +25,8 @@
 
     </div>
 </div>
-<?php include_once('inc/modal/search.php') ?>
+<?php //include_once('inc/modal/search.php') ?>
+<?php include_once('inc/modal/beneficiaires/search.php') ?>
 <?php include_once('inc/bottom-script.php') ?>
 
 

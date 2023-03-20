@@ -1,4 +1,4 @@
-<div id="searchModal" class="search-modal modal" tabindex="-1">
+<div id="searchBenModal" class="search-modal modal" tabindex="-1">
     <div class="modal-dialog">
 
         <div class="modal-content">

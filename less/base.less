@@ -148,6 +148,7 @@ video {
   position: relative;
 }
 
+
 .modal-dialog {
   z-index: 2200;
 }
@@ -160,11 +161,9 @@ video {
   background: #f8fafb;
 }
 
-.inmodal .modal-header {
-  padding: 30px 15px;
-  text-align: center;
-  display: block;
-}
+// .inmodal .modal-header {
+//   padding: 30px 15px;
+// }
 
 .animated.modal.fade .modal-dialog {
   -webkit-transform: none;
@@ -174,7 +173,9 @@ video {
 }
 
 .inmodal .modal-title {
-  font-size: 26px;
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: 400;
 }
 
 .inmodal .modal-icon {
@@ -210,6 +211,10 @@ video {
   position: relative !important;
   flex-shrink: 1;
   width: calc(~"100% - 220px");
+}
+
+.mini-navbar #page-wrapper {
+  width: calc(~"100% - 60px");
 }
 
 @media (min-width: 768px) {
