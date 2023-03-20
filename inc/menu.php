@@ -1,6 +1,6 @@
 <ul class="nav flex-column">
-    <li class="nav-item nav-header p-2">
-        <img src="img/logo_small.png" alt="Logo" srcset="">
+    <li class="nav-item nav-header">
+        <img src="img/logo-small-white-145px.png" alt="Logo">
     </li>
     <li class="nav-item active">
         <a class="nav-link" aria-current="page" aria-expanded="true" href="#">

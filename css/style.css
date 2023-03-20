@@ -6293,7 +6293,6 @@ h5 {
 }
 .nav > li.active > a {
   color: #ffffff;
-  font-weight: 600;
 }
 .navbar-default .nav > li > a:hover,
 .navbar-default .nav > li > a:focus {
@@ -6426,9 +6425,8 @@ h5 {
   font-size: 12px;
 }
 .nav-header {
-  padding: 33px 25px;
-  background-color: #39363a;
-  background-image: url("patterns/header-fablab.png");
+  text-align: center;
+  padding: 12px;
   position: relative;
 }
 .nav-header img {
@@ -6439,17 +6437,6 @@ h5 {
 .nav-header > .dropdown.profile-element {
   position: relative;
   z-index: 10;
-}
-.nav-header:after {
-  content: " ";
-  display: block;
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.6);
-  z-index: 1;
 }
 .caret {
   display: inline-block;
@@ -6471,7 +6458,7 @@ ul.nav-second-level {
   background: #312f32;
 }
 .nav > li.active {
-  background-color: #eb9e00 !important;
+  background-color: #dc9400 !important;
 }
 .nav.nav-second-level > li.active {
   border: none;
@@ -6554,19 +6541,18 @@ a[aria-expanded=true] > .fa.arrow:before {
 .fixed-sidebar.mini-navbar .nav-second-level li .nav-third-level li a {
   padding-left: 62px;
 }
-.nav-second-level li:last-child {
+body:not(.mini-navbar ) .nav-second-level li:last-child {
   padding-bottom: 10px;
 }
 body:not(.fixed-sidebar):not(.canvas-menu).mini-navbar .nav li:hover > .nav-second-level,
 .mini-navbar .nav li:focus > .nav-second-level {
   display: block;
-  min-width: 160px;
+  min-width: 210px;
   height: auto;
   background-color: #413d42;
 }
 body.mini-navbar .navbar-default .nav > li > .nav-second-level li a {
-  font-size: 12px;
-  border-radius: 3px;
+  font-size: 15px;
 }
 .fixed-nav .slimScrollDiv #side-menu {
   padding-bottom: 60px;
@@ -6576,17 +6562,16 @@ body.mini-navbar .navbar-default .nav > li > .nav-second-level li a {
 }
 .mini-navbar .nav .nav-second-level {
   position: absolute;
-  left: 70px;
+  left: 60px;
   top: 0;
   background-color: #39363a;
-  padding: 10px 10px 10px 10px;
-  font-size: 12px;
+  font-size: 15px;
 }
 .canvas-menu.mini-navbar .nav-second-level {
   background: #312f32;
 }
 .mini-navbar li.active .nav-second-level {
-  left: 65px;
+  left: 60px;
 }
 .navbar-default .special_link a {
   background: #eb9e00;
@@ -6678,7 +6663,7 @@ body.fixed-nav.fixed-nav-basic .navbar-fixed-top {
   left: 220px;
 }
 body.fixed-nav.fixed-nav-basic.mini-navbar .navbar-fixed-top {
-  left: 70px;
+  left: 60px;
 }
 body.fixed-nav.fixed-nav-basic.fixed-sidebar.mini-navbar .navbar-fixed-top {
   left: 0;
@@ -6699,7 +6684,7 @@ body.fixed-nav.fixed-nav-basic.fixed-sidebar.mini-navbar.body-small .navbar-fixe
   margin-left: 0;
 }
 body.mini-navbar .navbar-static-side {
-  width: 70px;
+  width: 60px;
 }
 body.mini-navbar .profile-element,
 body.mini-navbar .nav-label,
@@ -6712,8 +6697,15 @@ body.canvas-menu .profile-element {
 body:not(.fixed-sidebar):not(.canvas-menu).mini-navbar .nav-second-level {
   display: none;
 }
+body.mini-navbar .navbar-default .nav:first-child > li > a {
+  text-align: center;
+}
 body.mini-navbar .navbar-default .nav > li > a {
   font-size: 16px;
+  padding-left: 20px;
+}
+body.mini-navbar .navbar-default .nav > li > a i {
+  margin-right: 0;
 }
 body.mini-navbar .logo-element {
   display: block;
@@ -6722,8 +6714,7 @@ body.canvas-menu .logo-element {
   display: none;
 }
 body.mini-navbar .nav-header {
-  padding: 0;
-  background-color: #eb9e00;
+  padding: 6px;
 }
 body.canvas-menu .nav-header {
   padding: 33px 25px;
@@ -6768,8 +6759,7 @@ body.body-small.fixed-sidebar.mini-navbar .navbar-static-side {
   height: auto;
 }
 body.fixed-sidebar.mini-navbar .navbar-default .nav > li > .nav-second-level li a {
-  font-size: 12px;
-  border-radius: 3px;
+  font-size: 15px;
 }
 body.canvas-menu.mini-navbar .navbar-default .nav > li > .nav-second-level li a {
   font-size: 13px;
@@ -6823,7 +6813,6 @@ body.canvas-menu.mini-navbar nav.navbar-static-side {
 }
 .fixed-sidebar-sticky #wrapper {
   height: 100%;
-  background-color: white;
 }
 .fixed-sidebar-sticky .navbar-default {
   background-color: #39363a;
@@ -15427,10 +15416,6 @@ h2 .fa {
 }
 .bg-blue {
   background-color: #1a7bb9;
-}
-.nav-header {
-  background-image: none;
-  text-align: center;
 }
 .navbar-top-links {
   margin-right: 16px;

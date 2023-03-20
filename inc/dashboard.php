@@ -3,7 +3,7 @@
                 
                 <div class="col-lg-5">
                     <div class="ibox border-top-orange">
-                        <div class="text-center bg-nav text-white ibox-content  animate__animated animate__fadeIn">
+                        <div class="text-center bg-nav text-white ibox-content animate__animated animate__fadeIn">
                             <span class="fa fa-house fa-3x p-3"></span>
                             <p class="small">Accueil</p>
                             <h1>

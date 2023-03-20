@@ -7,16 +7,15 @@
 
     <div class="middle-box text-center loginscreen animated fadeInDown">
         <div>
-            <div>
+            <div class="animate__animated animate__fadeIn">
                 <h1 class="logo-name mt-0">
-                    <img width="240px"
-                    src="img/logo-240px.png"
+                    <img width="145px"
+                    src="img/logo-small-white-145px.png"
                     alt="Job Generation">
                 </h1>
+                <h2 class="text-white mt-1 mb-4">Bienvenue sur notre plateforme</h2>
             </div>
-            
-            <h2 class="text-white mt-1 mb-4">Bienvenue sur notre plateforme</h2>
-            <p class="text-muted text-left small">Utilisez vos identifiants habituels
+                <p class="text-muted text-left small">Utilisez vos identifiants habituels
                 <!--Continually expanded and constantly improved Inspinia Admin Them (IN+)-->
             </p>
             <form class="m-t" role="form" action="index.php">

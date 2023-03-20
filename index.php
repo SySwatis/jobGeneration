@@ -3,7 +3,7 @@
 
 <?php include_once('inc/head.php'); ?>
 
-<body class="fixed-sidebar-sticky"  style="background-image:url('img/AdobeStock_526910736_Preview.webp');background-repeat:no-repeat;background-size:cover;background-attachement:fixed;">
+<body class="fixed-sidebar-sticky"  style="background-image:url('img/AdobeStock_526910736_Preview.webp');background-repeat:no-repeat;background-size:cover;background-attachment:fixed;">
 
 <div id="wrapper">
 
