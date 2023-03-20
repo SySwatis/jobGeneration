@@ -20,16 +20,16 @@
             </p>
             <form id="loginForm" class="m-t" role="form" action="index.php">
                 <div class="form-group mb-3">
-                    <input type="text" class="form-control" placeholder="Login" required>
+                    <input type="text" class="form-control" placeholder="Identifiant" required>
                 </div>
                 <div class="form-group mb-3">
                     <input type="password" class="form-control" placeholder="Mot de passe" required>
                 </div>
-                <button type="submit" class="btn btn-primary block full-width m-b">Connexion</button>
+                <button type="submit" class="btn btn-success block full-width m-b">Se connecter</button>
               
             </form>
             <a href="#a-propos" class="text-muted"><small>A propos</small></a>
-             | <a href="#contact" class="text-muted"><small>Un problème de connection ?</small></a>
+             | <a href="#contact" class="text-muted"><small>Un problème de connexion ?</small></a>
         </div>
     </div>
 </div>
