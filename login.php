@@ -16,7 +16,6 @@
                 <h2 class="text-white mt-1 mb-4">Bienvenue sur notre plateforme</h2>
             </div>
                 <p class="text-muted text-left small">Utilisez vos identifiants habituels
-                <!--Continually expanded and constantly improved Inspinia Admin Them (IN+)-->
             </p>
             <form id="loginForm" class="m-t" role="form" action="index.php">
                 <div class="form-group mb-3">
@@ -29,11 +28,12 @@
               
             </form>
             <a href="#a-propos" class="text-muted"><small>A propos</small></a>
-             | <a href="#contact" class="text-muted"><small>Un problème de connexion ?</small></a>
+             | <a href="#contact" data-bs-toggle="modal" data-bs-target="#contactModal" class="text-muted"><small>Un problème de connexion ?</small></a>
         </div>
     </div>
 </div>
-<?php include_once('inc/modal/search.php') ?>
+
+<?php include_once('inc/modal/contact.php') ?>
 <?php include_once('inc/bottom-script.php') ?>
 
 

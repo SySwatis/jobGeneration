@@ -1,7 +1,7 @@
-<div id="searchBenModal" class="search-modal modal" tabindex="-1">
+<div id="searchModal" class="search-modal modal" tabindex="-1">
     <div class="modal-dialog">
 
-        <div class="modal-content">
+        <div class="modal-content inmodal">
 
             <div class="modal-header">
                 <h2 class="modal-title m-0">Rechercher dans le menu</h2>
