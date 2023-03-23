@@ -6,7 +6,7 @@
     font-size: 14px;
     color: @nav-text-color;
     font-weight: 400;
-    padding: 14px 20px 14px 25px;
+    padding: 12px 15px;
     display: block;    
   }
 }
@@ -39,8 +39,8 @@
   background-color: transparent;
 }
 
-.nav > li > a i {
-  margin-right: 6px;
+.nav > li > a i + span {
+  margin-left: 6px;
 }
 
 .navbar {
@@ -64,6 +64,14 @@
 .navbar-top-links li a {
   padding: 20px 10px;
   min-height: 50px;
+}
+
+.navbar.navbar-static-top {
+  li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 }
 
 .dropdown-menu {
@@ -242,9 +250,14 @@ ul.nav-second-level {
 }
 
 .minimalize-styl-2 {
-  color: @nav-bg;
-  margin: 0;
-  padding: 8px;
+  width: 60px;
+  text-align: center;
+}
+
+.mini-navbar .minimalize-styl-2 {
+  color: @orange;
+  -webkit-transform: rotate(-90deg);
+  transform: rotate(-90deg);
 }
 
 .navbar-form-custom .form-group {
@@ -408,13 +421,6 @@ body.mini-navbar .navbar-default .nav > li > .nav-second-level li a {
 .navbar-static-side { transition: width 0s; }
 .footer { transition: margin 0s; }
 
-// .pace-done .navbar-static-side, .pace-done .nav-header, .pace-done li.active, .pace-done #page-wrapper, .pace-done .footer {
-//   -webkit-transition: all 0.4s;
-//   -moz-transition: all 0.4s;
-//   -o-transition: all 0.4s;
-//   transition: all 0.4s;
-// }
-
 .navbar-fixed-top {
   background: #fff;
   transition-duration: 0.4s;
@@ -521,9 +527,7 @@ body.mini-navbar .navbar-default{
   }
   .nav > li > a {
     font-size: 16px;
-    padding-left: 20px;
     i {
-      
       margin-right: 0;
     }
   }

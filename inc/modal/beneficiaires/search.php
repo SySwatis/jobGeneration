@@ -1,4 +1,4 @@
-<div id="searchBenModal" class="search-ben-modal modal" tabindex="-1">
+<div id="searchBenModal" class="search-ben-modal modal fade" tabindex="-1">
     <div class="modal-dialog">
         <div class="modal-content inmodal">
             <div class="modal-header">
@@ -34,7 +34,7 @@
                         </select>
                     </div>
                     <div class="col-md-6">
-                    <label for="tpp_num" class="form-label">Type de prestation</label>
+                        <label for="tpp_num" class="form-label">Type de prestation</label>
                         <select class="form-select" id="tpp_num" name="tpp_num" onchange="">
                             <option value="">...&nbsp;&nbsp;</option>						<option value="8">ACL &nbsp;&nbsp;</option>
                             <option value="6">AP2 &nbsp;&nbsp;</option>
@@ -47,7 +47,7 @@
                     <div class="mb-3">
                         <!-- <input class="btn btn-primary" type="submit" onclick="xajax_affiche_benef(xajax.getFormValues('rechercher'));"
                             value="Afficher"> -->
-                            <button class="btn btn-primary" type="submit">Afficher</button>
+                            <button data-bs-toggle="modal" data-bs-target="#listBenModal" class="btn btn-success" type="submit">Afficher</button>
                     </div>
                 </form>
             </div>

@@ -1,7 +1,4 @@
 <ul class="nav flex-column">
-    <!-- <li class="nav-item nav-header">
-        <img src="img/logo-small-white-145px.png" alt="Logo">
-    </li> -->
     <li class="nav-item active">
         <a class="nav-link" aria-current="page" aria-expanded="true" href="#">
             <i class="fa fa-house"></i>

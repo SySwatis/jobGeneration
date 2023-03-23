@@ -1,6 +1,6 @@
 (function ($) {
 
-    // login
+    // functions
 
     function scrollToElement(targetEl,windowHash) {
         $targetEl = $(targetEl);
@@ -12,9 +12,14 @@
         });
     }
 
+
+      // login
+
     $('#loginForm input').on('click',function(e){
         e.preventDefault();
         scrollToElement('#loginForm',false);
-    })
+    });
+
+
 
 })(jQuery);

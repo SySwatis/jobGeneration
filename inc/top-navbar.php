@@ -1,6 +1,8 @@
 <div class="border-bottom">
 
-    <nav class="navbar navbar-static-top white-bg" role="navigation" style="margin-bottom: 0">
+    <!-- <button data-bs-toggle="modal" data-bs-target="#listBenModal" class="btn btn-primary" type="submit">Afficher</button> -->
+
+    <nav class="navbar navbar-static-top white-bg" role="navigation">
 
         <ul class="nav navbar-left">
             <li>

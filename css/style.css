@@ -6285,7 +6285,7 @@ h5 {
   font-size: 14px;
   color: #a7b1c2;
   font-weight: 400;
-  padding: 14px 20px 14px 25px;
+  padding: 12px 15px;
   display: block;
 }
 .nav.navbar-right > li > a {
@@ -6314,8 +6314,8 @@ h5 {
 .nav.navbar-top-links > li > a:focus {
   background-color: transparent;
 }
-.nav > li > a i {
-  margin-right: 6px;
+.nav > li > a i + span {
+  margin-left: 6px;
 }
 .navbar {
   border: 0;
@@ -6334,6 +6334,11 @@ h5 {
 .navbar-top-links li a {
   padding: 20px 10px;
   min-height: 50px;
+}
+.navbar.navbar-static-top li {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .dropdown-menu {
   border: medium none;
@@ -6473,9 +6478,13 @@ ul.nav-second-level {
   color: #8095a8 !important;
 }
 .minimalize-styl-2 {
-  color: #39363a;
-  margin: 0;
-  padding: 8px;
+  width: 60px;
+  text-align: center;
+}
+.mini-navbar .minimalize-styl-2 {
+  color: #eb9e00;
+  -webkit-transform: rotate(-90deg);
+  transform: rotate(-90deg);
 }
 .navbar-form-custom .form-group {
   margin-bottom: 0;
@@ -6702,7 +6711,6 @@ body.mini-navbar .navbar-default .nav:first-child > li > a {
 }
 body.mini-navbar .navbar-default .nav > li > a {
   font-size: 16px;
-  padding-left: 20px;
 }
 body.mini-navbar .navbar-default .nav > li > a i {
   margin-right: 0;
@@ -9941,6 +9949,16 @@ video {
 }
 .inmodal .modal-body {
   background: #f8fafb;
+}
+.inmodal.listmodal .modal-body {
+  padding: 0;
+}
+.inmodal.listmodal .modal-body .row {
+  margin: 0;
+  padding: 1.5rem 0;
+}
+.inmodal.listmodal .modal-body > .row:nth-child(2n) {
+  background-color: #eef3f5;
 }
 .animated.modal.fade .modal-dialog {
   -webkit-transform: none;
