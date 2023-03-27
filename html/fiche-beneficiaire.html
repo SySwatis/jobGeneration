@@ -1,10 +1,10 @@
 <nav class="navbar navbar-expand-lg  sticky-top bg-light">
     <div class="container-fluid p-0">
         <a class="navbar-brand" href="#">Bénéficiaire <i class="fa fa-chevron-right me-2"></i>ANDRE Nathalie</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        <btn class="navbar-toggler" type="btn" data-bs-toggle="collapse" data-bs-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
-        </button>
+        </btn>
         <div class="collapse navbar-collapse float-end" id="navbarNav">
             <ul class="navbar-nav text-uppercase">
                 <li class="nav-item">
@@ -44,7 +44,7 @@
                 </div>
                 <ul class="list-group list-group-flush">
                     </li>
-                    <li class="list-group-item"><span><i class="fa-solid fa-mobile-screen-button me-2"></i>6 59
+                    <li class="list-group-item"><span><i class="fa-solid fa-mobile-screen-btn me-2"></i>6 59
                             42 22 76</span>
                     </li>
                     <li class="list-group-item email text-lowercase"><a href="#"><i
@@ -134,18 +134,13 @@
         <div class="card mt-3 mb-3">
             <div class="card-body">
                 <h3 class="card-title">Status</h3>
-
                 <div class="small mt-3 mb-3">
                     <i class="fa fa-check me-2"></i>
                     S'est présenté et a démarré la prestation
                 </div>
-
-
                 <textarea class="form-control" id="note_595947" rows="3"
                     placeholder="Ajouter une note pour ANDRE NATHALIE "
                     onchange="xajax_update_champ('client_prestation','clp_note',595947,this.value,this.id)"></textarea>
-
-
             </div>
         </div>
 
@@ -179,5 +174,501 @@
 </div>
 
 <div id="ap2" class="row">
+
     <h2>Ap2</h2>
+
+    <div class="col-lg-12">
+
+
+        <div class="ibox">
+            <div class="ibox-content">
+
+                <div class="card mb-3">
+                    <div class="card-header">
+                        Documents
+                    </div>
+                    <div class="card-body row">
+                        <div class="col-lg-4">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h3 class="card-title">Emargement</h3>
+                                    <span class="btn"
+                                        onclick="xajax_affiche_pdf('emargement_ap2','595947')">
+                                        <i class="fa fa-file-pdf float-start me-2"></i>
+                                        <span class="small">Voir le PDF</span>
+                                    </span>
+                                    <span class="btn btn-success float-end"
+                                        onclick="xajax_document_par_cle('emargement',595947,'scan_emar')">
+                                        <i class="fa fa-link float-end ms-2"></i>Attacher le scan
+                                    </span>
+                                    <span id="scan_emar"></span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-lg-4">
+
+                            <div class="card mb-3">
+                                <div class="card-body">
+                                    <h3 class="card-title">Bilan</h3>
+
+                                    
+                                        <span class="btn"
+                                            onclick="xajax_affiche_pdf('bilan_ap2','595947')">
+                                            <i class="fa fa-file-pdf float-start me-2"></i>
+                                            <span class="small">Voir le PDF</span>
+                                        </span>
+                                        <span class="btn btn-success float-end"
+                                            onclick="xajax_document_par_cle('bilan',595947,'scan_bilan')">
+                                            <i class="fa fa-link float-end ms-2"></i>Attacher le scan
+                                        </span>
+                                        <span id="scan_bilan"></span>
+
+                                 
+
+
+
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="col-lg-4">
+                            <div class="card mb-3">
+                                <div class="card-body">
+                                    <h3 class="card-title">Accueil</h3>
+                                    <i class="fa fa-check me-2"></i><span class="small">Signé le 17/02/2023</span>
+                                    <div class="float-end mt-3">
+                                        <span class="btn btn-success"
+                                            onclick="xajax_annule_signature(595947,'1718009')">
+                                            <i class="fa fa-paper-plane float-end ms-2"></i>Redemander la signature
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6">
+                            <div class="card mb-3">
+                                <div class="card-body">
+                                    <h3 class="card-title">Enquète de satisfaction</h3>
+
+
+                                    <a data-bs-toggle="collapse" href="#collapseEsLink" role="button"
+                                        aria-expanded="false" aria-controls="collapseExample">
+                                        Voir le lien<i class="fa fa-chevron-down ms-2"></i>
+                                    </a>
+
+
+                                    <div class="collapse mt-3" id="collapseEsLink">
+                                        <div class="card card-body">
+                                            <a target="_blank"
+                                                href="https://www.job-generation.com/page/signature2.php?id=1762938_64131dcc3abd8">Lien
+                                                de la signature</a>
+                                        </div>
+                                    </div>
+                                    <div class="float-end mt-3">
+                                        <span class="btn btn-success"
+                                            onclick="xajax_document_par_cle('enquete',595947,'enquet_satis')">
+                                            <i class="fa fa-link float-end ms-2"></i>Attacher le fichier
+                                        </span>
+                                        <span id="enquet_satis"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-6">
+
+                            <div class="card mb-3">
+                                <div class="card-body">
+                                    <h3 class="card-title">Entretien à mi-parcours</h3>
+
+                                    <i class="fa fa-check me-2"></i>Envoyée le 16/03/2023
+                                    <div class="float-end mt-3">
+                                        <span class="btn btn-success"
+                                            onclick="xajax_annule_signature(595947,'1762938')">
+                                            <i class="fa fa-paper-plane float-end ms-2"></i>Redemander la signature
+                                        </span>
+
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-lg-12">
+                    <div class="card mb-3">
+                        <div class="card-header">
+
+                            Prescription
+
+                        </div>
+                        <ul class="list-group list-group-flush">
+
+                            <li class="list-group-item"><b> Objectif de la prestation : </b>Non Renseigné</li>
+                            <li class="list-group-item"><b> Projet envisagé : </b>Non Renseigné</li>
+                            <li class="list-group-item"><b>Actions réalisées en lien avec le projet :</b> Non Renseigné
+                            </li>
+                            <li class="list-group-item"><b>Les besoins identifiés : </b>Non Renseigné</li>
+
+                        </ul>
+
+                    </div>
+                </div>
+
+                <div class="col-lg-12">
+                    <div class="card mb-3">
+                        <div class="card-header">
+                            Contenu de la prestation
+                        </div>
+
+                        <div class="card-body">
+                            <div class="d-grid gap-2 mt-3">
+                                <span class="btn btn-success" onclick="xajax_affiche_plan_action_durant_ordre(595947)">
+                                    <i class="fa fa-pencil float-end me-2"></i>
+                                    Saisie plan d'actions durant Activ'projet
+                                </span>
+
+
+                                <span class="btn btn-success" onclick="xajax_affiche_plan_action_apres(595947)">
+                                    <i class="fa fa-pencil float-end me-2"></i>
+                                    Saisie plan d'actions après Activ'projet
+                                </span>
+
+                                <span class="btn btn-success"
+                                    onclick="		xajax_affiche_form('active_projet2','m','113355','contenu_modal','xajax_affiche_doc(595947)','clp_num=595947','','t');">
+                                    <i class="fa fa-pencil float-end me-2"></i>
+                                    Saisie du livrable
+                                </span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="col-lg-12">
+                    <div class="card mb-3">
+                        <div class="card-header">
+                            Fin de prestation
+                        </div>
+
+                        <div class="card-body">
+
+
+                            <span class="btn btn-danger" onclick="xajax_affiche_fin_de_prestation(595947); ">
+                                <i class="fa fa-close me-2"></i>
+                                Cloturer la prestation
+                            </span>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+
+<!-- end ap2-->
+
+</div>
+
+</div>
+
+<div id="profil" class="row">
+    <div class="col-lg-12">
+        <h2>Profil</h2>
+    </div>
+    <div class="col-lg-4">
+        <div class="card">
+            <div class="card-body">
+                <div id="contenu_fiche">
+                    <br>
+                    <div class="row">
+
+                        <div class="large-4 columns"><a href="#" class="btn radius small job"
+                                onclick="xajax_affiche_profil_rome('595947')"><img src="img/edit.png" alt="">
+                                Ajouter/enlever un code rome</a></div>
+                        <div class="large-4 columns text-center"><a href="#" class="btn radius radius small job"
+                                onclick="xajax_affiche_departement('595947')"><img src="img/edit.png" alt="">
+                                Ajouter/modifier une zone de recherche</a></div>
+                        <div class="large-4 columns text-right"><a href="#"
+                                onclick="xajax_document_par_cle('cv','595947','contenu_modal','xajax_affiche_profil(595947)')"
+                                class="btn radius radius small job"><img src="img/edit.png" alt=""> Ajouter un CV</a>
+                        </div>
+
+
+                    </div>
+                    <div class="row">
+                        <div class="large-12 columns text-center table-header">
+                            <br>
+                            CV
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="large-12 columns text-center">
+
+
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div class="large-12 columns text-center">
+                            <br>
+                            <br>
+                            Cochez si un CV vidéo a été réalisé <input type="checkbox" name="cv_video" id="cv_video"
+                                onchange="xajax_update_bool('client_prestation','clp_num','595947','clp_cv_video',this.checked)">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="large-12 columns text-center table-header">
+                            <br>
+                            Profil
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="large-4 columns text-center">
+                            <b>Code ROME</b><br><br>
+                        </div>
+                        <div class="row">
+                            <div class="large-4 columns text-center">
+                                <b>Département</b><br><br>
+
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="large-12 columns text-center table-header">
+                                <br>
+                                SPOC AP2
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="large-6 columns text-right">
+                                Utilisation du SPOC AP2
+                            </div>
+                            <div class="large-6 columns text-left">
+                                <select id="spo_num" name="spo_num"
+                                    onchange="xajax_delete_insert('spoc_clp','clp_num','595947','spo_num',this.value);xajax_affiche_profil(595947)">
+                                    <option value="">...&nbsp;&nbsp;</option>
+                                    <option value="1">Oui &nbsp;&nbsp;</option>
+                                    <option value="2">Ne possède pas de connexion internet &nbsp;&nbsp;</option>
+                                    <option value="3">Ne souhaite pas travailler sur l’outil &nbsp;&nbsp;</option>
+                                    <option value="4">Ne dispose pas du matériel nécessaire (PC, smartphone..)
+                                        &nbsp;&nbsp;</option>
+                                    <option value="5">Autre &nbsp;&nbsp;</option>
+                                </select>
+                            </div>
+
+
+
+                        </div>
+
+                        <br>
+                        <div class="row">
+                            <div class="large-12 columns text-center table-header">
+                                <br>
+                                DIVERS
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="large-12 columns text-center">
+                                <br>
+                                Cochez si le profil compétences est actualisé <input type="checkbox"
+                                    name="profil_competence" id="profil_competence"
+                                    onchange="xajax_update_bool('client_prestation','clp_num','595947','clp_profil_competence',this.checked)"><br>
+                                Cochez si des cartes de visites ont été éditées<input type="checkbox"
+                                    name="carte_visite" id="carte_visite"
+                                    onchange="xajax_update_bool('client_prestation','clp_num','595947','clp_carte_visite',this.checked)">
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="rendez-vous" class="row">
+    <h2>Rendez-vous</h2>
+    <div class="row" id="contenu_fiche">
+        <div class="large-12 columns"> <input type="hidden" id="date_temp" name="date_temp" value="">
+            <div class="row" style="display: block; margin-left: 0px; opacity: 1;">
+                <div class="large-12 columns centered">
+                    <div class="row" style="display: block; margin-left: 0px; opacity: 1;">
+                        <div class="large-12 columns">
+                            <p class="lead"> Rendez-vous </p>
+                            <span class="btn job" onclick="xajax_affiche_pdf('prochain_rdv',595947)"><img alt=""
+                                    src="img/print.png" exify_intitialized="true">Imprimer les prochains
+                                rendez-vous</span>
+                        </div>
+                    </div>
+                    <div id="panel3" class="content active" aria-hidden="false">
+                        <div class="row" style="display: block; margin-left: 0px; opacity: 1;">
+                            <div class="large-12 columns text-center table-header"> Accueil </div>
+                        </div>
+                        <div class="row" style="display: block; margin-left: 0px; opacity: 1;">
+
+                            <div class="large-1 columns text-left"> <img src="img/individuel.png"> </div>
+                            <div class="large-5 columns text-left">
+                                Le
+                                17/02/2023 de 14:00 à 15:00 Individuel
+
+                            </div>
+                            <div class="large-4 columns">
+                                <div class="row">
+                                    <div class="medium-12 columns">
+                                        S'est présenté et a démarré la prestation
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="medium-12 columns" id="precision">
+
+                                    </div>
+                                </div>
+                                <div class="row" id="commentaire_1718009" style="display:none">
+                                    <div class="medium-12 columns">
+                                        <textarea id="com1_1718009" placeholder="Commentaire obligatoire"
+                                            onchange="xajax_update_champ('prise_rendez_vous','prv_date_update','1718009','27/03/2023',this.id);xajax_update_champ('prise_rendez_vous','prv_commentaire','1718009',this.value,this.id);;"></textarea>
+                                        <br>
+                                        Confirmation Motif : Info interne <select id="mov_num_595947"
+                                            name="mov_num_595947" onchange="xajax_update_motif_vsi(595947,this.value)">
+                                            <option value="">...&nbsp;&nbsp;</option>
+                                            <option value="2">Autoprescription – erreur de prestation &nbsp;&nbsp;
+                                            </option>
+                                            <option value="7">Covid suspicion ou personne à risque &nbsp;&nbsp;</option>
+                                            <option value="9">Déjà en prestation EMD &nbsp;&nbsp;</option>
+                                            <option value="1">En emploi/en formation &nbsp;&nbsp;</option>
+                                            <option value="4">Indisponible autre &nbsp;&nbsp;</option>
+                                            <option value="3">Indisponible garde d’enfants &nbsp;&nbsp;</option>
+                                            <option value="6">Manque info sur la prestation (pas de convocation)
+                                                &nbsp;&nbsp;</option>
+                                            <option value="8">Problème de mobilité &nbsp;&nbsp;</option>
+                                            <option value="5">Raison médical (RDV, hospitalisation prévue…) &nbsp;&nbsp;
+                                            </option>
+                                        </select>
+
+                                        <br>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="large-2 columns">
+                                &nbsp;
+                            </div>
+                            <br><br>
+                        </div>
+
+                        <div class="row" style="display: block; margin-left: 0px; opacity: 1;">
+                            <div class="large-12 columns text-center table-header">Rendez-vous mi-parcours entre le
+                                10/03/2023 et le 23/03/2023
+                            </div>
+
+                        </div>
+                        <div class="row" style="display: block; margin-left: 0px; opacity: 1;">
+                            <div class="large-1 columns text-left"> <img src="img/individuel.png"> </div>
+                            <div class="large-5 columns text-left">
+                                Le
+                                16/03/2023 de 14:30 à 15:30 Individuel
+                            </div>
+                            <div class="large-5 columns">
+                                <div class="row">
+                                    <div class="medium-12 columns">
+                                        S'est présenté
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="medium-12 columns" id="precision">
+
+                                    </div>
+                                </div>
+                                <div class="row" id="commentaire_1762938" style="display:none">
+                                    <div class="medium-12 columns">
+                                        <textarea id="com1_1762938" placeholder="Commentaire obligatoire"
+                                            onchange="xajax_update_champ('prise_rendez_vous','prv_date_update','1762938','27/03/2023',this.id);xajax_update_champ('prise_rendez_vous','prv_commentaire','1762938',this.value,this.id);;"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row" style="display: block; margin-left: 0px; opacity: 1;">
+                            <div class="large-12 columns text-center table-header">Rendez-vous fin de prestation du
+                                14/04/2023 au 11/05/2023 </div>
+
+                        </div>
+                        <div class="row" style="display: block; margin-left: 0px; opacity: 1;">
+                            <div class="large-10 columns text-left">
+
+                                <strong>Ajouter un rendez-vous de fin de prestation obligatoire</strong>
+
+                            </div>
+                            <form id="rech3" name="rech3">
+                                <input type="hidden" id="con_num" name="con_num" value="854">
+                                <input type="hidden" id="date" name="date" value="11/05/2023">
+                            </form>
+                            <div class="large-2 columns">
+                                <span class="btn small stable" data-reveal-id="planningGrid"
+                                    onclick="xajax_vide_div('contenu_planning');xajax_affiche_planning(xajax.getFormValues('rech3'),'true','595947','t',7,'','rechercher','t')">
+                                    <img style="" alt="" src="img/edit.png" exify_intitialized="true">
+                                </span>
+                            </div>
+                        </div>
+
+                        <div class="row" style="display: block; margin-left: 0px; opacity: 1;">
+                            <div class="large-12 columns text-center table-header">Rendez-vous autre </div>
+
+                        </div>
+                        <div class="row">
+                            <div class="large-10 columns text-left">
+
+                                <strong>Ajouter un rendez-vous autre </strong>
+
+                            </div>
+
+                            <form id="rech4" name="rech4">
+                                <input type="hidden" id="con_num" name="con_num" value="854">
+                                <input type="hidden" id="date" name="date" value="27/03/2023">
+                            </form>
+                            <div class="large-2 columns">
+                                <span class="btn small stable" data-reveal-id="planningGrid"
+                                    onclick="xajax_vide_div('contenu_planning');xajax_affiche_planning(xajax.getFormValues('rech4'),'true','595947','t',3,'','rech4','t')">
+                                    <img style="" alt="" src="img/edit.png" exify_intitialized="true">
+                                </span>
+                            </div>
+
+                            <hr>
+                            <div class="large-12 columns text-center table-header">Outils consultés</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
