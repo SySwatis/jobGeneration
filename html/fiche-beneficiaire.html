@@ -1,0 +1,183 @@
+<nav class="navbar navbar-expand-lg  sticky-top bg-light">
+    <div class="container-fluid p-0">
+        <a class="navbar-brand" href="#">Bénéficiaire <i class="fa fa-chevron-right me-2"></i>ANDRE Nathalie</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse float-end" id="navbarNav">
+            <ul class="navbar-nav text-uppercase">
+                <li class="nav-item">
+                    <a class="nav-link no-ajax" aria-current="page" href="#information">Information</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link no-ajax" href="#ap2">Ap2</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#profil">Profil</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#rendez-vous">Rendez-vous</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+<!--  content -->
+<div id="information" class="row">
+    <div class="row">
+        <div class=" col-lg-12">
+            <h2>Information</h2>
+        </div>
+    </div>
+    <div class="col-lg-4">
+
+        <div class="card mt-3 mb-3">
+            <div class="card-body">
+                <h3 class="card-title">Données principales</h3>
+                <div class="d-grid gap-2 mt-3 mb-3">
+                    <span class="btn btn-success"
+                        onclick="xajax_affiche_form('client','m',531695,'contenu_modal','xajax_affiche_info(595947)','','','t')">
+                        ANDRE NATHALIE<i class="fa fa-pencil ms-2 float-end"></i></span>
+                </div>
+                <ul class="list-group list-group-flush">
+                    </li>
+                    <li class="list-group-item"><span><i class="fa-solid fa-mobile-screen-button me-2"></i>6 59
+                            42 22 76</span>
+                    </li>
+                    <li class="list-group-item email text-lowercase"><a href="#"><i
+                                class="fa fa-envelope me-2"></i>NATHALIEANDRE1683@GMAIL.COM</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="card mb-3">
+            <div class="card-body">
+                <h3 class="card-title">Prestation</h3>
+                <ul class="list-group list-group-flush">
+
+                    <li class="list-group-item"><span>Du 17/02/2023-14:00 au
+                            11/05/2023</span></li>
+                    <li class="list-group-item"><span>Modalite : <b>Phys</b></span></li>
+                    <li class="list-group-item"><span>A : Cannes - Space Camp</span>
+                    </li>
+                    <li class="list-group-item"><span>ID : 5412224C</span></li>
+                    <li class="list-group-item"><span>LC :SPAP2Y3298 jusqu'au 11/05/2023</span></li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="col-lg-4">
+
+        <div class="card mt-3 mb-3">
+            <div class="card-body">
+                <h3 class="card-title">Référents</h3>
+                <div class="mb-3">
+                    <label class="form-label small" for="con_num595947">Principal :</label>
+                    <select class="form-select" id="con_num595947" name="con_num595947"
+                        onchange="xajax_update_conseiller_accueil(this.value,5868087,595947)">
+                        <option value="">...&nbsp;&nbsp;</option>
+                        <option value="1266">GALLE Julie &nbsp;&nbsp;</option>
+                        <option value="1445">GAOUA Adam &nbsp;&nbsp;</option>
+                        <option value="1366">GARBARINO Emilie &nbsp;&nbsp;</option>
+                        <option value="854" selected="selected">GARCIA Vanessa &nbsp;&nbsp;</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label small" for="con_num595947">Référent sur livrable :</label>
+                    <select class="form-select" id="con_num_livrable595947" name="con_num_livrable595947"
+                        onchange="xajax_update_champ('client_prestation','con_num_livrable',595947,this.value,'con_num_liv595947')">
+                        <option value="">Pas de conseiller&nbsp;&nbsp;</option>
+                        <option value="1089">ABOUTRAD Sophie &nbsp;&nbsp;</option>
+                        <option value="1268">ANDRE Nathalie &nbsp;&nbsp;</option>
+                        <option value="1179">ANGELES Julien &nbsp;&nbsp;</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="card mb-3">
+            <div class="card-body">
+                <h3 class="card-title">Autorisations</h3>
+                <ul class="list-group list-group-flush small text-lowercase">
+                    <li class="list-group-item">
+                        <i class="fa fa-check me-2" style="color: green"></i>
+                        AUTORISATION DROIT A L’IMAGE
+                    </li>
+                    <li class="list-group-item"><i class="fa fa-check me-2" style="color: green"></i>Autorisation
+                        RGPD
+                        dans le cadre d’une prestation
+                        animée par INGENERIA Projet
+                    </li>
+                    <li class="list-group-item"><i class="fa fa-check me-2" style="color: green"></i>CONTRAT
+                        D’ENGAGEMENT
+                        DANS LA PRESTATION ACTIVE PROJET
+                    </li>
+                    <li class="list-group-item">
+                        <i class="fa fa-check me-2" style="color:green"></i>REGLEMENT Ingénéria Projet
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="col-lg-4">
+
+        <div class="card mt-3 mb-3">
+            <div class="card-body">
+                <h3 class="card-title">Status</h3>
+
+                <div class="small mt-3 mb-3">
+                    <i class="fa fa-check me-2"></i>
+                    S'est présenté et a démarré la prestation
+                </div>
+
+
+                <textarea class="form-control" id="note_595947" rows="3"
+                    placeholder="Ajouter une note pour ANDRE NATHALIE "
+                    onchange="xajax_update_champ('client_prestation','clp_note',595947,this.value,this.id)"></textarea>
+
+
+            </div>
+        </div>
+
+        <div class="card mb-3">
+            <div class="card-body">
+                <h3 class="card-title">Actions</h3>
+                <div class="d-grid gap-2 mt-3">
+                    <span class="btn btn-sm btn-success" onclick="xajax_affiche_pdf('fiche_identite',595947)">
+                        <i class="fa fa-print me-2 float-end"></i>Imprimer la fiche
+                    </span>
+
+                    <span class="btn btn-sm btn-success" onclick="xajax_affiche_pdf('identifiant_ap2',595947)">
+                        <i class="fa fa-print me-2  float-end"></i>Imprimer les identifiants
+                    </span>
+
+                    <span class="btn btn-sm btn-success" onclick="xajax_affiche_pdf('contrat_projet',595947)">
+                        <i class="fa fa-print me-2 float-end"></i>Imprimer le contrat
+                    </span>
+
+                    <span class="btn btn-sm btn-success" onclick="xajax_affiche_demande_contrat(595947)">
+                        <i class="fa fa-paper-plane me-2 float-end"></i>Envoyer les contrats (liens)
+                    </span>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<div id="ap2" class="row">
+    <h2>Ap2</h2>
+</div>

@@ -11,7 +11,7 @@
                 </a>
             </li>
             <li>
-                <a href="#home">
+                <a href="index.php" class="no-ajax">
                     <img src="img/logo-small-70px.png" alt="logo">
                     <span class="d-none d-md-inline-block">Job Génération</span>
                 </a>
@@ -21,9 +21,9 @@
 
         <ul class="nav navbar-right">
             <li>
-                <form class="d-flex p-2" role="search" data-bs-toggle="modal" data-bs-target="#searchModal">
+                <form class="d-flex p-2" role="search" data-bs-toggle="modal" data-bs-target="#searchBenModal">
                     <input class="form-control me-2 d-none d-sm-block" type="search"
-                        placeholder="Rechercher dans le menu" aria-label="Search">
+                        placeholder="Rechercher un bénéficiaire" aria-label="Search">
                     <span class="input-group-text border-0 bg-transparent" id="search-addon">
                         <i class="fas fa-search"></i>
                     </span>

@@ -1,5 +1,5 @@
 <!-- Mainly scripts -->
-<script src="js/jquery-3.6.3.min.js"></script>
+
 <script src="js/bootstrap.min.js"></script>
 <!-- <script src="js/plugins/metisMenu/metisMenu.min.js"></script> -->
 <!-- <script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script> -->

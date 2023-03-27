@@ -22,15 +22,20 @@
 
         event.preventDefault();
         const attrAriaExpanded = $(this).attr('aria-expanded');
-
-        menuExpanded();
         
         // For some browsers, `attr` is undefined; for others,
         // `attr` is false.  Check for both.
 
+        if(typeof attrAriaExpanded === 'undefined') {
+            return;
+        }
+
         if(typeof attrAriaExpanded !== 'undefined' && attrAriaExpanded == 'true') {
             return;
         }
+
+        menuExpanded();
+       
     
         $('.nav-item').removeClass('active');
         $(this).closest('.nav-item').addClass('active');

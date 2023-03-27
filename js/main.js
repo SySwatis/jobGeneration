@@ -21,5 +21,33 @@
     });
 
 
+    // Ajax content
+
+
+    function xajax_affiche_info (id) {
+
+        alert(id);
+
+    }
+
+
+
+$('a').on('click',function(event){
+
+    if($(this).attr('href')==='#' || $(this).hasClass('no-ajax')) {
+        return;
+    } else {
+        event.preventDefault();
+        ajaxUrl = $(this).attr('href');
+        new ajaxInner(ajaxUrl);
+    }
+
+    return;
+  
+});
+
+
+
+
 
 })(jQuery);
