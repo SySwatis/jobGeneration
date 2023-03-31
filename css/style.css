@@ -10355,7 +10355,7 @@ code {
 .ibox-content {
   background-color: #ffffff;
   color: inherit;
-  padding: 15px 20px 20px 20px;
+  padding: 20px;
   border-color: #e7eaec;
   border-image: none;
   border-style: solid;
@@ -15262,7 +15262,7 @@ textarea.form-control {
   color: #eb9e00;
 }
 .ibox-content {
-  border-radius: 0.5rem;
+  border-radius: 0.75rem;
 }
 .ibox-content .fa {
   position: relative;
@@ -15309,8 +15309,8 @@ textarea.form-control {
   border: none;
 }
 .ibox .ibox-title {
-  border-top-left-radius: 0.5rem;
-  border-top-right-radius: 0.5rem;
+  border-top-left-radius: 0.75rem;
+  border-top-right-radius: 0.75rem;
 }
 .ibox .ibox-title + .ibox-content {
   border-top-left-radius: 0;

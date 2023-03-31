@@ -1,8 +1,12 @@
 <!-- Mainly scripts -->
-
+<script src="js/plugins/popper/popper.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
-<!-- <script src="js/plugins/metisMenu/metisMenu.min.js"></script> -->
-<!-- <script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script> -->
+<script>
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+    return new bootstrap.Tooltip(tooltipTriggerEl)
+})
+</script>
 
 <!-- Custom and plugin javascript -->
 <script src="js/inspinia.js"></script>

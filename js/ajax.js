@@ -1,4 +1,4 @@
-function ajaxInner(ajaxUrl) {
+function ajaxInner(ajaxUrl,innerEl) {
 
   $.ajax({
     //L'URL de la requête
@@ -14,7 +14,7 @@ function ajaxInner(ajaxUrl) {
     /*On peut par exemple convertir cette réponse en chaine JSON et insérer
      * cette chaine dans un div id="res"*/
     .done(function (response) {
-      $("#content").html(response);
+      $(innerEl).html(response);
     })
 
     //Ce code sera exécuté en cas d'échec - L'erreur est passée à fail()
@@ -31,6 +31,12 @@ function ajaxInner(ajaxUrl) {
     });
 }
 
+// ajax modal
+
+
+
+// xajax
+
 function xajax_affiche_info() {
     ajaxInner('fiche-beneficiaire');
     $('#listBenModal').modal('hide');
@@ -38,4 +44,7 @@ function xajax_affiche_info() {
     $('.modal-backdrop').remove();
 }
 
-ajaxInner('fiche-beneficiaire');
+// demo
+
+// ajaxInner('fiche-beneficiaire','#content'); 
+

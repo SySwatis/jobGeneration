@@ -1,12 +1,12 @@
 (function ($) {
 
     // Menu active
-    const currentLocation = window.location.toString();
-    const currentPage = currentLocation.split('/').reverse();
+    let currentLocation = window.location.toString();
+    let currentPage = currentLocation.split('/').reverse();
     $('a.nav-link[href$="'+currentPage[0]+'"]').closest('.nav-item').addClass('active');
 
     // Menu subMenu
-    const menuExpanded = function () {
+    let menuExpanded = function () {
         $('a.nav-link').each(function(){
             // For some browsers, `attr` is undefined; for others,
             // `attr` is false.  Check for both.
@@ -21,7 +21,7 @@
     $('a.nav-link').on('click',function(event){
 
         event.preventDefault();
-        const attrAriaExpanded = $(this).attr('aria-expanded');
+        let attrAriaExpanded = $(this).attr('aria-expanded');
         
         // For some browsers, `attr` is undefined; for others,
         // `attr` is false.  Check for both.

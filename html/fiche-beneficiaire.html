@@ -30,7 +30,7 @@
 <div id="information" class="section">
     <div class="ibox">
         <div class="ibox-title">
-            <h2>Information</h2>
+            <h2><i class="fa fa-user-pen me-2"></i>Information</h2>
         </div>
         <div class="ibox-content">
             <div class="row">
@@ -178,7 +178,7 @@
 
     <div class="ibox">
         <div class="ibox-title">
-            <h2>Ap2</h2>
+            <h2><i class="fa fa-folder-open ms-2"></i>Ap2</h2>
         </div>
         <div class="ibox-content">
 
@@ -373,10 +373,10 @@
 <div id="profil" class="section">
     <div class="ibox">
         <div class="ibox-title">
-            <h2>Profil</h2>
+            <h2><i class="fa fa-user me-2"></i>Profil</h2>
         </div>
         <div class="ibox-content">
-            <div class="row mt-2">
+            <div class="row">
 
                 <div class="col-lg-4">
                     <div class="card mb-3">
@@ -419,8 +419,21 @@
                             Profil
                         </div>
                         <div class="card-body">
-                            <b>Code ROME</b><br><br>
-                            <b>Département</b><br><br>
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Code ROME</th>
+                                        <th scope="col">Département</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">E1205</th>
+                                        <td>13000</td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
                         </div>
                     </div>
                 </div>
@@ -455,10 +468,12 @@
                         <div class="card-header">DIVERS</div>
                         <div class="card-body">
                             <div class="form-check">
-                                <input class="form-check-input" type="checkbox" name="profil_competence" id="profil_competence"
+                                <input class="form-check-input" type="checkbox" name="profil_competence"
+                                    id="profil_competence"
                                     onchange="xajax_update_bool('client_prestation','clp_num','595947','clp_profil_competence',this.checked)">
 
-                                <label for="profil_competence" class="form-label">Cochez si le profil compétences est actualisé </label>
+                                <label for="profil_competence" class="form-label">Cochez si le profil compétences est
+                                    actualisé </label>
                             </div>
                             <div class="form-check">
                                 <input class="form-check-input" type="checkbox" name="carte_visite" id="carte_visite"
@@ -481,7 +496,7 @@
 <div id="rendez-vous" class="section">
     <div class="ibox">
         <div class="ibox-title">
-            <h2>Rendez-vous</h2>
+            <h2><i class="fa fa-calendar me-2"></i>Rendez-vous</h2>
         </div>
         <div class="ibox-content">
             <div class="row mt-2">
@@ -500,101 +515,102 @@
 
                 <div class="col-lg-12">
                     <input type="hidden" id="date_temp" name="date_temp" value="">
-                    <div class="" style="display: block; margin-left: 0px; opacity: 1;">
+                    <div>
                         <div class="large-12 columns centered">
-                            
+
                             <div class="card mb-3">
                                 <div class="card-header">
                                     Accueil
                                 </div>
-
-
                                 <div class="card-body">
-                                    <div class="large-12 columns text-center table-header">Rendez-vous mi-parcours entre
-                                        le
-                                        10/03/2023 et le 23/03/2023
+
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item"><i class="fa fa-user me-2"></i>
+                                            Le 17/02/2023 de 14:00 à 15:00 Individuel
+                                        </li>
+                                        <li class="list-group-item">
+                                            <i class="fa fa-check me-2"></i>S'est présenté et a démarré la prestation
+                                        </li>
+                                    </ul>
+
+                                    <div class="form-group" id="commentaire_1762938" style="display:block">
+                                        <textarea class="form-control" id="com1_1762938"
+                                            placeholder="Commentaire obligatoire"
+                                            onchange="xajax_update_champ('prise_rendez_vous','prv_date_update','1762938','27/03/2023',this.id);xajax_update_champ('prise_rendez_vous','prv_commentaire','1762938',this.value,this.id);;"></textarea>
                                     </div>
 
-                                </div>
-                                <div class="row" style="display: block; margin-left: 0px; opacity: 1;">
-                                    <div class="large-1 columns text-left"> <i class="fa fa-user me-2"></i> </div>
-                                    <div class="large-5 columns text-left">
-                                        Le 16/03/2023 de 14:30 à 15:30 Individuel
-                                    </div>
-                                    <div class="large-5 columns">
-                                        <div class="row">
-                                            <div class="medium-12 columns">
-                                                S'est présenté
-                                            </div>
-                                        </div>
-                                        <div class="row">
-                                            <div class="medium-12 columns" id="precision">
-
-                                            </div>
-                                        </div>
-                                        <div class="row" id="commentaire_1762938" style="display:none">
-                                            <div class="medium-12 columns">
-                                                <textarea id="com1_1762938" placeholder="Commentaire obligatoire"
-                                                    onchange="xajax_update_champ('prise_rendez_vous','prv_date_update','1762938','27/03/2023',this.id);xajax_update_champ('prise_rendez_vous','prv_commentaire','1762938',this.value,this.id);;"></textarea>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="row" style="display: block; margin-left: 0px; opacity: 1;">
-                                    <div class="large-12 columns text-center table-header">Rendez-vous fin de prestation
-                                        du
-                                        14/04/2023 au 11/05/2023 </div>
-
-                                </div>
-                                <div class="row" style="display: block; margin-left: 0px; opacity: 1;">
-                                    <div class="large-10 columns text-left">
-
-                                        <strong>Ajouter un rendez-vous de fin de prestation obligatoire</strong>
-
-                                    </div>
-                                    <form id="rech3" name="rech3">
-                                        <input type="hidden" id="con_num" name="con_num" value="854">
-                                        <input type="hidden" id="date" name="date" value="11/05/2023">
-                                    </form>
-                                    <div class="large-2 columns">
-                                        <span class="btn small stable" data-reveal-id="planningGrid"
-                                            onclick="xajax_vide_div('contenu_planning');xajax_affiche_planning(xajax.getFormValues('rech3'),'true','595947','t',7,'','rechercher','t')">
-                                            <img style="" alt="" src="img/edit.png" exify_intitialized="true">
-                                        </span>
-                                    </div>
-                                </div>
-
-                                <div class="row" style="display: block; margin-left: 0px; opacity: 1;">
-                                    <div class="large-12 columns text-center table-header">Rendez-vous autre </div>
-
-                                </div>
-                                <div class="row">
-                                    <div class="large-10 columns text-left">
-
-                                        <strong>Ajouter un rendez-vous autre </strong>
-
-                                    </div>
-
-                                    <form id="rech4" name="rech4">
-                                        <input type="hidden" id="con_num" name="con_num" value="854">
-                                        <input type="hidden" id="date" name="date" value="27/03/2023">
-                                    </form>
-                                    <div class="large-2 columns">
-                                        <span class="btn small stable" data-reveal-id="planningGrid"
-                                            onclick="xajax_vide_div('contenu_planning');xajax_affiche_planning(xajax.getFormValues('rech4'),'true','595947','t',3,'','rech4','t')">
-                                            <img style="" alt="" src="img/edit.png" exify_intitialized="true">
-                                        </span>
-                                    </div>
-
-                                    <hr>
-                                    <div class="large-12 columns text-center table-header">Outils consultés</div>
                                 </div>
                             </div>
                         </div>
+
+                        <div class="card mb-3">
+                            <div class="card-header">
+                                Rendez-vous mi-parcours (entre le 10/03/2023 et le 23/03/2023)
+                            </div>
+                            <div class="card-body">
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item"><i class="fa fa-user me-2"></i>
+                                        Le 16/03/2023 de 14:30 à 15:30 Individuel
+                                    </li>
+                                    <li class="list-group-item">
+                                        <i class="fa fa-check me-2"></i>S'est présenté
+                                    </li>
+                                </ul>
+
+                            </div>
+                        </div>
+
+                        <div class="card mb-3">
+                            <div class="card-header">
+                                Rendez-vous fin de prestation (du 14/04/2023 au 11/05/2023)
+                            </div>
+                            <div class="card-body">
+
+                                <form id="rech3" name="rech3">
+                                    <input type="hidden" id="con_num" name="con_num" value="854">
+                                    <input type="hidden" id="date" name="date" value="11/05/2023">
+                                </form>
+
+                                <span class="btn btn-small btn-success float-end" data-reveal-id="planningGrid"
+                                    onclick="xajax_vide_div('contenu_planning');xajax_affiche_planning(xajax.getFormValues('rech3'),'true','595947','t',7,'','rechercher','t')">
+                                    <i class="fa fa-plus float-end ms-2"></i>Ajouter un rendez-vous "de fin ..."
+                                </span>
+
+                            </div>
+                        </div>
+
+                        <div class="card mb-3">
+                            <div class="card-header">Rendez-vous <b>Autre</b></div>
+                            <div class="card-body">
+                                <form id="rech4" name="rech4">
+                                    <input type="hidden" id="con_num" name="con_num" value="854">
+                                    <input type="hidden" id="date" name="date" value="27/03/2023">
+                                </form>
+                                <span class="btn btn-small btn-success float-end" data-reveal-id="planningGrid"
+                                    onclick="xajax_vide_div('contenu_planning');xajax_affiche_planning(xajax.getFormValues('rech4'),'true','595947','t',3,'','rech4','t')">
+                                    <i class="fa fa-plus float-end ms-2"></i>Ajouter un rendez-vous "Autre"
+                                </span>
+
+                            </div>
+                        </div>
                     </div>
+
+                    <div class="card">
+                        <div class="card-header">Outils consultés</div>
+                        <div class="card-body">
+                            ...
+                        </div>
+                    </div>
+
+
+
+
                 </div>
             </div>
         </div>
     </div>
+</div>
+</div>
+</div>
+</div>
 </div>

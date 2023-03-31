@@ -1,0 +1,573 @@
+<div class="modal-header">
+    <h5 class="modal-title"><i class="fa fa-pencil me-2"></i>Information</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
+  </div>
+  <div class="modal-body">
+    <p>Modal body text goes here.</p>
+    <div class="mb-3 row">
+        <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
+        <div class="col-sm-10">
+          <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="email@example.com">
+        </div>
+      </div>
+      <div class="mb-3 row">
+        <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
+        <div class="col-sm-10">
+          <input type="password" class="form-control" id="inputPassword">
+        </div>
+      </div>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+    <button type="button" class="btn btn-success">Enregistrer</button>
+  </div>
+</div>
+
+
+<!-- <div id="myModal" class="modal" data-reveal="" aria-labelledby="Bénéficiaire - éditer"
+    data-options="close_on_background_click : false" aria-hidden="false" role="dialog"
+    style="display: block; opacity: 1; visibility: visible; top: 149.8px;" tabindex="0">
+
+    <a class="close-reveal-modal" aria-label="Close" onclick="xajax_vide_div('contenu_modal')" id="close"
+        style="display: block;">×</a>
+
+    <div id="contenu_modal">
+
+        <div class="row" style="line-height:0">
+            <div class="large-6 columns text-center">
+                <button class="btn btn-success"
+                    onclick="xajax_valide_formulaire('m',xajax.getFormValues('formulaire'),'client','xajax_affiche_info(595947)');"><img
+                        src="img/edit.png">Enregistrer</button>
+            </div>
+            <form id="formulaire" name="formulaire">
+
+               
+                <div class="row">
+                    <div class="large-12 columns"> <input type="hidden" name="cli_num" id="client_cli_num"
+                            value="531695">
+                        <div class="row" id="client_civ_num">
+                            <div class="large-4 columns text-right ">
+                                <label for="right-label" class="right inline">
+                                    <span class="requis">*</span>
+                                    Civilité </label>
+                            </div>
+                            <div class=" large-6 columns text-left champ  padded-column" id="cla_civ_num"><span
+                                    id="select_civ_num"> <select id="civ_num" name="civ_num" onchange="">
+                                        <option value="3">Mlle &nbsp;&nbsp;</option>
+                                        <option value="2" selected="selected">Mme &nbsp;&nbsp;</option>
+                                        <option value="1">Mr &nbsp;&nbsp;</option>
+                                    </select></span>
+                                <span id="err_civ_num" class="erreur">&nbsp;</span>
+                            </div>
+
+                        </div> <input type="hidden" name="cli_nom" id="client_cli_nom" value="ANDRE NATHALIE"> <input
+                            type="hidden" name="cli_prenom" id="client_cli_prenom" value="">
+                        <div class="row" id="client_cli_droit_au_dif">
+                            <div class="large-4 columns text-right ">
+                                <label for="right-label" class="right inline">
+
+                                    Droit Individuel à la Formation (Cochez si OUI) </label>
+                            </div>
+                            <div class=" large-6 columns text-left champ  padded-column" id="cla_cli_droit_au_dif">
+                                <input type="checkbox" name="cli_droit_au_dif" id="cli_droit_au_dif">
+                                <span id="err_cli_droit_au_dif" class="erreur">&nbsp;</span>
+                            </div>
+
+                        </div> <input type="hidden" name="cli_dif_nb_heure" id="client_cli_dif_nb_heure" value="">
+                        <div class="row" id="client_cli_droit_au_cif">
+                            <div class="large-4 columns text-right ">
+                                <label for="right-label" class="right inline">
+
+                                    Congé Individuel de Formation CDD (Cochez si OUI) </label>
+                            </div>
+                            <div class=" large-6 columns text-left champ  padded-column" id="cla_cli_droit_au_cif">
+                                <input type="checkbox" name="cli_droit_au_cif" id="cli_droit_au_cif">
+                                <span id="err_cli_droit_au_cif" class="erreur">&nbsp;</span>
+                            </div>
+
+                        </div> <input type="hidden" name="cli_cif_date_butoire" id="client_cli_cif_date_butoire"
+                            value=""> <input type="hidden" name="cli_ni_cif_ni_dif" id="client_cli_ni_cif_ni_dif"
+                            value=""> <input type="hidden" name="cli_deld" id="client_cli_deld" value=""> <input
+                            type="hidden" name="cli_indemnise" id="client_cli_indemnise" value=""> <input type="hidden"
+                            name="cli_cinquante_ans" id="client_cli_cinquante_ans" value=""> <input type="hidden"
+                            name="cli_minima_social" id="client_cli_minima_social" value="">
+                        <div class="row" id="client_cli_jeune">
+                            <div class="large-4 columns text-right ">
+                                <label for="right-label" class="right inline">
+
+                                    Jeunes </label>
+                            </div>
+                            <div class=" large-6 columns text-left champ  padded-column" id="cla_cli_jeune"> <input
+                                    type="checkbox" name="cli_jeune" id="cli_jeune">
+                                <span id="err_cli_jeune" class="erreur">&nbsp;</span>
+                            </div>
+
+                        </div>
+                        <div class="row" id="client_cli_travailleur_h">
+                            <div class="large-4 columns text-right ">
+                                <label for="right-label" class="right inline">
+
+                                    Travailleurs handicapés </label>
+                            </div>
+                            <div class=" large-6 columns text-left champ  padded-column" id="cla_cli_travailleur_h">
+                                <input type="checkbox" name="cli_travailleur_h" id="cli_travailleur_h">
+                                <span id="err_cli_travailleur_h" class="erreur">&nbsp;</span>
+                            </div>
+
+                        </div>
+                        <div class="row" id="client_cli_femme_reprise">
+                            <div class="large-4 columns text-right ">
+                                <label for="right-label" class="right inline">
+
+                                    Femmes en reprise d'emploi </label>
+                            </div>
+                            <div class=" large-6 columns text-left champ  padded-column" id="cla_cli_femme_reprise">
+                                <input type="checkbox" name="cli_femme_reprise" id="cli_femme_reprise">
+                                <span id="err_cli_femme_reprise" class="erreur">&nbsp;</span>
+                            </div>
+
+                        </div>
+                        <div class="row" id="client_cli_cadre">
+                            <div class="large-4 columns text-right ">
+                                <label for="right-label" class="right inline">
+
+                                    Cadres </label>
+                            </div>
+                            <div class=" large-6 columns text-left champ  padded-column" id="cla_cli_cadre"> <input
+                                    type="checkbox" name="cli_cadre" id="cli_cadre">
+                                <span id="err_cli_cadre" class="erreur">&nbsp;</span>
+                            </div>
+
+                        </div>
+                        <div class="row" id="client_cli_mobilite_internationale">
+                            <div class="large-4 columns text-right ">
+                                <label for="right-label" class="right inline">
+
+                                    Demandeurs d'emploi ayant un projet de mobilité internationale </label>
+                            </div>
+                            <div class=" large-6 columns text-left champ  padded-column"
+                                id="cla_cli_mobilite_internationale"> <input type="checkbox"
+                                    name="cli_mobilite_internationale" id="cli_mobilite_internationale">
+                                <span id="err_cli_mobilite_internationale" class="erreur">&nbsp;</span>
+                            </div>
+
+                        </div>
+                        <div class="row" id="client_cli_illettre">
+                            <div class="large-4 columns text-right ">
+                                <label for="right-label" class="right inline">
+
+                                    Public ne maîtrisant pas la langue française et/ou illettré </label>
+                            </div>
+                            <div class=" large-6 columns text-left champ  padded-column" id="cla_cli_illettre"> <input
+                                    type="checkbox" name="cli_illettre" id="cli_illettre">
+                                <span id="err_cli_illettre" class="erreur">&nbsp;</span>
+                            </div>
+
+                        </div>
+                        <div class="row" id="client_cli_adr">
+                            <div class="large-4 columns text-right ">
+                                <label for="right-label" class="right inline">
+
+                                    Adresse </label>
+                            </div>
+                            <div class=" large-6 columns text-left champ  padded-column" id="cla_cli_adr">
+                                <input type="text" maxlength="100" size="18" name="cli_adr" id="cli_adr"
+                                    value="10 rue droite">
+
+                                <span id="err_cli_adr" class="erreur">&nbsp;</span>
+                            </div>
+
+                        </div>
+                        <div class="row" id="client_cli_comp_adr">
+                            <div class="large-4 columns text-right ">
+                                <label for="right-label" class="right inline">
+
+                                    Complément d'adresse </label>
+                            </div>
+                            <div class=" large-6 columns text-left champ  padded-column" id="cla_cli_comp_adr">
+                                <input type="text" maxlength="100" size="18" name="cli_comp_adr" id="cli_comp_adr"
+                                    value="">
+
+                                <span id="err_cli_comp_adr" class="erreur">&nbsp;</span>
+                            </div>
+
+                        </div>
+                        <div class="row" id="client_cli_cp">
+                            <div class="large-4 columns text-right ">
+                                <label for="right-label" class="right inline">
+                                    <span class="requis">*</span>
+                                    Code postal </label>
+                            </div>
+                            <div class=" large-6 columns text-left champ  padded-column" id="cla_cli_cp">
+                                <input type="text" maxlength="100" size="18" name="cli_cp" id="cli_cp"
+                                    onchange="xajax_getvillecp(this.value,'cla_cli_ville','cli_ville');" value="83510">
+
+                                <span id="err_cli_cp" class="erreur">&nbsp;</span>
+                            </div>
+
+                        </div>
+                        <div class="row" id="client_cli_ville">
+                            <div class="large-4 columns text-right ">
+                                <label for="right-label" class="right inline">
+
+                                    Ville </label>
+                            </div>
+                            <div class=" large-6 columns text-left champ  padded-column" id="cla_cli_ville">
+                                <input type="text" maxlength="100" size="18" name="cli_ville" id="cli_ville"
+                                    value="LORGUES">
+
+                                <span id="err_cli_ville" class="erreur">&nbsp;</span>
+                            </div>
+
+                        </div>
+                        <div class="row" id="client_cli_tel">
+                            <div class="large-4 columns text-right ">
+                                <label for="right-label" class="right inline">
+
+                                    Téléphone </label>
+                            </div>
+                            <div class=" large-6 columns text-left champ  padded-column" id="cla_cli_tel">
+                                <input type="text" maxlength="100" size="18" name="cli_tel" id="cli_tel"
+                                    onchange="validetel" value="06 59 42 22 76">
+
+                                <span id="err_cli_tel" class="erreur">&nbsp;</span>
+                            </div>
+
+                        </div>
+                        <div class="row" id="client_cli_tel2">
+                            <div class="large-4 columns text-right ">
+                                <label for="right-label" class="right inline">
+
+                                    Téléphone portable </label>
+                            </div>
+                            <div class=" large-6 columns text-left champ  padded-column" id="cla_cli_tel2">
+                                <input type="text" maxlength="100" size="18" name="cli_tel2" id="cli_tel2"
+                                    onchange="validetel" value="">
+
+                                <span id="err_cli_tel2" class="erreur">&nbsp;</span>
+                            </div>
+
+                        </div>
+                        <div class="row" id="client_cli_ddn">
+                            <div class="large-4 columns text-right ">
+                                <label for="right-label" class="right inline">
+                                    <span class="requis">*</span>
+                                    Date de naissance </label>
+                            </div>
+                            <div class=" large-6 columns text-left champ  padded-column" id="cla_cli_ddn">
+                                <input type="text" maxlength="100" size="18" name="cli_ddn" id="cli_ddn"
+                                    onchange="xajax_valide_date(this.value,'cli_ddn');" value="14/10/1983">
+
+                                <span id="err_cli_ddn" class="erreur">&nbsp;</span>
+                            </div>
+
+                        </div>
+                        <div class="row" id="client_cli_mail">
+                            <div class="large-4 columns text-right ">
+                                <label for="right-label" class="right inline">
+
+                                    Email </label>
+                            </div>
+                            <div class=" large-6 columns text-left champ  padded-column" id="cla_cli_mail">
+                                <input type="text" maxlength="100" size="18" name="cli_mail" id="cli_mail"
+                                    value="NATHALIEANDRE1683@GMAIL.COM">
+
+                                <span id="err_cli_mail" class="erreur">&nbsp;</span>
+                            </div>
+
+                        </div>
+                        <div class="row" id="client_sit_num">
+                            <div class="large-4 columns text-right ">
+                                <label for="right-label" class="right inline">
+
+                                    Situation </label>
+                            </div>
+                            <div class=" large-6 columns text-left champ  padded-column" id="cla_sit_num"><span
+                                    id="select_sit_num"> <select id="sit_num" name="sit_num" onchange="">
+                                        <option value="">...&nbsp;&nbsp;</option>
+                                        <option value="4">Concubinage &nbsp;&nbsp;</option>
+                                        <option value="2">Célibataire &nbsp;&nbsp;</option>
+                                        <option value="7">Divorcé(e) &nbsp;&nbsp;</option>
+                                        <option value="1" selected="selected">Marié(e) &nbsp;&nbsp;</option>
+                                        <option value="6">N.D. &nbsp;&nbsp;</option>
+                                        <option value="8">PACS &nbsp;&nbsp;</option>
+                                        <option value="5">Séparé(s) &nbsp;&nbsp;</option>
+                                        <option value="3">Veuf &nbsp;&nbsp;</option>
+                                    </select></span>
+                                <span id="err_sit_num" class="erreur">&nbsp;</span>
+                            </div>
+
+                        </div>
+                        <div class="row" id="client_cli_nb_enfant">
+                            <div class="large-4 columns text-right ">
+                                <label for="right-label" class="right inline">
+
+                                    Nb enfants à charge </label>
+                            </div>
+                            <div class=" large-6 columns text-left champ  padded-column" id="cla_cli_nb_enfant">
+                                <input type="text" maxlength="100" size="18" name="cli_nb_enfant" id="cli_nb_enfant"
+                                    value="2">
+
+                                <span id="err_cli_nb_enfant" class="erreur">&nbsp;</span>
+                            </div>
+
+                        </div>
+                        <div class="row" id="client_cli_permis_b">
+                            <div class="large-4 columns text-right ">
+                                <label for="right-label" class="right inline">
+
+                                    Permis B </label>
+                            </div>
+                            <div class=" large-6 columns text-left champ  padded-column" id="cla_cli_permis_b"> <input
+                                    type="checkbox" name="cli_permis_b" id="cli_permis_b" checked="checked">
+                                <span id="err_cli_permis_b" class="erreur">&nbsp;</span>
+                            </div>
+
+                        </div>
+                        <div class="row" id="client_cli_vehicule">
+                            <div class="large-4 columns text-right ">
+                                <label for="right-label" class="right inline">
+
+                                    Véhicule </label>
+                            </div>
+                            <div class=" large-6 columns text-left champ  padded-column" id="cla_cli_vehicule"> <input
+                                    type="checkbox" name="cli_vehicule" id="cli_vehicule" checked="checked">
+                                <span id="err_cli_vehicule" class="erreur">&nbsp;</span>
+                            </div>
+
+                        </div>
+                        <div class="row" id="client_cli_date_insc_anpe">
+                            <div class="large-4 columns text-right ">
+                                <label for="right-label" class="right inline">
+                                    <span class="requis">*</span>
+                                    Date d'inscription Pôle emploi </label>
+                            </div>
+                            <div class=" large-6 columns text-left champ  padded-column" id="cla_cli_date_insc_anpe">
+                                <input type="text" maxlength="100" size="18" name="cli_date_insc_anpe"
+                                    id="cli_date_insc_anpe"
+                                    onchange="xajax_valide_date(this.value,'cli_date_insc_anpe');" value="01/10/2023">
+
+                                <span id="err_cli_date_insc_anpe" class="erreur">&nbsp;</span>
+                            </div>
+
+                        </div>
+                        <div class="row" id="client_mot_num">
+                            <div class="large-4 columns text-right ">
+                                <label for="right-label" class="right inline">
+
+                                    Motif d'inscription Pôle Emploi </label>
+                            </div>
+                            <div class=" large-6 columns text-left champ  padded-column" id="cla_mot_num"><span
+                                    id="select_mot_num"> <select id="mot_num" name="mot_num" onchange="">
+                                        <option value="">...&nbsp;&nbsp;</option>
+                                        <option value="8">Autre &nbsp;&nbsp;</option>
+                                        <option value="12">Cessation d’activité indépendante &nbsp;&nbsp;</option>
+                                        <option value="1">Congé parental &nbsp;&nbsp;</option>
+                                        <option value="3">Démission &nbsp;&nbsp;</option>
+                                        <option value="2">Déménagement &nbsp;&nbsp;</option>
+                                        <option value="10">Fin d'étude &nbsp;&nbsp;</option>
+                                        <option value="7" selected="selected">Fin de CDD &nbsp;&nbsp;</option>
+                                        <option value="4">Licenciement &nbsp;&nbsp;</option>
+                                        <option value="11">Licenciement pour inaptitude &nbsp;&nbsp;</option>
+                                        <option value="5">Licenciement économique &nbsp;&nbsp;</option>
+                                        <option value="9">Rupture conventionnelle &nbsp;&nbsp;</option>
+                                        <option value="6">Suivi conjoint &nbsp;&nbsp;</option>
+                                    </select></span>
+                                <span id="err_mot_num" class="erreur">&nbsp;</span>
+                            </div>
+
+                        </div>
+                        <div class="row" id="client_dip_num">
+                            <div class="large-4 columns text-right ">
+                                <label for="right-label" class="right inline">
+
+                                    Niveau d'étude </label>
+                            </div>
+                            <div class=" large-6 columns text-left champ  padded-column" id="cla_dip_num"><span
+                                    id="select_dip_num"> <select id="dip_num" name="dip_num" onchange="">
+                                        <option value="">...&nbsp;&nbsp;</option>
+                                        <option value="5">2nd ou 1ère achevée &nbsp;&nbsp;</option>
+                                        <option value="3">4ème effectuée &nbsp;&nbsp;</option>
+                                        <option value="1">Aucune formation &nbsp;&nbsp;</option>
+                                        <option value="7">BAC ou diplôme niveau 4 &nbsp;&nbsp;</option>
+                                        <option value="8">BAC+2 ou diplôme niveau 3 &nbsp;&nbsp;</option>
+                                        <option value="9">BAC+3, BAC+4 ou diplôme niveau 2 &nbsp;&nbsp;</option>
+                                        <option value="10">BAC+5 et plus ou diplôme niveau 1 &nbsp;&nbsp;</option>
+                                        <option value="4">BEPC ou 3ème achevée &nbsp;&nbsp;</option>
+                                        <option value="6" selected="selected">CAP, BEP ou diplôme niveau 5 &nbsp;&nbsp;
+                                        </option>
+                                        <option value="2">Primaire à 4ème &nbsp;&nbsp;</option>
+                                    </select></span>
+                                <span id="err_dip_num" class="erreur">&nbsp;</span>
+                            </div>
+
+                        </div>
+                        <div class="row" id="client_cli_diplome_intitule">
+                            <div class="large-4 columns text-right ">
+                                <label for="right-label" class="right inline">
+
+                                    Intitulé diplôme </label>
+                            </div>
+                            <div class=" large-6 columns text-left champ  padded-column" id="cla_cli_diplome_intitule">
+                                <input type="text" maxlength="100" size="18" name="cli_diplome_intitule"
+                                    id="cli_diplome_intitule" value="BEP Secretariat">
+
+                                <span id="err_cli_diplome_intitule" class="erreur">&nbsp;</span>
+                            </div>
+
+                        </div>
+                        <div class="row" id="client_cap_num">
+                            <div class="large-4 columns text-right ">
+                                <label for="right-label" class="right inline">
+
+                                    Catégorie professionnelle </label>
+                            </div>
+                            <div class=" large-6 columns text-left champ  padded-column" id="cla_cap_num"><span
+                                    id="select_cap_num"> <select id="cap_num" name="cap_num" onchange="">
+                                        <option value="">...&nbsp;&nbsp;</option>
+                                        <option value="1">Cadre et agent de maîtrise &nbsp;&nbsp;</option>
+                                        <option value="3" selected="selected">Employé &nbsp;&nbsp;</option>
+                                        <option value="5">Manoeuvre &nbsp;&nbsp;</option>
+                                        <option value="4">Ouvrier &nbsp;&nbsp;</option>
+                                        <option value="2">Technicien &nbsp;&nbsp;</option>
+                                    </select></span>
+                                <span id="err_cap_num" class="erreur">&nbsp;</span>
+                            </div>
+
+                        </div>
+                        <div class="row" id="client_dea_num">
+                            <div class="large-4 columns text-right ">
+                                <label for="right-label" class="right inline">
+
+                                    Ancienneté dans le dernier emploi </label>
+                            </div>
+                            <div class=" large-6 columns text-left champ  padded-column" id="cla_dea_num"><span
+                                    id="select_dea_num"> <select id="dea_num" name="dea_num" onchange="">
+                                        <option value="">...&nbsp;&nbsp;</option>
+                                        <option value="3">De 2 ans à 10 ans &nbsp;&nbsp;</option>
+                                        <option value="2">De 6 mois à 2 ans &nbsp;&nbsp;</option>
+                                        <option value="1">Moins de 6 mois &nbsp;&nbsp;</option>
+                                        <option value="4">Plus de 10 ans &nbsp;&nbsp;</option>
+                                    </select></span>
+                                <span id="err_dea_num" class="erreur">&nbsp;</span>
+                            </div>
+
+                        </div>
+                        <div class="row" id="client_cli_commentaires">
+                            <div class="large-4 columns text-right ">
+                                <label for="right-label" class="right inline">
+
+                                </label>
+                            </div>
+                            <div class=" large-6 columns text-left champ  padded-column" id="cla_cli_commentaires">
+                                <input type="text" maxlength="100" size="18" name="cli_commentaires"
+                                    id="cli_commentaires" value="">
+
+                                <span id="err_cli_commentaires" class="erreur">&nbsp;</span>
+                            </div>
+
+                        </div> <input type="hidden" name="cli_id" id="client_cli_id" value="5412224C"> <input
+                            type="hidden" name="cli_mdp_clair" id="client_cli_mdp_clair" value="ECzXmiyu"> <input
+                            type="hidden" name="cli_mail_accueil" id="client_cli_mail_accueil" value="">
+                        <div class="row" id="client_dui_num">
+                            <div class="large-4 columns text-right ">
+                                <label for="right-label" class="right inline">
+
+                                    Durée inactivité professionnelle </label>
+                            </div>
+                            <div class=" large-6 columns text-left champ  padded-column" id="cla_dui_num"><span
+                                    id="select_dui_num"> <select id="dui_num" name="dui_num" onchange="">
+                                        <option value="">...&nbsp;&nbsp;</option>
+                                        <option value="3">12-23 mois &nbsp;&nbsp;</option>
+                                        <option value="4">2 ans et plus &nbsp;&nbsp;</option>
+                                        <option value="2">6-11 mois &nbsp;&nbsp;</option>
+                                        <option value="1" selected="selected">Moins de 6 mois &nbsp;&nbsp;</option>
+                                        <option value="5">n'a jamais travaillé &nbsp;&nbsp;</option>
+                                    </select></span>
+                                <span id="err_dui_num" class="erreur">&nbsp;</span>
+                            </div>
+
+                        </div> <input type="hidden" name="cli_note" id="client_cli_note" value="">
+                        <div class="row" id="client_nap_num">
+                            <div class="large-4 columns text-right ">
+                                <label for="right-label" class="right inline">
+
+                                    Nature de l'allocation perçue </label>
+                            </div>
+                            <div class=" large-6 columns text-left champ  padded-column" id="cla_nap_num"><span
+                                    id="select_nap_num"> <select id="nap_num" name="nap_num" onchange="">
+                                        <option value="">...&nbsp;&nbsp;</option>
+                                        <option value="5">AAH &nbsp;&nbsp;</option>
+                                        <option value="3">AI API &nbsp;&nbsp;</option>
+                                        <option value="1" selected="selected">ARE &nbsp;&nbsp;</option>
+                                        <option value="2">ASS &nbsp;&nbsp;</option>
+                                        <option value="6">Aucune &nbsp;&nbsp;</option>
+                                        <option value="7">Autres &nbsp;&nbsp;</option>
+                                        <option value="4">RSA &nbsp;&nbsp;</option>
+                                    </select></span>
+                                <span id="err_nap_num" class="erreur">&nbsp;</span>
+                            </div>
+
+                        </div>
+                        <div class="row" id="client_bal_num">
+                            <div class="large-4 columns text-right ">
+                                <label for="right-label" class="right inline">
+
+                                    Bénéficiaire de l'article L512-13 </label>
+                            </div>
+                            <div class=" large-6 columns text-left champ  padded-column" id="cla_bal_num"><span
+                                    id="select_bal_num"> <select id="bal_num" name="bal_num" onchange="">
+                                        <option value="">...&nbsp;&nbsp;</option>
+                                        <option value="4">Allocation Adulte Handicapé &nbsp;&nbsp;</option>
+                                        <option value="6">Autres cas &nbsp;&nbsp;</option>
+                                        <option value="1">CDAPH - COTOREP &nbsp;&nbsp;</option>
+                                        <option value="5">En voie de reconnaissance &nbsp;&nbsp;</option>
+                                        <option value="3">Pension d'invalidité &nbsp;&nbsp;</option>
+                                        <option value="2">Rente pour accident du travail ou maladie professionnelle
+                                            &nbsp;&nbsp;</option>
+                                    </select></span>
+                                <span id="err_bal_num" class="erreur">&nbsp;</span>
+                            </div>
+
+                        </div> <input type="hidden" name="cli_lieu_naissance" id="client_cli_lieu_naissance" value="">
+                        <div class="row" id="client_han_num">
+                            <div class="large-4 columns text-right ">
+                                <label for="right-label" class="right inline">
+
+                                    Nature du handicap </label>
+                            </div>
+                            <div class=" large-6 columns text-left champ  padded-column" id="cla_han_num"><span
+                                    id="select_han_num"> <select id="han_num" name="han_num" onchange="">
+                                        <option value="">...&nbsp;&nbsp;</option>
+                                        <option value="3">Déficience auditive &nbsp;&nbsp;</option>
+                                        <option value="5">Déficience intellectuelle &nbsp;&nbsp;</option>
+                                        <option value="1">Déficience physique &nbsp;&nbsp;</option>
+                                        <option value="2">Déficience visuelle &nbsp;&nbsp;</option>
+                                        <option value="6">Handicap psychique &nbsp;&nbsp;</option>
+                                        <option value="4">Maladie invalidante &nbsp;&nbsp;</option>
+                                        <option value="9">Non connu &nbsp;&nbsp;</option>
+                                        <option value="8">Polyhandicap &nbsp;&nbsp;</option>
+                                        <option value="7">Traumatisme crânien &nbsp;&nbsp;</option>
+                                    </select></span>
+                                <span id="err_han_num" class="erreur">&nbsp;</span>
+                            </div>
+
+                        </div> <input type="hidden" name="cli_mdp" id="client_cli_mdp"
+                            value="0088d1d137faad65847df965888f1757">
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <div class="row">
+            <div class="large-6 columns text-center">
+                <button class="btn btn-success"
+                    onclick="xajax_valide_formulaire('m',xajax.getFormValues('formulaire'),'client','xajax_affiche_info(595947)');">
+                    <img
+                        src="img/edit.png">Enregistrer</button>
+            </div>
+        </div>
+
+    </div>
+    <div id="contenu_modal2"></div>
+</div> -->

@@ -18,12 +18,10 @@
             </li>
         </ul>
 
-
         <ul class="nav navbar-right">
             <li>
-                <form class="d-flex p-2" role="search" data-bs-toggle="modal" data-bs-target="#searchBenModal">
-                    <input class="form-control me-2 d-none d-sm-block" type="search"
-                        placeholder="Rechercher un bénéficiaire" aria-label="Search">
+                <form class="d-flex p-2" role="search" data-bs-toggle="modal" data-bs-target="#myModal" data-bs-filepath="beneficiaires/search" data-bs-msize="modal-lg">
+                    <input class="form-control me-2 d-none d-sm-block" type="search" placeholder="Rechercher un bénéficiaire" aria-label="Search">
                     <span class="input-group-text border-0 bg-transparent" id="search-addon">
                         <i class="fas fa-search"></i>
                     </span>
