@@ -31,19 +31,6 @@ function ajaxInner(ajaxUrl,innerEl) {
     });
 }
 
-// ajax modal
-
-
-
-// xajax
-
-function xajax_affiche_info() {
-    ajaxInner('fiche-beneficiaire');
-    $('#listBenModal').modal('hide');
-    $('body').removeClass('modal-open');
-    $('.modal-backdrop').remove();
-}
-
 // demo
 
 // ajaxInner('fiche-beneficiaire','#content'); 

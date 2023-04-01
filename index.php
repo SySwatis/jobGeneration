@@ -16,7 +16,9 @@
         <?php include_once('inc/footer.php') ?>
     </div>
 </div>
-<?php include_once('inc/modal/mymodal.html') ?>
+
 <?php include_once('inc/bottom-script.php') ?>
+
+<?php include_once('inc/mymodal.php') ?>
 </body>
 </html>
