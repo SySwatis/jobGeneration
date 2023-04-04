@@ -33,7 +33,7 @@
                 </a>
             </li>
             <li>
-                <a href="login.php" class="text-body">
+                <a href="login.php" class="text-body no-ajax">
                     <i class="fa fa-sign-out m-0"></i><span class="px-2 d-none d-md-inline-block">Se déconnecter</span>
                 </a>
             </li>

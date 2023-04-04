@@ -28,15 +28,14 @@
               
             </form>
             <a href="#a-propos" class="text-muted"><small>A propos</small></a>
-             | <a href="#contact" data-bs-toggle="modal" data-bs-target="#contactModal" class="text-muted"><small>Un problème de connexion ?</small></a>
+             | <a href="#contact" data-bs-toggle="modal" data-bs-target="#myModal" data-bs-filepath="login/contact" class="text-muted"><small>Un problème de connexion ?</small></a>
         </div>
     </div>
 </div>
 
-<?php include_once('inc/modal/contact.php') ?>
 <?php include_once('inc/bottom-script.php') ?>
 
-
+<?php include_once('inc/mymodal.php') ?>
 </body>
 
 </html>
