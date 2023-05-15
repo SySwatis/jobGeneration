@@ -1,5 +1,15 @@
 (function ($) {
 
+    // Menu active
+    // let currentLocation = window.location.toString();
+    // let currentPage = currentLocation.split('/').reverse();
+    // $('a.nav-link[href$="'+currentPage[0]+'"]').closest('.nav-item').addClass('active');
+
+    // $('a.nav-link').on('click',function(){
+    //     $('a.nav-link').not($(this)).closest('.nav-item').removeClass('active');
+    //     $(this).closest('.nav-item').addClass('active');
+    // })
+
     // Menu subMenu
     let menuExpanded = function () {
         $('a.nav-link').each(function(){
@@ -31,6 +41,8 @@
             $(this).next('.nav').addClass('hidden');
             return;
         }
+
+        menuExpanded();
        
         $('.nav-item').removeClass('active');
         $(this).closest('.nav-item').addClass('active');
