@@ -13,3 +13,4 @@
 <script src="js/plugins/pace/pace.min.js"></script>
 <script src="js/menu.js"></script>
 <script src="js/main.js?<?php echo date('Y-m-d H:i:s');?>"></script>
+<script src="js/ajax.js?<?php echo date('Y-m-d H:i:s');?>"></script>

@@ -1,4 +1,4 @@
-(function ($) {
+//(function ($) {
 
   // functions
 
@@ -26,6 +26,7 @@
   });
 
   // showMyModal('modal/beneficiaires/edit','#myModalContent');
+  
 
   // Ajax content by link
 
@@ -39,6 +40,12 @@
     }
     return;
   });
+
+
   
 
-})(jQuery);
+//})(jQuery);
+
+let globalJs = function() {
+  return console.log('callbac ajax js')
+ }

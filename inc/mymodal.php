@@ -10,19 +10,24 @@
 
 	// Modal (global)
 
-	let setModalSize = function (mSize, fullScreen) {
+	let setModalSize = function (mSize) {
+		
 		let myModalEl = document.getElementById("myModal");
 		let myModalElInner = document.getElementById('modalDialog');
-		console.log(myModalElInner);
+		
+		// Remove sizes
 		myModalEl.classList.remove("modal-sm");
 		myModalEl.classList.remove("modal-lg");
 		myModalEl.classList.remove("modal-xl");
 		myModalElInner.classList.remove('modal-fullscreen');
 
-		if (fullScreen)
+		if (mSize=="modal-fullscreen") {
 			myModalElInner.classList.add('modal-fullscreen');
-		myModalElInner.classList.add(mSize);
-		myModalEl.classList.add(mSize);
+		} else {
+			myModalEl.classList.add(mSize);
+		}
+
+		
 	};
 
 	let buttonModal = document.getElementById("myModal");
@@ -33,13 +38,10 @@
 		// // Extract info from data-bs-* attributes
 		let filePath = button.getAttribute("data-bs-filepath");
 		let mSizeAttr = button.getAttribute("data-bs-msize");
-		let fullScreenAttr = button.getAttribute("data-bs-fullscreen");
 
-
-		let fullScreen = typeof fullScreenAttr !== "undefined" && fullScreenAttr == 1 ? true : false;
 		let mSize = typeof mSizeAttr !== "undefined" && mSizeAttr !== "" ? mSizeAttr : '';
 
-		setModalSize(mSize, fullScreen);
+		setModalSize(mSize);
 
 		let ajaxUrl = "modal/" + filePath;
 		new ajaxInner(ajaxUrl, "#myModalContent");
@@ -70,16 +72,10 @@
 
 	// Ajax function by onClick
 
-	function xajax_affiche_info() {
-
-		// Open if not
-		let myModal = new bootstrap.Modal(document.getElementById('myModal'), {
-			//keyboard: false
-		})
-		myModal.show();
-		setModalSize('modal-lg', 1);
-		let ajaxUrl = "modal/beneficiaires/edit";
-		new ajaxInner(ajaxUrl, "#myModalContent");
+	function xajax_affiche_info(id) {
+		$('#myModal').modal('hide');
+		let ajaxUrl = "fiche-beneficiaire";
+		new ajaxInner(ajaxUrl, "#content");
 
 	}
 

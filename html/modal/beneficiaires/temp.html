@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formualair</title>
+</head>
+<body>
+    <div id="form">
+        <div class="row">
+            <div class="large-10 columns">
+                <div class="row">
+                    <div class="large-12 columns small-margin">
+                        <div class="row collapse">
+                            <div class="large-6 columns">
+                                <label class="text-right">Structure</label>
+                            </div>
+                            <div class="large-6 columns left">
+                                <select id="str_num" name="str_num"
+                                    onchange="xajax_changeStr(xajax.getFormValues('rechercher'))">
+                                    <option value="81">AAAGIS Conseil &nbsp;&nbsp;</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="large-12 columns">
+                        <div class="row collapse">
+                            <div class="large-6 columns text-right">
+                                Conseiller
+                            </div>
+                            <div class="large-6 columns left">
+                                <span id="span_con">
+                                    <select id="con_num" name="con_num" onchange="">
+                                        <option value="">...&nbsp;&nbsp;</option>
+                                        <option style="color:#A8A8A8" value="334">BILOTTO Marie AAAGIS Conseil &nbsp;&nbsp;
+                                        </option>
+                                        <option value="1282">CALVET Jacqueline AAAGIS Conseil &nbsp;&nbsp;</option>
+                                        
+                                    </select>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="large-12 columns">
+                        <div class="row collapse">
+                            <div class="large-6 columns text-right">
+                                Marché
+                            </div>
+                            <div class="large-6 columns left">
+                                <span id="span_con">
+                                    <select id="lot_num" name="lot_num" onchange="">
+                                        <option value="">...&nbsp;&nbsp;</option>
+                                    </select>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="large-12 columns">
+                        <div class="row collapse">
+                            <div class="large-6 columns">
+                                <label class="text-right">Type de rendez-vous</label>
+                            </div>
+                            <div class="large-6 columns left">
+                                <select id="trv_num" name="trv_num" onchange="">
+                                    <option value="">...&nbsp;&nbsp;</option>
+                                </select>
+                            </div>
+                        </div>
+    
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="large-12 columns">
+                        <div class="row collapse">
+                            <div class="large-6 columns">
+                                <label class="text-right"> Bureau </label>
+                            </div>
+                            <div class="large-6 columns left">
+                                <select id="bur_num" multiple="multiple" size="8" style="height:100px;" name="bur_num[]"
+                                    onchange="">
+                                    <option value="">...&nbsp;&nbsp;</option>                                    
+                                </select>
+                            </div>
+    
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row" id="bottomForm">
+            <div class="large-12 columns small-margin text-left">
+                <input type="checkbox" id="anim" name="anim"> Voir les animations Groupe des autres conseillers
+            </div>
+    
+        </div>
+        <div class="row" id="bottomForm2">
+            <div class="large-12 columns text-center">
+                <input type="button" class="button" data-reveal-id="newCal" value="Recherche "
+                    onclick="xajax_getClick(this.value);xajax_affiche_new_agenda(xajax.getFormValues('rechercher'),'f')">
+                <span class="button-search"></span>
+                <!--&nbsp; <span data-tooltip aria-haspopup="true" data-options="show_on:large" title="Les autres boutons de recherches sont désactivés car obsolètes. " ><img  width="34"  src='img/question.png'/></span>-->
+            </div>
+        </div>
+    </div>  
+</body>
+</html>
+

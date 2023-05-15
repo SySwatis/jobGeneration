@@ -6,6 +6,7 @@ let ajaxInner = function (ajaxUrl, innerEl) {
   })
     .done(function (response) {
       $(innerEl).html(response);
+      new globalJs();
     })
 
     .fail(function (error) {
@@ -18,15 +19,8 @@ let ajaxInner = function (ajaxUrl, innerEl) {
     });
 };
 
-// Set content by link
 
-$("a").on("click", function (event) {
-  if ($(this).attr("href") === "#" || $(this).hasClass("no-ajax")) {
-    return;
-  } else {
-    event.preventDefault();
-    ajaxUrl = $(this).attr("href");
-    new ajaxInner(ajaxUrl, "#content");
-  }
-  return;
-});
+// Set content default 
+
+new ajaxInner('fiche-beneficiaire', "#content");
+
