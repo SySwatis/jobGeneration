@@ -12,11 +12,11 @@
             <span class="fa arrow"></span>
         </a>
         <ul class="nav flex-column nav-second-level">
-            <li class="nav-item"><a href="agenda" class="nav-link">Agenda Ateliers</a></li>
-            <li class="nav-item"><a href="gestion-session" class="nav-link">Gestion Session</a></li>
-            <li class="nav-item"><a href="vsi-prog" class="nav-link">VSI Prog.</a></li>
-            <li class="nav-item"><a href="vsi-modules-a-la-carte" class="nav-link">VSI modules à la carte</a></li>
-            <li class="nav-item"><a href="acl-atelier-obligatoire" class="nav-link">ACL Atelier obligatoire</a></li>
+            <li class="nav-item"><a href="page/agenda" class="nav-link">Agenda Ateliers</a></li>
+            <li class="nav-item"><a href="page/gestion-session" class="nav-link">Gestion Session</a></li>
+            <li class="nav-item"><a href="page/vsi-prog" class="nav-link">VSI Prog.</a></li>
+            <li class="nav-item"><a href="page/vsi-modules-a-la-carte" class="nav-link">VSI modules à la carte</a></li>
+            <li class="nav-item"><a href="page/acl-atelier-obligatoire" class="nav-link">ACL Atelier obligatoire</a></li>
         </ul>
     </li>
     <li class="nav-item">

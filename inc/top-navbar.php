@@ -11,7 +11,7 @@
                 </a>
             </li>
             <li>
-                <a href="index.php" class="no-ajax">
+                <a href="page/dashboard" class="logo-link">
                     <img src="img/logo-small-70px.png" alt="logo">
                     <span class="d-none d-md-inline-block">Job Génération</span>
                 </a>

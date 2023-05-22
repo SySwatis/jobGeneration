@@ -70,14 +70,26 @@
 		myModal.show();
 	};
 
-	// Ajax function by onClick
+	// xAjax function by onClick
 
-	function xajax_affiche_info(id) {
+	function xajax_affiche_info(e) {
 		$('#myModal').modal('hide');
-		let ajaxUrl = "fiche-beneficiaire";
+		let ajaxUrl = "page/fiche-beneficiaire";
 		new ajaxInner(ajaxUrl, "#content");
-
 	}
+
+	function xajax_affiche_form(e) {
+		filePath = 'beneficiaires/edit';
+		$('#myModal').modal('hide');
+		let ajaxUrl = "modal/" + filePath;
+		new ajaxInner(ajaxUrl, "#myModalContent");
+		$('#myModal').modal('show');
+	}
+
+	function xajax_valide_formulaire(e) {
+		$('#myModal').modal('hide');
+	}
+
 
 
 </script>

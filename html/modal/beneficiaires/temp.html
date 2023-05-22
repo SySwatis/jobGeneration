@@ -1,114 +1,353 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formualair</title>
-</head>
-<body>
-    <div id="form">
-        <div class="row">
-            <div class="large-10 columns">
-                <div class="row">
-                    <div class="large-12 columns small-margin">
-                        <div class="row collapse">
-                            <div class="large-6 columns">
-                                <label class="text-right">Structure</label>
-                            </div>
-                            <div class="large-6 columns left">
-                                <select id="str_num" name="str_num"
-                                    onchange="xajax_changeStr(xajax.getFormValues('rechercher'))">
-                                    <option value="81">AAAGIS Conseil &nbsp;&nbsp;</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="large-12 columns">
-                        <div class="row collapse">
-                            <div class="large-6 columns text-right">
-                                Conseiller
-                            </div>
-                            <div class="large-6 columns left">
-                                <span id="span_con">
-                                    <select id="con_num" name="con_num" onchange="">
-                                        <option value="">...&nbsp;&nbsp;</option>
-                                        <option style="color:#A8A8A8" value="334">BILOTTO Marie AAAGIS Conseil &nbsp;&nbsp;
-                                        </option>
-                                        <option value="1282">CALVET Jacqueline AAAGIS Conseil &nbsp;&nbsp;</option>
-                                        
-                                    </select>
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="large-12 columns">
-                        <div class="row collapse">
-                            <div class="large-6 columns text-right">
-                                Marché
-                            </div>
-                            <div class="large-6 columns left">
-                                <span id="span_con">
-                                    <select id="lot_num" name="lot_num" onchange="">
-                                        <option value="">...&nbsp;&nbsp;</option>
-                                    </select>
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="large-12 columns">
-                        <div class="row collapse">
-                            <div class="large-6 columns">
-                                <label class="text-right">Type de rendez-vous</label>
-                            </div>
-                            <div class="large-6 columns left">
-                                <select id="trv_num" name="trv_num" onchange="">
-                                    <option value="">...&nbsp;&nbsp;</option>
-                                </select>
-                            </div>
-                        </div>
-    
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="large-12 columns">
-                        <div class="row collapse">
-                            <div class="large-6 columns">
-                                <label class="text-right"> Bureau </label>
-                            </div>
-                            <div class="large-6 columns left">
-                                <select id="bur_num" multiple="multiple" size="8" style="height:100px;" name="bur_num[]"
-                                    onchange="">
-                                    <option value="">...&nbsp;&nbsp;</option>                                    
-                                </select>
-                            </div>
-    
-                        </div>
-                    </div>
-                </div>
-            </div>
+<div id="contenu_modal"> <br>
+    <br>
+    <div class="row" style="line-height:0">
+        <div class="col-lg-6 text-center">
+            <button class="button small job radius"
+                onclick="xajax_valide_formulaire('m',xajax.getFormValues('formulaire'),'client','xajax_affiche_info(639941)');"><img
+                    src="img/edit.png">Enregistrer</button>
         </div>
-        <div class="row" id="bottomForm">
-            <div class="large-12 columns small-margin text-left">
-                <input type="checkbox" id="anim" name="anim"> Voir les animations Groupe des autres conseillers
-            </div>
-    
-        </div>
-        <div class="row" id="bottomForm2">
-            <div class="large-12 columns text-center">
-                <input type="button" class="button" data-reveal-id="newCal" value="Recherche "
-                    onclick="xajax_getClick(this.value);xajax_affiche_new_agenda(xajax.getFormValues('rechercher'),'f')">
-                <span class="button-search"></span>
-                <!--&nbsp; <span data-tooltip aria-haspopup="true" data-options="show_on:large" title="Les autres boutons de recherches sont désactivés car obsolètes. " ><img  width="34"  src='img/question.png'/></span>-->
-            </div>
-        </div>
-    </div>  
-</body>
-</html>
+        <form id="formulaire" name="formulaire">
 
+            <!--<input type="hidden" name="action" id="s_action" value="m" />
+			<input type="hidden" name="table" value="client" />-->
+            <div class="row">
+                <div class="col-lg-12">
+                    <input type="hidden" name="cli_num" id="client_cli_num" value="570163">
+                    <div class="row" id="client_civ_num">
+                        <div class="col-lg-4 text-right ">
+                            <label for="right-label" class="right inline">
+                                <span class="requis">*</span>
+                                Civilité </label>
+                        </div>
+                        <div class=" col-lg-6 text-left" id="cla_civ_num"><span
+                                id="select_civ_num"> <select id="civ_num" name="civ_num" onchange="">
+                                    <option value="3">Mlle &nbsp;&nbsp;</option>
+                                    <option value="2">Mme &nbsp;&nbsp;</option>
+                                    <option value="1">Mr &nbsp;&nbsp;</option>
+                                </select></span>
+                            <span id="err_civ_num" class="erreur">&nbsp;</span>
+                        </div>
+
+                    </div> <input type="hidden" name="cli_nom" id="client_cli_nom" value="ABAD">
+                    <div class="row" id="client_cli_new_age">
+                        <div class="col-lg-4 text-right ">
+                            <label for="right-label" class="right inline">
+
+                                Age </label>
+                        </div>
+                        <div class=" col-lg-6 text-left" id="cla_cli_new_age">
+                            <input type="text" maxlength="100" size="18" name="cli_new_age" id="cli_new_age" value="">
+
+                            <span id="err_cli_new_age" class="erreur">&nbsp;</span>
+                        </div>
+
+                    </div>
+                    <div class="row" id="client_cli_tel">
+                        <div class="col-lg-4 text-right ">
+                            <label for="right-label" class="right inline">
+
+                                Téléphone </label>
+                        </div>
+                        <div class=" col-lg-6 text-left" id="cla_cli_tel">
+                            <input type="text" maxlength="100" size="18" name="cli_tel" id="cli_tel"
+                                onchange="validetel" value="06 25 16 28 97">
+
+                            <span id="err_cli_tel" class="erreur">&nbsp;</span>
+                        </div>
+
+                    </div> <input type="hidden" name="cli_prenom" id="client_cli_prenom" value="Alim">
+                    <div class="row" id="client_cli_tel2">
+                        <div class="col-lg-4 text-right ">
+                            <label for="right-label" class="right inline">
+
+                                Téléphone portable </label>
+                        </div>
+                        <div class=" col-lg-6 text-left" id="cla_cli_tel2">
+                            <input type="text" maxlength="100" size="18" name="cli_tel2" id="cli_tel2"
+                                onchange="validetel" value="">
+
+                            <span id="err_cli_tel2" class="erreur">&nbsp;</span>
+                        </div>
+
+                    </div>
+                    <div class="row" id="client_cli_mail">
+                        <div class="col-lg-4 text-right ">
+                            <label for="right-label" class="right inline">
+
+                                Email </label>
+                        </div>
+                        <div class=" col-lg-6 text-left" id="cla_cli_mail">
+                            <input type="text" maxlength="100" size="18" name="cli_mail" id="cli_mail" value="">
+
+                            <span id="err_cli_mail" class="erreur">&nbsp;</span>
+                        </div>
+
+                    </div> <input type="hidden" name="cli_dif_nb_heure" id="client_cli_dif_nb_heure" value="">
+                    <div class="row" id="client_alp_num">
+                        <div class="col-lg-4 text-right ">
+                            <label for="right-label" class="right inline">
+
+                                Type d'allocation </label>
+                        </div>
+                        <div class=" col-lg-6 text-left" id="cla_alp_num"><span
+                                id="select_alp_num"> <select id="alp_num" name="alp_num" onchange="">
+                                    <option value="">...&nbsp;&nbsp;</option>
+                                    <option value="4">AAH &nbsp;&nbsp;</option>
+                                    <option value="1">ARE &nbsp;&nbsp;</option>
+                                    <option value="2">ASS &nbsp;&nbsp;</option>
+                                    <option value="5">CEJ &nbsp;&nbsp;</option>
+                                    <option value="3">RSA &nbsp;&nbsp;</option>
+                                    <option value="6">Sans Rémunération &nbsp;&nbsp;</option>
+                                </select></span>
+                            <span id="err_alp_num" class="erreur">&nbsp;</span>
+                        </div>
+
+                    </div> 
+                    <input type="hidden" name="cli_cif_date_butoire" id="client_cli_cif_date_butoire" value="">
+                    <input type="hidden" name="cli_ni_cif_ni_dif" id="client_cli_ni_cif_ni_dif" value=""> <input
+                        type="hidden" name="cli_deld" id="client_cli_deld" value=""> <input type="hidden"
+                        name="cli_cinquante_ans" id="client_cli_cinquante_ans" value=""> <input type="hidden"
+                        name="cli_indemnise" id="client_cli_indemnise" value=""> <input type="hidden"
+                        name="cli_minima_social" id="client_cli_minima_social" value="">
+                    <div class="row" id="client_cli_jeune">
+                        <div class="col-lg-4 text-right ">
+                            <label for="right-label" class="right inline">
+
+                                Jeunes </label>
+                        </div>
+                        <div class=" col-lg-6 text-left" id="cla_cli_jeune"> <input
+                                type="checkbox" name="cli_jeune" id="cli_jeune">
+                            <span id="err_cli_jeune" class="erreur">&nbsp;</span>
+                        </div>
+
+                    </div>
+                    <div class="row" id="client_cli_travailleur_h">
+                        <div class="col-lg-4 text-right ">
+                            <label for="right-label" class="right inline">
+
+                                Personne en Situation de Handicap </label>
+                        </div>
+                        <div class=" col-lg-6 text-left" id="cla_cli_travailleur_h"> <input
+                                type="checkbox" name="cli_travailleur_h" id="cli_travailleur_h">
+                            <span id="err_cli_travailleur_h" class="erreur">&nbsp;</span>
+                        </div>
+
+                    </div> <input type="hidden" name="cli_femme_reprise" id="client_cli_femme_reprise" value="">
+                    <div class="row" id="client_cli_cadre">
+                        <div class="col-lg-4 text-right ">
+                            <label for="right-label" class="right inline">
+
+                                Cadres </label>
+                        </div>
+                        <div class=" col-lg-6 text-left" id="cla_cli_cadre"> <input
+                                type="checkbox" name="cli_cadre" id="cli_cadre">
+                            <span id="err_cli_cadre" class="erreur">&nbsp;</span>
+                        </div>
+
+                    </div> <input type="hidden" name="cli_mobilite_internationale"
+                        id="client_cli_mobilite_internationale" value="">
+                    <div class="row" id="client_cli_senior">
+                        <div class="col-lg-4 text-right ">
+                            <label for="right-label" class="right inline">
+
+                                Sénior </label>
+                        </div>
+                        <div class=" col-lg-6 text-left" id="cla_cli_senior"> <input
+                                type="checkbox" name="cli_senior" id="cli_senior">
+                            <span id="err_cli_senior" class="erreur">&nbsp;</span>
+                        </div>
+
+                    </div>
+                    <div class="row" id="client_cli_plus_12">
+                        <div class="col-lg-4 text-right ">
+                            <label for="right-label" class="right inline">
+
+                                Ancienneté d'inscription &gt; 12 mois </label>
+                        </div>
+                        <div class=" col-lg-6 text-left" id="cla_cli_plus_12"> <input
+                                type="checkbox" name="cli_plus_12" id="cli_plus_12">
+                            <span id="err_cli_plus_12" class="erreur">&nbsp;</span>
+                        </div>
+
+                    </div>
+                    <div class="row" id="client_cli_plus_24">
+                        <div class="col-lg-4 text-right ">
+                            <label for="right-label" class="right inline">
+
+                                Ancienneté d'inscription &gt; 24 mois </label>
+                        </div>
+                        <div class=" col-lg-6 text-left" id="cla_cli_plus_24"> <input
+                                type="checkbox" name="cli_plus_24" id="cli_plus_24">
+                            <span id="err_cli_plus_24" class="erreur">&nbsp;</span>
+                        </div>
+
+                    </div>
+                    <div class="row" id="client_fsd_num">
+                        <div class="col-lg-4 text-right ">
+                            <label for="right-label" class="right inline">
+
+                                Niveau d'étude </label>
+                        </div>
+                        <div class=" col-lg-6 text-left" id="cla_fsd_num"><span
+                                id="select_fsd_num"> <select id="fsd_num" name="fsd_num" onchange="">
+                                    <option value="">...&nbsp;&nbsp;</option>
+                                    <option value="1">AFS - AUC. FORM. SCOL &nbsp;&nbsp;</option>
+                                    <option value="4">C12 - 2E/1E ACHEVEE &nbsp;&nbsp;</option>
+                                    <option value="5">C3A - BEPC/3E ACHEVEE &nbsp;&nbsp;</option>
+                                    <option value="2">CFG - CFG OU CEP &nbsp;&nbsp;</option>
+                                    <option value="3">CP4 - </option>
+                                    <option value="6">NV1 - BAC+5 ET + &nbsp;&nbsp;</option>
+                                    <option value="7">NV2 - BAC+3 ET +4 &nbsp;&nbsp;</option>
+                                    <option value="8">NV3 - BAC+2 &nbsp;&nbsp;</option>
+                                    <option value="9">NV4 - BAC &nbsp;&nbsp;</option>
+                                    <option value="10">NV5 - CAP, BEP &nbsp;&nbsp;</option>
+                                </select></span>
+                            <span id="err_fsd_num" class="erreur">&nbsp;</span>
+                        </div>
+
+                    </div> <input type="hidden" name="cli_illettre" id="client_cli_illettre" value="">
+                    <div class="row" id="client_cli_adr">
+                        <div class="col-lg-4 text-right ">
+                            <label for="right-label" class="right inline">
+
+                                Adresse </label>
+                        </div>
+                        <div class=" col-lg-6 text-left" id="cla_cli_adr">
+                            <input type="text" maxlength="100" size="18" name="cli_adr" id="cli_adr" value="">
+
+                            <span id="err_cli_adr" class="erreur">&nbsp;</span>
+                        </div>
+
+                    </div>
+                    <div class="row" id="client_cli_comp_adr">
+                        <div class="col-lg-4 text-right ">
+                            <label for="right-label" class="right inline">
+
+                                Complément d'adresse </label>
+                        </div>
+                        <div class=" col-lg-6 text-left" id="cla_cli_comp_adr">
+                            <input type="text" maxlength="100" size="18" name="cli_comp_adr" id="cli_comp_adr" value="">
+
+                            <span id="err_cli_comp_adr" class="erreur">&nbsp;</span>
+                        </div>
+
+                    </div>
+                    <div class="row" id="client_cli_cp">
+                        <div class="col-lg-4 text-right ">
+                            <label for="right-label" class="right inline">
+                                <span class="requis">*</span>
+                                Code postal </label>
+                        </div>
+                        <div class=" col-lg-6 text-left" id="cla_cli_cp">
+                            <input type="text" maxlength="100" size="18" name="cli_cp" id="cli_cp"
+                                onchange="xajax_getvillecp(this.value,'cla_cli_ville','cli_ville');" value="">
+
+                            <span id="err_cli_cp" class="erreur">&nbsp;</span>
+                        </div>
+
+                    </div>
+                    <div class="row" id="client_cli_ville">
+                        <div class="col-lg-4 text-right ">
+                            <label for="right-label" class="right inline">
+
+                                Ville </label>
+                        </div>
+                        <div class=" col-lg-6 text-left" id="cla_cli_ville">
+                            <input type="text" maxlength="100" size="18" name="cli_ville" id="cli_ville" value="">
+
+                            <span id="err_cli_ville" class="erreur">&nbsp;</span>
+                        </div>
+
+                    </div>
+                    <div class="row" id="client_cli_qvp">
+                        <div class="col-lg-4 text-right ">
+                            <label for="right-label" class="right inline">
+
+                                Résident QPV </label>
+                        </div>
+                        <div class=" col-lg-6 text-left" id="cla_cli_qvp"> <input
+                                type="checkbox" name="cli_qvp" id="cli_qvp">
+                            <span id="err_cli_qvp" class="erreur">&nbsp;</span>
+                        </div>
+
+                    </div>
+                    <div class="row" id="client_cli_zrr">
+                        <div class="col-lg-4 text-right ">
+                            <label for="right-label" class="right inline">
+
+                                Résident ZRR </label>
+                        </div>
+                        <div class=" col-lg-6 text-left" id="cla_cli_zrr"> <input
+                                type="checkbox" name="cli_zrr" id="cli_zrr">
+                            <span id="err_cli_zrr" class="erreur">&nbsp;</span>
+                        </div>
+
+                    </div> <input type="hidden" name="cli_ddn" id="client_cli_ddn" value="">
+                    <div class="row" id="client_cli_zone_blanche">
+                        <div class="col-lg-4 text-right ">
+                            <label for="right-label" class="right inline">
+
+                                Zone blanche </label>
+                        </div>
+                        <div class=" col-lg-6 text-left" id="cla_cli_zone_blanche"> <input
+                                type="checkbox" name="cli_zone_blanche" id="cli_zone_blanche">
+                            <span id="err_cli_zone_blanche" class="erreur">&nbsp;</span>
+                        </div>
+
+                    </div> <input type="hidden" name="sit_num" id="client_sit_num" value=""> <input type="hidden"
+                        name="cli_nb_enfant" id="client_cli_nb_enfant" value="">
+                    <div class="row" id="client_cli_permis_b">
+                        <div class="col-lg-4 text-right ">
+                            <label for="right-label" class="right inline">
+
+                                Permis B </label>
+                        </div>
+                        <div class=" col-lg-6 text-left" id="cla_cli_permis_b"> <input
+                                type="checkbox" name="cli_permis_b" id="cli_permis_b">
+                            <span id="err_cli_permis_b" class="erreur">&nbsp;</span>
+                        </div>
+
+                    </div>
+                    <div class="row" id="client_cli_vehicule">
+                        <div class="col-lg-4 text-right ">
+                            <label for="right-label" class="right inline">
+
+                                Véhicule </label>
+                        </div>
+                        <div class=" col-lg-6 text-left" id="cla_cli_vehicule"> <input
+                                type="checkbox" name="cli_vehicule" id="cli_vehicule">
+                            <span id="err_cli_vehicule" class="erreur">&nbsp;</span>
+                        </div>
+
+                    </div> <input type="hidden" name="cli_date_insc_anpe" id="client_cli_date_insc_anpe" value="">
+                    <input type="hidden" name="mot_num" id="client_mot_num" value=""> <input type="hidden"
+                        name="dip_num" id="client_dip_num" value=""> <input type="hidden" name="cap_num"
+                        id="client_cap_num" value=""> <input type="hidden" name="dea_num" id="client_dea_num" value="">
+                    <input type="hidden" name="cli_commentaires" id="client_cli_commentaires" value=""> <input
+                        type="hidden" name="cli_droit_au_cif" id="client_cli_droit_au_cif" value=""> <input
+                        type="hidden" name="cli_diplome_intitule" id="client_cli_diplome_intitule" value=""> <input
+                        type="hidden" name="cli_id" id="client_cli_id" value="4544710C"> <input type="hidden"
+                        name="bal_num" id="client_bal_num" value=""> <input type="hidden" name="dui_num"
+                        id="client_dui_num" value=""> <input type="hidden" name="cli_mdp" id="client_cli_mdp"
+                        value="4672ef78aac9f308f1b5c43d5b67402d"> <input type="hidden" name="han_num"
+                        id="client_han_num" value=""> <input type="hidden" name="cli_lieu_naissance"
+                        id="client_cli_lieu_naissance" value=""> <input type="hidden" name="cli_mdp_clair"
+                        id="client_cli_mdp_clair" value="dcy2dhCw"> <input type="hidden" name="cli_note"
+                        id="client_cli_note" value=""> <input type="hidden" name="nap_num" id="client_nap_num" value="">
+                    <input type="hidden" name="cli_mail_accueil" id="client_cli_mail_accueil" value=""> <input
+                        type="hidden" name="fsh_num" id="client_fsh_num" value=""> <input type="hidden"
+                        name="cli_droit_au_dif" id="client_cli_droit_au_dif" value="">
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-6 text-center">
+            <button class="button small job radius"
+                onclick="xajax_valide_formulaire('m',xajax.getFormValues('formulaire'),'client','xajax_affiche_info(639941)');"><img
+                    src="img/edit.png">Enregistrer</button>
+        </div>
+    </div>
+
+</div>

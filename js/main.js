@@ -47,5 +47,31 @@
 //})(jQuery);
 
 let globalJs = function() {
-  return console.log('callbac ajax js')
+
+
+  //document.addEventListener('DOMContentLoaded', function() {
+    var calendarEl = document.getElementById('calendar');
+    if(calendarEl!==null) {
+    var calendar = new FullCalendar.Calendar(calendarEl, {
+      locale: 'fr',
+      themeSystem: 'bootstrap5',
+      buttonIcons: {
+      prev: 'dsb fa fa-chevron-left',
+      next: 'dsb fa fa-chevron-right',
+      prevYear: 'chevrons-left', // double chevron
+      nextYear: 'chevrons-right' // double chevron
+      },
+          initialView: 'dayGridMonth',
+      events: [
+        {
+          title: 'Rendez-vous',
+          start: '2023-05-23' // Exemple de rendez-vous pour demain
+        }
+      ]
+    });
+    calendar.render();
+  }
+ // });
+
+  return console.log('callback ajax js')
  }

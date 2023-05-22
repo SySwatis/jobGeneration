@@ -22,5 +22,5 @@ let ajaxInner = function (ajaxUrl, innerEl) {
 
 // Set content default 
 
-new ajaxInner('fiche-beneficiaire', "#content");
+new ajaxInner('page/dashboard', "#content");
 
