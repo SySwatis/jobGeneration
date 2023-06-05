@@ -1,6 +1,6 @@
 <ul class="nav flex-column">
     <li class="nav-item active">
-        <a href="#" class="nav-link" aria-current="page" aria-expanded="true" href="#">
+        <a href="page/dashboard" class="nav-link" aria-current="page" aria-expanded="true" href="#">
             <i class="fa fa-house"></i>
             <span class="nav-label">Accueil</span>
         </a>
@@ -8,12 +8,13 @@
     <li class="nav-item">
         <a href="#" class="nav-link" aria-current="page" aria-expanded="true" href="#">
             <i class="fa fa-calendar"></i>
-            <span class="nav-label">Agenda</span>
+            <span class="nav-label">Plannigs</span>
             <span class="fa arrow"></span>
         </a>
         <ul class="nav flex-column nav-second-level">
-            <li class="nav-item"><a href="page/agenda" class="nav-link">Agenda Ateliers</a></li>
-            <li class="nav-item"><a href="page/gestion-session" class="nav-link">Gestion Session</a></li>
+            <!-- <li class="nav-item"><a href="page/agenda" class="nav-link">Agenda Ateliers</a></li> -->
+            <li class="nav-item"><a href="#" class="nav-link no-ajax" href="#"  data-bs-toggle="modal" data-bs-target="#myModal" data-bs-filepath="agenda/search" data-bs-msize="modal-lg">Agenda</a></li>
+            <li class="nav-item"><a href="page/gestion-session" class="nav-link">Session VSI</a></li>
             <li class="nav-item"><a href="page/vsi-prog" class="nav-link">VSI Prog.</a></li>
             <li class="nav-item"><a href="page/vsi-modules-a-la-carte" class="nav-link">VSI modules à la carte</a></li>
             <li class="nav-item"><a href="page/acl-atelier-obligatoire" class="nav-link">ACL Atelier obligatoire</a></li>
@@ -26,7 +27,7 @@
             <span class="fa arrow"></span>
         </a>
         <ul class="nav flex-column nav-second-level">
-            <li class="nav-item"><a href="#" class="nav-link no-ajax" href="#"  data-bs-toggle="modal" data-bs-target="#myModal" data-bs-filepath="beneficiaires/search" data-bs-msize="modal-fullscreen">Rechercher</a></li>
+            <li class="nav-item"><a href="#" class="nav-link no-ajax" href="#"  data-bs-toggle="modal" data-bs-target="#myModal" data-bs-filepath="beneficiaires/search" data-bs-msize="modal-lg">Rechercher</a></li>
             <li class="nav-item"><a href="#" class="nav-link">Ajouter</a></li>
         </ul>
     </li>

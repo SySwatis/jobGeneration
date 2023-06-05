@@ -1,0 +1,620 @@
+<div class="modal-header">
+    <h5 class="modal-title"><i class="fa fa-users me-3"></i>Bénéficiaires <i class="fa fa-chevron-right"></i>
+        <b>Nathalie ANDRE</b>
+    </h5>
+    <ul class="ms-3 nav justify-content-center" id="pills-tab" role="tablist">
+        <li class="nav-item ms-1 me-1" role="presentation">
+            <button class="btn active" id="pills-information-tab" data-bs-toggle="pill"
+                data-bs-target="#pills-information" type="button" role="tab" aria-controls="pills-home"
+                aria-selected="true">Information</button>
+        </li>
+        <li class="nav-item ms-1 me-1" role="presentation">
+            <button class="btn" id="pills-ap2-tab" data-bs-toggle="pill" data-bs-target="#pills-ap2"
+                type="button" role="tab" aria-controls="pills-ap2" aria-selected="false">Ap2</button>
+        </li>
+        <li class="nav-item ms-1 me-1" role="presentation">
+            <button class="btn" id="pills-contact-tab" data-bs-toggle="pill"
+                data-bs-target="#pills-profil" type="button" role="tab" aria-controls="pills-profil"
+                aria-selected="false">Profil</button>
+        </li>
+        <li class="nav-item  ms-1 me-1" role="presentation">
+            <button class="btn" id="pills-rdv-tab" data-bs-toggle="pill" data-bs-target="#pills-rdv"
+                type="button" role="tab" aria-controls="pills-rdv"
+                aria-selected="false">Rendez-vous</button>
+        </li>
+    </ul>
+    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
+</div>
+
+<div class="modal-body">
+ 
+
+    <!--  content -->
+    <div class="tab-content" id="pills-tabContent">
+
+        <div class="tab-pane fade show active" id="pills-information" role="tabpanel"
+            aria-labelledby="pills-information-tab" tabindex="0">
+            <div class="ibox">
+                <div class="ibox-title">
+                    <h2><i class="fa fa-database me-2"></i>Information</h2>
+                </div>
+                <div class="ibox-content">
+                    <div class="row">
+                        <div class="col-lg-4">
+
+                            <div class="card mb-3">
+                                <div class="card-body">
+                                    <h3 class="card-title">Données principales</h3>
+                                    <div class="d-grid gap-2 mt-3 mb-3">
+                                        <span class="btn btn-success"
+                                            onclick="xajax_affiche_form('client','m',531695,'contenu_modal','xajax_affiche_info(595947)','','','t')">ANDRE
+                                            NATHALIE<i class="fa fa-pencil ms-2 float-end"></i></span>
+                                    </div>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item">
+                                            <span><i class="fa-solid fa-mobile-screen-btn me-2"></i>06 59 42 22
+                                                76</span>
+                                        </li>
+                                        <li class="list-group-item email text-lowercase">
+                                            <a href="#"><i
+                                                    class="fa fa-envelope me-2"></i>NATHALIEANDRE1683@GMAIL.COM</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="card mb-3">
+                                <div class="card-body">
+                                    <h3 class="card-title">Prestation</h3>
+                                    <ul class="list-group list-group-flush">
+
+                                        <li class="list-group-item"><span>Du 17/02/2023-14:00 au
+                                                11/05/2023</span></li>
+                                        <li class="list-group-item"><span>Modalite : <b>Phys</b></span></li>
+                                        <li class="list-group-item"><span>A : Cannes - Space Camp</span>
+                                        </li>
+                                        <li class="list-group-item"><span>ID : 5412224C</span></li>
+                                        <li class="list-group-item"><span>LC :SPAP2Y3298 jusqu'au 11/05/2023</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="col-lg-4">
+
+                            <div class="card mb-3">
+                                <div class="card-body">
+                                    <h3 class="card-title">Référents</h3>
+                                    <div class="mb-3">
+                                        <label class="form-label small" for="con_num595947">Principal :</label>
+                                        <select class="form-select" id="con_num595947" name="con_num595947"
+                                            onchange="xajax_update_conseiller_accueil(this.value,5868087,595947)">
+                                            <option value="">...&nbsp;&nbsp;</option>
+                                            <option value="1266">GALLE Julie &nbsp;&nbsp;</option>
+                                            <option value="1445">GAOUA Adam &nbsp;&nbsp;</option>
+                                            <option value="1366">GARBARINO Emilie &nbsp;&nbsp;</option>
+                                            <option value="854" selected="selected">GARCIA Vanessa &nbsp;&nbsp;</option>
+                                        </select>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label small" for="con_num595947">Référent sur livrable
+                                            :</label>
+                                        <select class="form-select" id="con_num_livrable595947"
+                                            name="con_num_livrable595947"
+                                            onchange="xajax_update_champ('client_prestation','con_num_livrable',595947,this.value,'con_num_liv595947')">
+                                            <option value="">Pas de conseiller&nbsp;&nbsp;</option>
+                                            <option value="1089">ABOUTRAD Sophie &nbsp;&nbsp;</option>
+                                            <option value="1268">ANDRE Nathalie &nbsp;&nbsp;</option>
+                                            <option value="1179">ANGELES Julien &nbsp;&nbsp;</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card mb-3 text-bg-light">
+                                <div class="card-body">
+                                    <h3 class="card-title">Autorisations</h3>
+                                    <ul class="list-group list-group-flush small text-lowercase">
+                                        <li class="list-group-item">
+                                            <i class="fa fa-check me-2" style="color: green"></i>
+                                            AUTORISATION DROIT A L’IMAGE
+                                        </li>
+                                        <li class="list-group-item">
+                                            <i class="fa fa-check me-2" style="color: green"></i>
+                                            Autorisation RGPD dans le cadre d’une prestation animée par INGENERIA Projet
+                                        </li>
+                                        <li class="list-group-item">
+                                            <i class="fa fa-check me-2" style="color: green"></i>
+                                            CONTRAT D’ENGAGEMENT DANS LA PRESTATION ACTIVE PROJET
+                                        </li>
+                                        <li class="list-group-item">
+                                            <i class="fa fa-check me-2" style="color:green"></i>
+                                            REGLEMENT Ingénéria Projet
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="col-lg-4">
+
+                            <div class="card mb-3">
+                                <div class="card-body">
+                                    <h3 class="card-title">Status</h3>
+                                    <div class="small mt-3 mb-3">
+                                        <i class="fa fa-check me-2"></i>
+                                        S'est présenté et a démarré la prestation
+                                    </div>
+                                    <textarea class="form-control" id="note_595947" rows="3"
+                                        placeholder="Ajouter une note pour ANDRE NATHALIE "
+                                        onchange="xajax_update_champ('client_prestation','clp_note',595947,this.value,this.id)"></textarea>
+                                </div>
+                            </div>
+
+                            <div class="card mb-3">
+                                <div class="card-body">
+                                    <h3 class="card-title">Actions</h3>
+                                    <div class="d-grid gap-2 mt-3">
+                                        <span class="btn btn-sm btn-success"
+                                            onclick="xajax_affiche_pdf('fiche_identite',595947)">
+                                            <i class="fa fa-print me-2 float-end"></i>Imprimer la fiche
+                                        </span>
+                                        <span class="btn btn-sm btn-success"
+                                            onclick="xajax_affiche_pdf('identifiant_ap2',595947)">
+                                            <i class="fa fa-print me-2  float-end"></i>Imprimer les identifiants
+                                        </span>
+                                        <span class="btn btn-sm btn-success"
+                                            onclick="xajax_affiche_pdf('contrat_projet',595947)">
+                                            <i class="fa fa-print me-2 float-end"></i>Imprimer le contrat
+                                        </span>
+                                        <span class="btn btn-sm btn-success"
+                                            onclick="xajax_affiche_demande_contrat(595947)">
+                                            <i class="fa fa-paper-plane me-2 float-end"></i>Envoyer les contrats (liens)
+                                        </span>
+
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="pills-ap2" role="tabpanel" aria-labelledby="pills-ap2-tab" tabindex="0">
+
+            <div class="ibox">
+                <div class="ibox-title">
+                    <h2><i class="fa fa-folder-open ms-2"></i>Ap2</h2>
+                </div>
+                <div class="ibox-content">
+
+                    <div class="card mb-3">
+                        <div class="card-header">
+                            Documents
+                        </div>
+                        <div class="card-body row">
+                            <div class="col-lg-4">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <h3 class="card-title">Emargement</h3>
+                                        <span class="btn" onclick="xajax_affiche_pdf('emargement_ap2','595947')">
+                                            <i class="fa fa-file-pdf float-start me-2"></i>
+                                            <span class="small">Voir le PDF</span>
+                                        </span>
+                                        <span class="btn btn-success float-end"
+                                            onclick="xajax_document_par_cle('emargement',595947,'scan_emar')">
+                                            <i class="fa fa-link float-end ms-2"></i>Attacher le scan
+                                        </span>
+                                        <span id="scan_emar"></span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4">
+
+                                <div class="card mb-3">
+                                    <div class="card-body">
+                                        <h3 class="card-title">Bilan</h3>
+
+
+                                        <span class="btn" onclick="xajax_affiche_pdf('bilan_ap2','595947')">
+                                            <i class="fa fa-file-pdf float-start me-2"></i>
+                                            <span class="small">Voir le PDF</span>
+                                        </span>
+                                        <span class="btn btn-success float-end"
+                                            onclick="xajax_document_par_cle('bilan',595947,'scan_bilan')">
+                                            <i class="fa fa-link float-end ms-2"></i>Attacher le scan
+                                        </span>
+                                        <span id="scan_bilan"></span>
+
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="col-lg-4">
+                                <div class="card mb-3">
+                                    <div class="card-body">
+                                        <h3 class="card-title">Accueil</h3>
+                                        <i class="fa fa-check me-2"></i><span class="small">Signé le 17/02/2023</span>
+                                        <div class="float-end mt-3">
+                                            <span class="btn btn-success"
+                                                onclick="xajax_annule_signature(595947,'1718009')">
+                                                <i class="fa fa-paper-plane float-end ms-2"></i>Redemander la signature
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div class="card mb-3">
+                                    <div class="card-body">
+                                        <h3 class="card-title">Enquète de satisfaction</h3>
+
+
+                                        <a data-bs-toggle="collapse" href="#collapseEsLink" role="button"
+                                            aria-expanded="false" aria-controls="collapseExample">
+                                            Voir le lien<i class="fa fa-chevron-down ms-2"></i>
+                                        </a>
+
+
+                                        <div class="collapse mt-3" id="collapseEsLink">
+                                            <div class="card card-body">
+                                                <a target="_blank"
+                                                    href="https://www.job-generation.com/page/signature2.php?id=1762938_64131dcc3abd8">Lien
+                                                    de la signature</a>
+                                            </div>
+                                        </div>
+                                        <div class="float-end mt-3">
+                                            <span class="btn btn-success"
+                                                onclick="xajax_document_par_cle('enquete',595947,'enquet_satis')">
+                                                <i class="fa fa-link float-end ms-2"></i>Attacher le fichier
+                                            </span>
+                                            <span id="enquet_satis"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+
+                                <div class="card mb-3">
+                                    <div class="card-body">
+                                        <h3 class="card-title">Entretien à mi-parcours</h3>
+
+                                        <i class="fa fa-check me-2"></i>Envoyée le 16/03/2023
+                                        <div class="float-end mt-3">
+                                            <span class="btn btn-success"
+                                                onclick="xajax_annule_signature(595947,'1762938')">
+                                                <i class="fa fa-paper-plane float-end ms-2"></i>Redemander la signature
+                                            </span>
+
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="card mb-3">
+                                <div class="card-header">
+                                    Prescription
+                                </div>
+                                <ul class="list-group list-group-flush">
+                                    <li class="list-group-item"><b> Objectif de la prestation : </b>Non Renseigné</li>
+                                    <li class="list-group-item"><b> Projet envisagé : </b>Non Renseigné</li>
+                                    <li class="list-group-item"><b>Actions réalisées en lien avec le projet :</b> Non
+                                        Renseigné
+                                    </li>
+                                    <li class="list-group-item"><b>Les besoins identifiés : </b>Non Renseigné</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="card mb-3">
+                                <div class="card-header">
+                                    Contenu de la prestation
+                                </div>
+                                <div class="card-body">
+                                    <div class="d-grid gap-2 mt-3">
+                                        <span class="btn btn-success"
+                                            onclick="xajax_affiche_plan_action_durant_ordre(595947)">
+                                            <i class="fa fa-pencil float-end me-2"></i>
+                                            Saisie plan d'actions durant Activ'projet
+                                        </span>
+                                        <span class="btn btn-success" onclick="xajax_affiche_plan_action_apres(595947)">
+                                            <i class="fa fa-pencil float-end me-2"></i>
+                                            Saisie plan d'actions après Activ'projet
+                                        </span>
+                                        <span class="btn btn-success"
+                                            onclick="		xajax_affiche_form('active_projet2','m','113355','contenu_modal','xajax_affiche_doc(595947)','clp_num=595947','','t');">
+                                            <i class="fa fa-pencil float-end me-2"></i>
+                                            Saisie du livrable
+                                        </span>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="col-lg-12">
+                            <div class="card">
+                                <div class="card-header">
+                                    Fin de prestation
+                                </div>
+
+                                <div class="card-body">
+
+                                    <span class="btn btn-lg btn-danger float-end"
+                                        onclick="xajax_affiche_fin_de_prestation(595947); ">
+                                        <i class="fa fa-close float-end ms-2"></i>
+                                        Cloturer la prestation
+                                    </span>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <div class="tab-pane fade" id="pills-profil" role="tabpanel" aria-labelledby="pills-contact-tab" tabindex="0">
+            <div class="ibox">
+                <div class="ibox-title">
+                    <h2><i class="fa fa-user me-2"></i>Profil</h2>
+                </div>
+                <div class="ibox-content">
+                    <div class="row">
+
+                        <div class="col-lg-4">
+                            <div class="card mb-3">
+                                <div class="card-header">
+                                    Ajouter ou Enlever
+                                </div>
+                                <div class="card-body">
+                                    <div class="d-grid gap-2 mt-3">
+                                        <a href="#" class="btn btn-success"
+                                            onclick="xajax_affiche_profil_rome('595947')">
+                                            <i class="fa fa-pencil float-end ms-2"></i>Code rome</a>
+                                        <a href="#" class="btn radius btn-success"
+                                            onclick="xajax_affiche_departement('595947')">
+                                            <i class="fa fa-pencil float-end ms-2"></i>Zone de recherche</a>
+                                        <a href="#"
+                                            onclick="xajax_document_par_cle('cv','595947','contenu_modal','xajax_affiche_profil(595947)')"
+                                            class="btn radius btn-success">
+                                            <i class="fa fa-pencil float-end ms-2"></i>CV</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4">
+                            <div class="card mb-3">
+                                <div class="card-header">
+                                    CV Vidéo
+                                </div>
+                                <div class="card-body">
+
+                                    <input class="form-check-input" type="checkbox" name="cv_video" id="cv_video"
+                                        onchange="xajax_update_bool('client_prestation','clp_num','595947','clp_cv_video',this.checked)">
+                                    <label for="cv_video" class="form-label small">Cochez si un CV vidéo a été réalisé
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4">
+                            <div class="card mb-3">
+                                <div class="card-header">
+                                    Profil
+                                </div>
+                                <div class="card-body">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th scope="col">Code ROME</th>
+                                                <th scope="col">Département</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th scope="row">E1205</th>
+                                                <td>13000</td>
+                                            </tr>
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="card mb-3">
+                                <div class="card-header">
+                                    SPOC AP2
+                                </div>
+                                <div class="card-body">
+                                    <label for="spo_num" class="form-label">Utilisation du SPOC AP2</label>
+                                    <select class="form-select" id="spo_num" name="spo_num"
+                                        onchange="xajax_delete_insert('spoc_clp','clp_num','595947','spo_num',this.value);xajax_affiche_profil(595947)">
+                                        <option value="">...&nbsp;&nbsp;</option>
+                                        <option value="1">Oui &nbsp;&nbsp;</option>
+                                        <option value="2">Ne possède pas de connexion internet &nbsp;&nbsp;
+                                        </option>
+                                        <option value="3">Ne souhaite pas travailler sur l’outil &nbsp;&nbsp;
+                                        </option>
+                                        <option value="4">Ne dispose pas du matériel nécessaire (PC,
+                                            smartphone..)
+                                            &nbsp;&nbsp;</option>
+                                        <option value="5">Autre &nbsp;&nbsp;</option>
+                                    </select>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="card mb-3">
+                                <div class="card-header">DIVERS</div>
+                                <div class="card-body">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" name="profil_competence"
+                                            id="profil_competence"
+                                            onchange="xajax_update_bool('client_prestation','clp_num','595947','clp_profil_competence',this.checked)">
+
+                                        <label for="profil_competence" class="form-label">Cochez si le profil
+                                            compétences est
+                                            actualisé </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" name="carte_visite"
+                                            id="carte_visite"
+                                            onchange="xajax_update_bool('client_prestation','clp_num','595947','clp_carte_visite',this.checked)">
+                                        <label for="carte_visite" class="form-label">Cochez si des cartes de visites ont
+                                            été
+                                            éditées</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="pills-rdv" role="tabpanel" aria-labelledby="pills-rdv-tab" tabindex="0">
+            <div class="ibox">
+                <div class="ibox-title">
+                    <h2><i class="fa fa-calendar me-2"></i>Rendez-vous</h2>
+                </div>
+                <div class="ibox-content">
+                    <div class="row mt-2">
+                        <div class="col-lg-12">
+                            <div class="card mb-3">
+                                <div class="card-header">
+                                    Rendez-vous
+                                </div>
+                                <div class="card-body">
+                                    <span class="btn btn-success" onclick="xajax_affiche_pdf('prochain_rdv',595947)">
+                                        <i class="fa fa-print float-end ms-2"></i>Imprimer les prochains
+                                        rendez-vous</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-12">
+                            <input type="hidden" id="date_temp" name="date_temp" value="">
+                            <div>
+                                <div class="large-12 columns centered">
+
+                                    <div class="card mb-3">
+                                        <div class="card-header">
+                                            Accueil
+                                        </div>
+                                        <div class="card-body">
+
+                                            <ul class="list-group list-group-flush">
+                                                <li class="list-group-item"><i class="fa fa-user me-2"></i>
+                                                    Le 17/02/2023 de 14:00 à 15:00 Individuel
+                                                </li>
+                                                <li class="list-group-item">
+                                                    <i class="fa fa-check me-2"></i>S'est présenté et a démarré la
+                                                    prestation
+                                                </li>
+                                            </ul>
+
+                                            <div class="form-group" id="commentaire_1762938" style="display:block">
+                                                <textarea class="form-control" id="com1_1762938"
+                                                    placeholder="Commentaire obligatoire"
+                                                    onchange="xajax_update_champ('prise_rendez_vous','prv_date_update','1762938','27/03/2023',this.id);xajax_update_champ('prise_rendez_vous','prv_commentaire','1762938',this.value,this.id);;"></textarea>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="card mb-3">
+                                    <div class="card-header">
+                                        Rendez-vous mi-parcours (entre le 10/03/2023 et le 23/03/2023)
+                                    </div>
+                                    <div class="card-body">
+                                        <ul class="list-group list-group-flush">
+                                            <li class="list-group-item"><i class="fa fa-user me-2"></i>
+                                                Le 16/03/2023 de 14:30 à 15:30 Individuel
+                                            </li>
+                                            <li class="list-group-item">
+                                                <i class="fa fa-check me-2"></i>S'est présenté
+                                            </li>
+                                        </ul>
+
+                                    </div>
+                                </div>
+
+                                <div class="card mb-3">
+                                    <div class="card-header">
+                                        Rendez-vous fin de prestation (du 14/04/2023 au 11/05/2023)
+                                    </div>
+                                    <div class="card-body">
+
+                                        <form id="rech3" name="rech3">
+                                            <input type="hidden" id="con_num" name="con_num" value="854">
+                                            <input type="hidden" id="date" name="date" value="11/05/2023">
+                                        </form>
+
+                                        <span class="btn btn-small btn-success float-end" data-reveal-id="planningGrid"
+                                            onclick="xajax_vide_div('contenu_planning');xajax_affiche_planning(xajax.getFormValues('rech3'),'true','595947','t',7,'','rechercher','t')">
+                                            <i class="fa fa-plus float-end ms-2"></i>Ajouter un rendez-vous "de fin ..."
+                                        </span>
+
+                                    </div>
+                                </div>
+
+                                <div class="card mb-3">
+                                    <div class="card-header">Rendez-vous <b>Autre</b></div>
+                                    <div class="card-body">
+                                        <form id="rech4" name="rech4">
+                                            <input type="hidden" id="con_num" name="con_num" value="854">
+                                            <input type="hidden" id="date" name="date" value="27/03/2023">
+                                        </form>
+                                        <span class="btn btn-small btn-success float-end" data-reveal-id="planningGrid"
+                                            onclick="xajax_vide_div('contenu_planning');xajax_affiche_planning(xajax.getFormValues('rech4'),'true','595947','t',3,'','rech4','t')">
+                                            <i class="fa fa-plus float-end ms-2"></i>Ajouter un rendez-vous "Autre"
+                                        </span>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <div class="card-header">Outils consultés</div>
+                                <div class="card-body">
+                                    ...
+                                </div>
+                            </div>
+
+
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>

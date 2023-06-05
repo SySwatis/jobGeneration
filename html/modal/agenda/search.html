@@ -1,0 +1,99 @@
+<div class="modal-header">
+    <h5 class="modal-title">
+        <i class="fa fa-calendar me-3"></i>Agenda <i class="fa fa-chevron-right"></i> <b>Planning</b>
+    </h5>
+    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
+</div>
+<div class="modal-body">
+    <form id="rechercher" name="rechercher">
+        <div id="form">
+            <div class="row mb-3">
+                <div class="col-lg-4 text-end">
+                    <label class="form-label" for="start">Date départ</label>
+                </div>
+                <div class="col-lg-8">
+                    <input class="form-control" type="date" id="date" name="date" value="2018-07-22"
+                        min="2018-01-01" max="2018-12-31">
+
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-lg-4 text-end">
+                    <label class="form-label">Structure</label>
+                </div>
+                <div class="col-lg-8">
+                    <select id="str_num" name="str_num" class="form-select"
+                        onchange="xajax_changeStr(xajax.getFormValues('rechercher'))">
+                        <option value="81">AAAGIS Conseil &nbsp;&nbsp;</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-lg-4 text-end">
+                    Conseiller
+                </div>
+                <div class="col-lg-8">
+                    <span id="span_con">
+                        <select id="con_num" name="con_num" class="form-select" onchange="">
+                            <option value="">...&nbsp;&nbsp;</option>
+                            <option style="color:#A8A8A8" value="334">BILOTTO Marie AAAGIS Conseil
+                                &nbsp;&nbsp;
+                            </option>
+                            <option value="1282">CALVET Jacqueline AAAGIS Conseil &nbsp;&nbsp;</option>
+                        </select>
+                    </span>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-lg-4 text-end">
+                    Marché
+                </div>
+                <div class="col-lg-8">
+                    <span id="span_con">
+                        <select id="lot_num" name="lot_num" class="form-select" onchange="">
+                            <option value="">...&nbsp;&nbsp;</option>
+                        </select>
+                    </span>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-lg-4 text-end">
+                    <label class="form-label">Type de rendez-vous</label>
+                </div>
+                <div class="col-lg-8">
+                    <select id="trv_num" name="trv_num" class="form-select" onchange="">
+                        <option value="">...&nbsp;&nbsp;</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-lg-4 text-end">
+                    <label class="form-label"> Bureau </label>
+                </div>
+                <div class="col-lg-8">
+                    <select id="bur_num" name="bur_num[]" multiple="multiple" size="3"
+                        class="form-select" onchange="">
+                        <option value="">...&nbsp;&nbsp;</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row mb-3" id="bottomForm">
+                <div class="col-lg-12 small-margin text-end">
+                    <div class="form-check ">
+
+                        <input class="form-check-input float-end" type="checkbox" id="anim" name="anim">
+                        <label class="form-check-label me-4" for="anim">
+                            Voir les animations Groupe des autres conseillers
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="modal-footer" id="bottomForm2">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+            <a href="page/agenda" class="btn btn-success">Afficher</a>
+            <!-- <button type="button" class="btn btn-success" data-bs-toggle="modal"
+                        data-bs-target="#myModal" data-bs-filepath="agenda/result" data-bs-msize="modal-fullscreen">Afficher</button> -->
+        </div>
+    </form>
+</div>

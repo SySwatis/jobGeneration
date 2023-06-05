@@ -10,7 +10,8 @@ let ajaxInner = function (ajaxUrl, innerEl) {
     })
 
     .fail(function (error) {
-      // ...
+      // Set content error
+      alert('error content');
     })
     .always(function () {
       console.log("AjaxInner request success");
