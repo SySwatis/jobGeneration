@@ -11,6 +11,9 @@
 <!-- fullCalendar -->
 
 <script src='js/plugins/fullcalendar-6.1.7/dist/index.global.js'></script>
+
+<script src='https://cdn.jsdelivr.net/npm/fullcalendar-scheduler@6.1.8/index.global.min.js'></script>
+
 <script src='js/plugins/fullcalendar-6.1.7/packages/bootstrap5/index.global.js'></script>
 
 <!-- Custom and plugin javascript -->

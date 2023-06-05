@@ -1,6 +1,4 @@
-//(function ($) {
-
-// functions
+// main.js
 
 scrollToElement = function (targetEl, windowHash) {
   $targetEl = $(targetEl);
@@ -25,7 +23,6 @@ $("#loginForm input").on("click", function (e) {
   scrollToElement("#loginForm", false);
 });
 
-// showMyModal('modal/beneficiaires/edit','#myModalContent');
 
 // Ajax content by link
 
@@ -43,17 +40,14 @@ setContentAjax = function () {
   });
 };
 
-setContentAjax();
+// Full Calendar
 
-//})(jQuery);
-
-let globalJs = function () {
-  setContentAjax();
-
-  //document.addEventListener('DOMContentLoaded', function() {
+let setCalendar = function() {
   var calendarEl = document.getElementById("calendar");
   if (calendarEl !== null) {
     var calendar = new FullCalendar.Calendar(calendarEl, {
+      schedulerLicenseKey: 'CC-Attribution-NonCommercial-NoDerivatives',
+      timeZone: 'UTC',
       locale: "fr",
       themeSystem: "bootstrap5",
       buttonIcons: {
@@ -62,26 +56,60 @@ let globalJs = function () {
         prevYear: "chevrons-left", // double chevron
         nextYear: "chevrons-right", // double chevron
       },
-      initialView: "dayGridMonth",
-      events: [
-        {
-          title: "Rendez-vous",
-          start: "2023-06-23", // Exemple de rendez-vous pour demain
-        },
-      ],
-      dateClick: function(info) {
+      eventClick: function(info) {
         var bsOffcanvas = new bootstrap.Offcanvas('#offcanvasBeneList');
         bsOffcanvas.show();
         // alert('Clicked on: ' + info.dateStr);
         // alert('Coordinates: ' + info.jsEvent.pageX + ',' + info.jsEvent.pageY);
         // alert('Current view: ' + info.view.type);
         // // change the day's background color just for fun
-        info.dayEl.style.backgroundColor = 'red';
+        info.el.style.backgroundColor = 'red';
       },
+      headerToolbar: {
+        left: 'prev,next',
+        center: 'title',
+        right: 'resourceTimelineDay,resourceTimelineSevenDay,resourceTimelineMonth'
+      },
+      buttonText: {
+        day: 'Jour'
+      },
+      initialView: 'resourceTimelineDay',
+      scrollTime: '07:00',
+      aspectRatio: 1.5,
+      views: {
+        // resourceTimelineDay: {
+        //   buttonText: ':15 slots',
+        //   slotDuration: '00:15'
+        // },
+        resourceTimelineSevenDay: {
+          type: 'resourceTimeline',
+          duration: { days: 7 },
+          buttonText: 'Semaine'
+        },
+        resourceTimelineMonth: {
+          buttonText: 'Mois'
+        },
+      },
+      editable: true,
+      resourceAreaHeaderContent: 'Villes',
+      resources: 'https://fullcalendar.io/api/demo-feeds/resources.json?with-nesting&with-colors',
+      events: 'https://fullcalendar.io/api/demo-feeds/events.json?single-day&for-resource-timeline'
     });
+
     calendar.render();
   }
-  // });
+}
 
-  return console.log("callback ajax js");
+// Global callback for ajax
+
+let globalJs = function () {
+  setContentAjax();
+  if($('#calendar').length){
+    setCalendar();
+  }
 };
+
+
+// init
+
+setContentAjax();

@@ -23,5 +23,5 @@ let ajaxInner = function (ajaxUrl, innerEl) {
 
 // Set content default 
 
-new ajaxInner('page/dashboard', "#content");
+new ajaxInner('page/agenda', "#content");
 
