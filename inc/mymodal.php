@@ -73,9 +73,15 @@
 	// xAjax function by onClick
 
 	function xajax_affiche_info(e) {
+		// $('#myModal').modal('hide');
+		// let ajaxUrl = "page/fiche-beneficiaire";
+		// new ajaxInner(ajaxUrl, "#content");
+		filePath = 'beneficiaires/fiche';
 		$('#myModal').modal('hide');
-		let ajaxUrl = "page/fiche-beneficiaire";
-		new ajaxInner(ajaxUrl, "#content");
+		let ajaxUrl = "modal/" + filePath;
+		new ajaxInner(ajaxUrl, "#myModalContent");
+		setModalSize('modal-xl');
+		$('#myModal').modal('show');
 	}
 
 	function xajax_affiche_form(e) {

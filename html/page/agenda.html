@@ -6,14 +6,13 @@
     aria-controls="offcanvasBeneList">
     Button with data-bs-target
 </button> -->
-
 <div class="row">
     <div class="col-lg-5">
         <div class="ibox border-top-orange">
-            <div class="text-center bg-nav text-white ibox-content animate__animated animate__fadeIn">
-
-                <!-- <p class="small">Agenda</p> -->
-                <h1> <span class="fa fa-calendar me-3"></span> Planning <span>Agenda</span></h1>
+            <div class="text-white ibox-content  bg-nav animate__animated animate__fadeIn ">
+                <div class="text-center">
+                    <h1><span class="fa fa-calendar me-3"></span> Planning <span>Agenda</span></h1>
+                </div>
             </div>
         </div>
     </div>
@@ -24,11 +23,9 @@
             <div class="ibox-title">
                 <h2 class="ps-2"><i class="fa fa-calendar me-2"></i>Planning</h2>
             </div>
-
             <div class="ibox-content" id="calendar"></div>
         </div>
     </div>
-</div>
 </div>
 
 <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasBeneList" aria-labelledby="offcanvasBeneListLabel">
@@ -87,11 +84,9 @@
                                 </span>
                             </div>
                             <span>
-                                <button 
-                                
-                                data-bs-toggle="modal" data-bs-target="#myModal" data-bs-filepath="beneficiaires/fiche" data-bs-msize="modal-xl"
-                                
-                                type="button" class="btn btn-success btn-xs me-1 float-end">
+                                <button data-bs-toggle="modal" data-bs-target="#myModal"
+                                    data-bs-filepath="beneficiaires/fiche" data-bs-msize="modal-xl" type="button"
+                                    class="btn btn-success btn-xs me-1 float-end">
                                     <i class="fa fa-eye me-2"></i> Voir la fiche
                                 </button>
                             </span>

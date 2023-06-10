@@ -1,0 +1,562 @@
+<script>
+	initTreeView();
+</script>
+<style>
+  ul[role="tree"] {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 120%;
+  }
+
+  ul[role="tree"] {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 120%;
+  }
+
+  ul[role="tree"] li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  [role="treeitem"][aria-expanded="false"]+[role="group"] {
+    display: none;
+  }
+
+  [role="treeitem"][aria-expanded="true"]+[role="group"] {
+    display: block;
+  }
+
+  [role="treeitem"].doc::before {
+    font-family: "Font Awesome 6 Free";
+    content: "\f15c";
+    display: inline-block;
+    padding-right: 2px;
+    padding-left: 5px;
+    vertical-align: middle;
+  }
+
+  [role="treeitem"].pdf::before {
+    font-family: "Font Awesome 6 Free";
+    content: "\f1c1";
+    display: inline-block;
+    padding-right: 2px;
+    padding-left: 5px;
+    vertical-align: middle;
+  }
+
+  [role="treeitem"].png::before,
+  [role="treeitem"].jpg::before {
+    font-family: "Font Awesome 6 Free";
+    content: "\f1c5";
+    display: inline-block;
+    padding-right: 2px;
+    padding-left: 5px;
+    vertical-align: middle;
+  }
+
+
+  [role="treeitem"][aria-expanded="false"]>ul {
+    display: none;
+  }
+
+  [role="treeitem"][aria-expanded="true"]>ul {
+    display: block;
+  }
+
+  [role="treeitem"][aria-expanded="false"]>span::before {
+    font-family: "Font Awesome 6 Free";
+    content: "\f07b";
+    display: inline-block;
+    padding-right: 3px;
+    vertical-align: middle;
+    font-weight: 900;
+  }
+
+  [role="treeitem"][aria-expanded="true"]>span::before {
+    font-family: "Font Awesome 6 Free";
+    content: "\f07c";
+    display: inline-block;
+    padding-right: 3px;
+    vertical-align: middle;
+    font-weight: 900;
+  }
+
+  [role="treeitem"],
+  [role="treeitem"] span {
+    width: 9em;
+    margin: 0;
+    padding: 0.125em;
+    display: block;
+  }
+
+  /* disable default keyboard focus styling for treeitems
+   Keyboard focus is styled with the following CSS */
+  [role="treeitem"]:focus {
+    outline: 0;
+  }
+
+  [role="treeitem"][aria-selected="true"] {
+    padding-left: 4px;
+    border-left: 5px solid #1872ac;
+  }
+
+  [role="treeitem"].focus,
+  [role="treeitem"] span.focus {
+    border-color: black;
+    background-color: #eee;
+  }
+
+  [role="treeitem"].hover,
+  [role="treeitem"] span:hover {
+    padding-left: 4px;
+    background-color: #ddd;
+    border-left: 5px solid #333;
+  }
+
+  ul[role="tree"] li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  [role="treeitem"][aria-expanded="false"]+[role="group"] {
+    display: none;
+  }
+
+  [role="treeitem"][aria-expanded="true"]+[role="group"] {
+    display: block;
+  }
+
+  [role="treeitem"].doc::before {
+    font-family: "Font Awesome 6 Free";
+    content: "\f15c";
+    display: inline-block;
+    padding-right: 2px;
+    padding-left: 5px;
+    vertical-align: middle;
+  }
+
+  [role="treeitem"].pdf::before {
+    font-family: "Font Awesome 6 Free";
+    content: "\f1c1";
+    display: inline-block;
+    padding-right: 2px;
+    padding-left: 5px;
+    vertical-align: middle;
+  }
+
+  [role="treeitem"].png::before,
+  [role="treeitem"].jpg::before {
+    font-family: "Font Awesome 6 Free";
+    content: "\f1c5";
+    display: inline-block;
+    padding-right: 2px;
+    padding-left: 5px;
+    vertical-align: middle;
+  }
+
+  [role="treeitem"].xls::before {
+    font-family: "Font Awesome 6 Free";
+    content: "\f1c3";
+    display: inline-block;
+    padding-right: 2px;
+    padding-left: 5px;
+    vertical-align: middle;
+  }
+
+
+
+  [role="treeitem"][aria-expanded="false"]>ul {
+    display: none;
+  }
+
+  [role="treeitem"][aria-expanded="true"]>ul {
+    display: block;
+  }
+
+  [role="treeitem"][aria-expanded="false"]>span::before {
+    font-family: "Font Awesome 6 Free";
+    content: "\f07b";
+    display: inline-block;
+    padding-right: 3px;
+    vertical-align: middle;
+    font-weight: 900;
+  }
+
+  [role="treeitem"][aria-expanded="true"]>span::before {
+    font-family: "Font Awesome 6 Free";
+    content: "\f07c";
+    display: inline-block;
+    padding-right: 3px;
+    vertical-align: middle;
+    font-weight: 900;
+  }
+
+  [role="treeitem"],
+  [role="treeitem"] span {
+    width: 9em;
+    margin: 0;
+    padding: 0.125em;
+    display: block;
+  }
+
+  /* disable default keyboard focus styling for treeitems
+   Keyboard focus is styled with the following CSS */
+  [role="treeitem"]:focus {
+    outline: 0;
+  }
+
+  [role="treeitem"][aria-selected="true"] {
+    padding-left: 4px;
+    border-left: 5px solid #005a9c;
+  }
+
+  [role="treeitem"].focus,
+  [role="treeitem"] span.focus {
+    border-color: black;
+    background-color: #eee;
+  }
+
+  [role="treeitem"].hover,
+  [role="treeitem"] span:hover {
+    padding-left: 4px;
+    background-color: #ddd;
+    border-left: 5px solid #333;
+  }
+</style>
+
+<div class="row">
+  <div class="col-lg-5">
+    <div class="ibox border-top-orange">
+      <div class="text-white ibox-content bg-nav animate__animated animate__fadeIn ">
+        <div class="text-center">
+          <h1> <span class="fa fa-folder-open me-3"></span> Mes <span>Documents</span></h1>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-2"></div>
+  <div class="col-lg-5">
+    <div class="ibox">
+      <div class="ibox-content">
+        <label for="formFileLg" class="form-label"><i class="fa fa-upload me-1"></i>Importer un fichier</label>
+        <input class="form-control form-control-lg" id="formFileLg" type="file">
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+	<div class="ibox">
+		<div class="ibox-content">
+			<h3 id="tree_label">My Documents</h3>
+<ul role="tree" aria-labelledby="tree_label">
+  <li role="treeitem" aria-expanded="false" aria-selected="false">
+    <span> Projects </span>
+    <ul role="group">
+      <li role="treeitem" aria-selected="false" class="doc">project-1.docx</li>
+      <li role="treeitem" aria-selected="false" class="doc">project-2.docx</li>
+      <li role="treeitem" aria-expanded="false" aria-selected="false">
+        <span> Project 3 </span>
+        <ul role="group">
+          <li role="treeitem" aria-selected="false" class="doc">project-3A.docx</li>
+          <li role="treeitem" aria-selected="false" class="doc">project-3B.docx</li>
+          <li role="treeitem" aria-selected="false" class="doc">project-3C.docx</li>
+        </ul>
+      </li>
+      <li role="treeitem" aria-selected="false" class="doc">project-4.docx</li>
+      <li role="treeitem" aria-expanded="false" aria-selected="false">
+        <span> Project 5 </span>
+        <ul role="group">
+          <li role="treeitem" aria-selected="false" class="doc">project-5A.docx</li>
+          <li role="treeitem" aria-selected="false" class="doc">project-5B.docx</li>
+          <li role="treeitem" aria-selected="false" class="doc">project-5C.docx</li>
+          <li role="treeitem" aria-selected="false" class="doc">project-5D.docx</li>
+          <li role="treeitem" aria-selected="false" class="doc">project-5E.docx</li>
+          <li role="treeitem" aria-selected="false" class="doc">project-5F.docx</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li role="treeitem" aria-expanded="false" aria-selected="false">
+    <span> Reports </span>
+    <ul role="group">
+      <li role="treeitem" aria-expanded="false" aria-selected="false">
+        <span> report-1 </span>
+        <ul role="group">
+          <li role="treeitem" aria-selected="false" class="doc">report-1A.docx</li>
+          <li role="treeitem" aria-selected="false" class="doc">report-1B.docx</li>
+          <li role="treeitem" aria-selected="false" class="doc">report-1C.docx</li>
+        </ul>
+      </li>
+      <li role="treeitem" aria-expanded="false" aria-selected="false">
+        <span> report-2 </span>
+        <ul role="group">
+          <li role="treeitem" aria-selected="false" class="doc">report-2A.docx</li>
+          <li role="treeitem" aria-selected="false" class="doc">report-2B.docx</li>
+          <li role="treeitem" aria-selected="false" class="doc">report-2C.docx</li>
+          <li role="treeitem" aria-selected="false" class="doc">report-2D.docx</li>
+        </ul>
+      </li>
+      <li role="treeitem" aria-expanded="false" aria-selected="false">
+        <span> report-3 </span>
+        <ul role="group">
+          <li role="treeitem" aria-selected="false" class="doc">report-3A.docx</li>
+          <li role="treeitem" aria-selected="false" class="doc">report-3B.docx</li>
+          <li role="treeitem" aria-selected="false" class="doc">report-3C.docx</li>
+          <li role="treeitem" aria-selected="false" class="doc">report-3D.docx</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li role="treeitem" aria-expanded="false" aria-selected="false">
+    <span> Letters </span>
+    <ul role="group">
+      <li role="treeitem" aria-expanded="false" aria-selected="false">
+        <span> letter-1 </span>
+        <ul>
+          <li role="treeitem" aria-selected="false" class="doc">letter-1A.docx</li>
+          <li role="treeitem" aria-selected="false" class="doc">letter-1B.docx</li>
+          <li role="treeitem" aria-selected="false" class="doc">letter-1C.docx</li>
+        </ul>
+      </li>
+      <li role="treeitem" aria-expanded="false" aria-selected="false">
+        <span> letter-2 </span>
+        <ul role="group">
+          <li role="treeitem" aria-selected="false" class="doc">letter-2A.docx</li>
+          <li role="treeitem" aria-selected="false" class="doc">letter-2B.docx</li>
+          <li role="treeitem" aria-selected="false" class="doc">letter-2C.docx</li>
+          <li role="treeitem" aria-selected="false" class="doc">letter-2D.docx</li>
+        </ul>
+      </li>
+      <li role="treeitem" aria-expanded="false" aria-selected="false">
+        <span> letter-3 </span>
+        <ul role="group">
+          <li role="treeitem" aria-selected="false" class="doc">letter-3A.docx</li>
+          <li role="treeitem" aria-selected="false" class="doc">letter-3B.docx</li>
+          <li role="treeitem" aria-selected="false" class="doc">letter-3C.docx</li>
+          <li role="treeitem" aria-selected="false" class="doc">letter-3D.docx</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p>
+  <label>File or Folder Selected: <input id="last_action" type="text" size="15" readonly=""></label>
+</p>
+        
+
+		</div>
+	</div>
+</div>
+
+<!-- <div class="row">
+  <div class="col-lg-5">
+    <div class="ibox">
+      <div class="ibox-title">
+        <h2 id="tree1"><i class="fa fa-list-ul me-2"></i>Liste fichiers</h2>
+      </div>
+      <div class="ibox-content">
+        <div class="">
+          <button type="button" class="btn btn-lg btn-success float-end"><i class="fa fa-folder-plus me-1"></i>
+            Nouveau</button>
+        </div>
+        <ul role="tree" aria-labelledby="tree1">
+          <li role="treeitem" aria-level="1" aria-setsize="3" aria-posinset="1" aria-expanded="false"
+            aria-selected="false">
+            <span> Projects </span>
+            <ul role="group">
+              <li role="treeitem" aria-level="2" aria-setsize="5" aria-posinset="1" aria-selected="false" class="jpg">
+                project-1.jpg</li>
+              <li role="treeitem" aria-level="2" aria-setsize="5" aria-posinset="2" aria-selected="false" class="doc">
+                project-2.docx</li>
+              <li role="treeitem" aria-level="2" aria-setsize="5" aria-posinset="3" aria-expanded="false"
+                aria-selected="false">
+                <span> project-3 </span>
+                <ul role="group">
+                  <li role="treeitem" aria-level="3" aria-setsize="3" aria-posinset="1" aria-selected="false"
+                    class="xls">
+                    project-3A.xls</li>
+                  <li role="treeitem" aria-level="3" aria-setsize="3" aria-posinset="2" aria-selected="false"
+                    class="doc">
+                    project-3B.docx</li>
+                  <li role="treeitem" aria-level="3" aria-setsize="3" aria-posinset="3" aria-selected="false"
+                    class="doc">
+                    project-3C.docx</li>
+                </ul>
+              </li>
+              <li role="treeitem" aria-level="2" aria-setsize="5" aria-posinset="4" aria-selected="false" class="doc">
+                project-4.docx</li>
+              <li role="treeitem" aria-level="2" aria-setsize="5" aria-posinset="5" aria-expanded="false"
+                aria-selected="false">
+                <span> project-5 </span>
+                <ul role="group">
+                  <li role="treeitem" aria-level="3" aria-setsize="6" aria-posinset="1" aria-selected="false"
+                    class="doc">
+                    project-5A.docx</li>
+                  <li role="treeitem" aria-level="3" aria-setsize="6" aria-posinset="2" aria-selected="false"
+                    class="doc">
+                    project-5B.docx</li>
+                  <li role="treeitem" aria-level="3" aria-setsize="6" aria-posinset="3" aria-selected="false"
+                    class="doc">
+                    project-5C.docx</li>
+                  <li role="treeitem" aria-level="3" aria-setsize="6" aria-posinset="4" aria-selected="false"
+                    class="doc">
+                    project-5D.docx</li>
+                  <li role="treeitem" aria-level="3" aria-setsize="6" aria-posinset="5" aria-selected="false"
+                    class="doc">
+                    project-5E.docx</li>
+                  <li role="treeitem" aria-level="3" aria-setsize="6" aria-posinset="6" aria-selected="false"
+                    class="doc">
+                    project-5F.docx</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li role="treeitem" aria-level="1" aria-setsize="3" aria-posinset="2" aria-expanded="false"
+            aria-selected="false">
+            <span> Reports </span>
+            <ul role="group">
+              <li role="treeitem" aria-level="2" aria-setsize="3" aria-posinset="1" aria-expanded="false"
+                aria-selected="false">
+                <span> report-1 </span>
+                <ul role="group">
+                  <li role="treeitem" aria-level="3" aria-setsize="3" aria-posinset="1" aria-selected="false"
+                    class="doc">
+                    report-1A.docx</li>
+                  <li role="treeitem" aria-level="3" aria-setsize="3" aria-posinset="2" aria-selected="false"
+                    class="doc">
+                    report-1B.docx</li>
+                  <li role="treeitem" aria-level="3" aria-setsize="3" aria-posinset="3" aria-selected="false"
+                    class="doc">
+                    report-1C.docx</li>
+                </ul>
+              </li>
+              <li role="treeitem" aria-level="2" aria-setsize="3" aria-posinset="2" aria-expanded="false"
+                aria-selected="false">
+                <span> report-2 </span>
+                <ul role="group">
+                  <li role="treeitem" aria-level="3" aria-setsize="4" aria-posinset="1" aria-selected="false"
+                    class="doc">
+                    report-2A.docx</li>
+                  <li role="treeitem" aria-level="3" aria-setsize="4" aria-posinset="2" aria-selected="false"
+                    class="doc">
+                    report-2B.docx</li>
+                  <li role="treeitem" aria-level="3" aria-setsize="4" aria-posinset="3" aria-selected="false"
+                    class="doc">
+                    report-2C.docx</li>
+                  <li role="treeitem" aria-level="3" aria-setsize="4" aria-posinset="4" aria-selected="false"
+                    class="doc">
+                    report-2D.docx</li>
+                </ul>
+              </li>
+              <li role="treeitem" aria-level="2" aria-setsize="3" aria-posinset="3" aria-expanded="false"
+                aria-selected="false">
+                <span> report-3 </span>
+                <ul role="group">
+                  <li role="treeitem" aria-level="3" aria-setsize="4" aria-posinset="1" aria-selected="false"
+                    class="doc">
+                    report-3A.docx</li>
+                  <li role="treeitem" aria-level="3" aria-setsize="4" aria-posinset="2" aria-selected="false"
+                    class="doc">
+                    report-3B.docx</li>
+                  <li role="treeitem" aria-level="3" aria-setsize="4" aria-posinset="3" aria-selected="false"
+                    class="doc">
+                    report-3C.docx</li>
+                  <li role="treeitem" aria-level="3" aria-setsize="4" aria-posinset="4" aria-selected="false"
+                    class="doc">
+                    report-3D.docx</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li role="treeitem" aria-level="1" aria-setsize="3" aria-posinset="3" aria-expanded="false"
+            aria-selected="false">
+            <span> Letters </span>
+            <ul role="group">
+              <li role="treeitem" aria-level="2" aria-setsize="3" aria-posinset="1" aria-expanded="false"
+                aria-selected="false">
+                <span> letter-1 </span>
+                <ul>
+                  <li role="treeitem" aria-level="3" aria-setsize="3" aria-posinset="1" aria-selected="false"
+                    class="doc">
+                    letter-1A.docx</li>
+                  <li role="treeitem" aria-level="3" aria-setsize="3" aria-posinset="2" aria-selected="false"
+                    class="doc">
+                    letter-1B.docx</li>
+                  <li role="treeitem" aria-level="3" aria-setsize="3" aria-posinset="3" aria-selected="false"
+                    class="doc">
+                    letter-1C.docx</li>
+                </ul>
+              </li>
+              <li role="treeitem" aria-level="2" aria-setsize="3" aria-posinset="2" aria-expanded="false"
+                aria-selected="false">
+                <span> letter-2 </span>
+                <ul role="group">
+                  <li role="treeitem" aria-level="3" aria-setsize="4" aria-posinset="1" aria-selected="false"
+                    class="doc">
+                    letter-2A.docx</li>
+                  <li role="treeitem" aria-level="3" aria-setsize="4" aria-posinset="2" aria-selected="false"
+                    class="doc">
+                    letter-2B.docx</li>
+                  <li role="treeitem" aria-level="3" aria-setsize="4" aria-posinset="3" aria-selected="false"
+                    class="doc">
+                    letter-2C.docx</li>
+                  <li role="treeitem" aria-level="3" aria-setsize="4" aria-posinset="4" aria-selected="false"
+                    class="doc">
+                    letter-2D.docx</li>
+                </ul>
+              </li>
+              <li role="treeitem" aria-level="2" aria-setsize="3" aria-posinset="3" aria-expanded="false"
+                aria-selected="false">
+                <span> letter-3 </span>
+                <ul role="group">
+                  <li role="treeitem" aria-level="3" aria-setsize="4" aria-posinset="1" aria-selected="false"
+                    class="doc">
+                    letter-3A.docx</li>
+                  <li role="treeitem" aria-level="3" aria-setsize="4" aria-posinset="2" aria-selected="false"
+                    class="doc">
+                    letter-3B.docx</li>
+                  <li role="treeitem" aria-level="3" aria-setsize="4" aria-posinset="3" aria-selected="false"
+                    class="doc">
+                    letter-3C.docx</li>
+                  <li role="treeitem" aria-level="3" aria-setsize="4" aria-posinset="4" aria-selected="false"
+                    class="doc">
+                    letter-3D.docx</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-7">
+    <div class="ibox">
+      <div class="ibox-title">
+        <h3><i class="fa fa-eye me-1"></i>Prévisulaiser</h3>
+      </div>
+      <div class="ibox-content">
+        <div class="mb-3">
+          <label class="form-label">
+              Fichier sélectionné
+            </label>
+          <input id="last_action" class="form-control" type="text" value=" Fichier sélectionné"
+            aria-label="Fichier sélectionné" readonly>
+        </div>
+        <div class="mb-3 text-center">
+          <button disabled class="btn btn-success">
+            <i class="fa fa-download me-2"></i>
+            Télécharger</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
+

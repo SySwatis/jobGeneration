@@ -16006,6 +16006,35 @@ h2 .fa {
     font-size: 48px;
   }
 }
+.fc-current-open-offcanvas {
+  opacity: 0.5;
+}
+.fc-timeline-event {
+  border-radius: 4px;
+  padding: 6px 8px;
+  margin: 4px 1px 0px 1px;
+  font-size: 16px;
+  text-align: center;
+}
+.fc-h-event {
+  border-width: 2px;
+}
+.fc-event-time,
+.fc-event-title {
+  color: #39363a;
+}
+.tooltip.fullcalendar-tooltip .tooltip-inner {
+  background-color: #FFF !important;
+  opacity: 1 !important;
+  color: #333;
+  font-size: 18px;
+  padding: 16px;
+  box-shadow: #333 0 0 3px;
+}
+.tooltip.fullcalendar-tooltip .tooltip-arrow::after,
+.tooltip.fullcalendar-tooltip .tooltip-arrow::before {
+  margin: 2px;
+}
 @media print {
   nav.navbar-static-side {
     display: none;

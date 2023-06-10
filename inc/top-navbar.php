@@ -1,3 +1,4 @@
+<div id="alert"></div>
 <div class="border-bottom">
 
     <!-- <button data-bs-toggle="modal" data-bs-target="#listBenModal" class="btn btn-primary" type="submit">Afficher</button> -->
@@ -34,7 +35,9 @@
             </li>
             <li>
                 <a href="login.php" class="text-body no-ajax">
-                    <i class="fa fa-sign-out m-0"></i><span class="px-2 d-none d-md-inline-block">Se déconnecter</span>
+                    <!-- <i class="fa fa-sign-out m-0"></i><span class="px-2 d-none d-md-inline-block">Se déconnecter</span> -->
+                    <i class="fa fa-2x fa-sign-out m-0"></i><span class="px-2 d-none d-md-inline-block"></span>
+               
                 </a>
             </li>
         </ul>

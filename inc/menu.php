@@ -43,6 +43,7 @@
             <span class="fa arrow"></span>
         </a>
         <ul class="nav flex-column nav-second-level">
+        <li class="nav-item"><a href="page/documents" class="nav-link">Documents</a></li>
             <li class="nav-item"><a href="#" class="nav-link">Forum</a></li>
             <li class="nav-item"><a href="#" class="nav-link">Recherche de CV VSI</a></li>
         </ul>

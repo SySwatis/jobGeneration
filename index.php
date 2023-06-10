@@ -13,10 +13,10 @@
         <div id="content" class="wrapper wrapper-content">
            <!-- ajax content -->
         </div>
-        <?php include_once('inc/footer.php') ?>
+      
     </div>
 </div>
-
+<?php include_once('inc/footer.php') ?>
 <?php include_once('inc/bottom-script.php') ?>
 <?php include_once('inc/mymodal.php') ?>
 </body>
