@@ -26,8 +26,6 @@
 		} else {
 			myModalEl.classList.add(mSize);
 		}
-
-		
 	};
 
 	let buttonModal = document.getElementById("myModal");
@@ -35,16 +33,20 @@
 	buttonModal.addEventListener("show.bs.modal", function (event) {
 		// // Button that triggered the modal
 		let button = event.relatedTarget;
-		// // Extract info from data-bs-* attributes
-		let filePath = button.getAttribute("data-bs-filepath");
-		let mSizeAttr = button.getAttribute("data-bs-msize");
+		if(typeof button !== "undefined") {
 
-		let mSize = typeof mSizeAttr !== "undefined" && mSizeAttr !== "" ? mSizeAttr : '';
+			// // Extract info from data-bs-* attributes
+			let filePath = button.getAttribute("data-bs-filepath");
+			let mSizeAttr = button.getAttribute("data-bs-msize");
 
-		setModalSize(mSize);
+			let mSize = typeof mSizeAttr !== "undefined" && mSizeAttr !== "" ? mSizeAttr : '';
 
-		let ajaxUrl = "modal/" + filePath;
-		new ajaxInner(ajaxUrl, "#myModalContent");
+			setModalSize(mSize);
+
+			let ajaxUrl = "modal/" + filePath;
+			new ajaxInner(ajaxUrl, "#myModalContent");
+
+		}
 
 	});
 
@@ -72,10 +74,7 @@
 
 	// xAjax function by onClick
 
-	function xajax_affiche_info(e) {
-		// $('#myModal').modal('hide');
-		// let ajaxUrl = "page/fiche-beneficiaire";
-		// new ajaxInner(ajaxUrl, "#content");
+	function xajax_affiche_info() {
 		filePath = 'beneficiaires/fiche';
 		$('#myModal').modal('hide');
 		let ajaxUrl = "modal/" + filePath;
@@ -84,7 +83,7 @@
 		$('#myModal').modal('show');
 	}
 
-	function xajax_affiche_form(e) {
+	function xajax_affiche_form() {
 		filePath = 'beneficiaires/edit';
 		$('#myModal').modal('hide');
 		let ajaxUrl = "modal/" + filePath;
@@ -92,9 +91,16 @@
 		$('#myModal').modal('show');
 	}
 
-	function xajax_valide_formulaire(e) {
+	function xajax_valide_formulaire() {
 		$('#myModal').modal('hide');
+		xajax_affiche_info();
 	}
+
+	let xajax = new Object();
+	xajax.getFormValues = function() {
+		return;
+	}
+
 
 
 

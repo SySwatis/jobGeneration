@@ -23,5 +23,5 @@ let ajaxInner = function (ajaxUrl, innerEl) {
 
 // Set content default 
 
-new ajaxInner('page/documents', "#content");
+new ajaxInner('page/list-beneficiaires', "#content");
 
