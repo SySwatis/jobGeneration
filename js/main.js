@@ -188,6 +188,7 @@ let globalJs = function () {
   if($('#calendar').length){
     setCalendar();
   }
+  initTreeView();
 };
 
 
