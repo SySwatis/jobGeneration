@@ -2,7 +2,7 @@
             <!-- <div class="pull-right">
                 10GB of <strong>250GB</strong> Free.
             </div> -->
-            <div class="pull-right">
+            <div class="float-end">
                 <strong>Copyright</strong> Job-generation &copy; 2023
             </div>
         </div>

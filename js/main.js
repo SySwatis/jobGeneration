@@ -23,7 +23,6 @@ $("#loginForm input").on("click", function (e) {
   scrollToElement("#loginForm", false);
 });
 
-
 // Ajax content by link
 
 setContentAjax = function () {
@@ -36,14 +35,14 @@ setContentAjax = function () {
       ajaxUrl = $(this).attr("href");
 
       // Demo alert
-      if(ajaxUrl==='page/dashboard') {
-        new ajaxInner('alert/warning', "#alert");
+      if (ajaxUrl === "page/dashboard") {
+        new ajaxInner("alert/warning", "#alert");
       }
-      if(ajaxUrl==='page/list-beneficiaires') {
-        new ajaxInner('alert/beneficiaires', "#alert");
+      if (ajaxUrl === "page/list-beneficiaires") {
+        new ajaxInner("alert/beneficiaires", "#alert");
       }
-      if(ajaxUrl==='page/agenda') {
-        new ajaxInner('alert/success', "#alert");
+      if (ajaxUrl === "page/agenda") {
+        new ajaxInner("alert/success", "#alert");
       }
 
       new ajaxInner(ajaxUrl, "#content");
@@ -54,12 +53,12 @@ setContentAjax = function () {
 
 // Full Calendar
 
-let setCalendar = function() {
-  var calendarEl = document.getElementById("calendar");
+let setCalendar = function () {
+  let calendarEl = document.getElementById("calendar");
   if (calendarEl !== null) {
-    var calendar = new FullCalendar.Calendar(calendarEl, {
-      schedulerLicenseKey: 'CC-Attribution-NonCommercial-NoDerivatives',
-      timeZone: 'UTC',
+    let calendar = new FullCalendar.Calendar(calendarEl, {
+      schedulerLicenseKey: "CC-Attribution-NonCommercial-NoDerivatives",
+      timeZone: "UTC",
       // dayMaxEvents: true, // allow "more" link when too many events
       locale: "fr",
       themeSystem: "bootstrap5",
@@ -69,58 +68,64 @@ let setCalendar = function() {
         prevYear: "chevrons-left", // double chevron
         nextYear: "chevrons-right", // double chevron
       },
-      eventDidMount: function(info) {
-        var eventElement = info.el;
-        var eventTitle = info.event.title;
-        var eventDescription = info.event.extendedProps.description;
-      
-        eventElement.setAttribute('data-bs-toggle', 'tooltip');
-        eventElement.setAttribute('data-bs-placement', 'top');
-        eventElement.setAttribute('title','<h3>' + eventTitle + '</h3>' + eventDescription);
-        eventElement.setAttribute('data-bs-html', 'true');
-      
+      eventDidMount: function (info) {
+        let eventElement = info.el;
+        let eventTitle = info.event.title;
+        let eventDescription = info.event.extendedProps.description;
+
+        eventElement.setAttribute("data-bs-toggle", "tooltip");
+        eventElement.setAttribute("data-bs-placement", "top");
+        eventElement.setAttribute(
+          "title",
+          "<h3>" + eventTitle + "</h3>" + eventDescription
+        );
+        eventElement.setAttribute("data-bs-html", "true");
+
         // Initialise le tooltip Bootstrap avec une classe personnalisée
-        var tooltip = new bootstrap.Tooltip(eventElement, {
-          template: '<div class="tooltip fullcalendar-tooltip" role="tooltip"><div class="tooltip-arrow"></div><div class="tooltip-inner"></div></div>'
+        let tooltip = new bootstrap.Tooltip(eventElement, {
+          template:
+            '<div class="tooltip fullcalendar-tooltip" role="tooltip"><div class="tooltip-arrow"></div><div class="tooltip-inner"></div></div>',
         });
-      
+
         // Activation du tooltip lors du survol de la souris
-        eventElement.addEventListener('mouseenter', function () {
+        eventElement.addEventListener("mouseenter", function () {
           tooltip.show();
         });
-      
+
         // Désactivation du tooltip lorsque la souris quitte l'événement
-        eventElement.addEventListener('mouseleave', function () {
+        eventElement.addEventListener("mouseleave", function () {
           tooltip.hide();
         });
-      }
-      ,
-      eventClick: function(info) {
-        let bsOffcanvas = new bootstrap.Offcanvas('#offcanvasBeneList');
+      },
+      eventClick: function (info) {
+        let bsOffcanvas = new bootstrap.Offcanvas("#offcanvasBeneList");
         bsOffcanvas.show();
         el = info.el;
-        bsOffcanvas._element.addEventListener('hidden.bs.offcanvas', function () {
-          // Code à exécuter lors de la fermeture de l'Offcanvas
-          el.classList.remove('fc-current-open-offcanvas');
-        }); 
+        bsOffcanvas._element.addEventListener(
+          "hidden.bs.offcanvas",
+          function () {
+            // Code à exécuter lors de la fermeture de l'Offcanvas
+            el.classList.remove("fc-current-open-offcanvas");
+          }
+        );
         // alert('Clicked on: ' + info.dateStr);
         // alert('Coordinates: ' + info.jsEvent.pageX + ',' + info.jsEvent.pageY);
         // alert('Current view: ' + info.view.type);
         // // change the day's background color just for fun
         // info.el.style.backgroundColor = 'red';
         info.el.classList.add("fc-current-open-offcanvas");
-       
       },
       headerToolbar: {
-        left: 'prev,next',
-        center: 'title',
-        right: 'resourceTimelineDay,resourceTimelineSevenDay,resourceTimelineMonth'
+        left: "prev,next",
+        center: "title",
+        right:
+          "resourceTimelineDay,resourceTimelineSevenDay,resourceTimelineMonth",
       },
       buttonText: {
-        day: 'Jour'
+        day: "Jour",
       },
-      initialView: 'resourceTimelineDay',
-      scrollTime: '07:00',
+      initialView: "resourceTimelineDay",
+      scrollTime: "07:00",
       aspectRatio: 1.5,
       views: {
         // resourceTimelineDay: {
@@ -128,50 +133,57 @@ let setCalendar = function() {
         //   slotDuration: '00:15'
         // },
         resourceTimelineSevenDay: {
-          type: 'resourceTimeline',
+          type: "resourceTimeline",
           duration: { days: 7 },
-          buttonText: 'Semaine'
+          buttonText: "Semaine",
         },
         resourceTimelineMonth: {
-          buttonText: 'Mois'
+          buttonText: "Mois",
         },
       },
       editable: true,
-      resourceAreaHeaderContent: 'Villes',
-      resources: 'https://fullcalendar.io/api/demo-feeds/resources.json?with-nesting&with-colors',
-      events: 'https://fullcalendar.io/api/demo-feeds/events.json?single-day&for-resource-timeline'
+      resourceAreaHeaderContent: "Villes",
+      resources:
+        "https://fullcalendar.io/api/demo-feeds/resources.json?with-nesting&with-colors",
+      events:
+        "https://fullcalendar.io/api/demo-feeds/events.json?single-day&for-resource-timeline",
     });
 
     calendar.render();
-
   }
+};
+
+let initTreeView = function () {
+
+  console.log("initTreeview");
+
+  let ajaxTree = document.querySelectorAll('[role="tree"]');
+
+
+  let ajaxTreeitem = document.querySelectorAll('[role="treeitem"]');
+
+  if (ajaxTreeitem.length) {
   
-}
+    for (let i = 0; i < ajaxTree.length; i++) {
+      let at = new Tree(ajaxTree[i]);
+      at.init();
+    }
 
+    for (let i = 0; i < ajaxTreeitem.length; i++) {
+      let ati = new Treeitem(ajaxTreeitem[i],ajaxTree);
+      ati.init();
+    }
 
-let initTreeView = function() {
-
-	/*
- *   This content is licensed according to the W3C Software License at
- *   https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document
- *
- *   File:   Treeitem.js
- *
- *   Desc:   Setup click events for Tree widget examples
- */
-
-    var treeitems = document.querySelectorAll('[role="treeitem"]');
-  
-    for (var i = 0; i < treeitems.length; i++) {
-      treeitems[i].addEventListener('click', function (event) {
-        var treeitem = event.currentTarget;
-        var label = treeitem.getAttribute('aria-label');
+    for (let i = 0; i < ajaxTreeitem.length; i++) {
+      ajaxTreeitem[i].addEventListener('click', function (event) {
+        let treeitem = event.currentTarget;
+        let label = treeitem.getAttribute('aria-label');
         if (!label) {
-          var child = treeitem.firstElementChild;
+          let child = treeitem.firstElementChild;
           label = child ? child.innerText : treeitem.innerText;
         }
-        
-      document.getElementById('last_action').value = label.trim();
+  
+        document.getElementById('last_action').value = label.trim();
   
         event.stopPropagation();
         event.preventDefault();
@@ -179,18 +191,22 @@ let initTreeView = function() {
     }
 
 
-}
+
+  }
+};
 
 // Global callback for ajax
 
 let globalJs = function () {
+  
   setContentAjax();
-  if($('#calendar').length){
+
+  if ($("#calendar").length) {
     setCalendar();
   }
+
   initTreeView();
 };
-
 
 // init
 

@@ -86,6 +86,7 @@ Tree.prototype.init = function () {
   this.updateVisibleTreeitems();
 
   this.firstTreeitem.domNode.tabIndex = 0;
+
 };
 
 Tree.prototype.setSelectedToItem = function (treeitem) {
