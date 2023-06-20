@@ -13,6 +13,9 @@
 <link href = 'css/animate.min.css' rel = 'stylesheet'>
 <link href = 'css/style.css' rel = 'stylesheet'>
 
+<script src="js/tree.js"></script>
+<script src="js/treeitem.js"></script>
+
 <script src = 'js/jquery-3.6.3.min.js'></script>
 
 </head>

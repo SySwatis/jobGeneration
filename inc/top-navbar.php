@@ -1,42 +1,37 @@
-<div id="alert"></div>
-<div class="border-bottom">
-
+<div id="alert" class="clearfix"></div>
+<div class="top-navbar border-bottom sticky-top">
     <!-- <button data-bs-toggle="modal" data-bs-target="#listBenModal" class="btn btn-primary" type="submit">Afficher</button> -->
 
-    <nav class="navbar navbar-static-top white-bg" role="navigation">
+    <nav class="navbar white-bg p-1" role="navigation">
 
         <ul class="nav navbar-left">
             <li>
                 <a class="navbar-minimalize minimalize-styl-2" href="#">
-                    <i class="fa-solid fa-bars fa-2x"></i>
+                    <i class="fa-solid fa-2x fa-bars"></i>
                 </a>
             </li>
             <li>
                 <a href="page/dashboard" class="logo-link">
                     <img src="img/logo-small-70px.png" alt="logo">
-                    <span class="d-none d-md-inline-block">Job Génération</span>
+                    <span class="d-none d-md-inline-block mt-3">Job Génération</span>
                 </a>
             </li>
         </ul>
 
         <ul class="nav navbar-right">
             <li>
-                <form class="d-flex p-2" role="search" data-bs-toggle="modal" data-bs-target="#myModal" data-bs-filepath="beneficiaires/search" data-bs-msize="modal-lg">
-                    <input class="form-control me-2 d-none d-sm-block" type="search" placeholder="Rechercher un bénéficiaire" aria-label="Search">
-                    <span class="input-group-text border-0 bg-transparent" id="search-addon">
-                        <i class="fas fa-search"></i>
-                    </span>
-                </form>
+                <a href="#" class="text-body">
+                    <i class="fa fa-gear m-0"></i>
+                </a>
             </li>
             <li>
                 <a href="#" class="text-body">
-                    <i class="fa fa-user m-0"></i><span class="px-2 d-none d-md-inline-block">Mon compte</span>
+                    <i class="fa fa-user m-0"></i>
                 </a>
             </li>
             <li>
                 <a href="login.php" class="text-body no-ajax">
-                    <!-- <i class="fa fa-sign-out m-0"></i><span class="px-2 d-none d-md-inline-block">Se déconnecter</span> -->
-                    <i class="fa fa-2x fa-sign-out m-0"></i><span class="px-2 d-none d-md-inline-block"></span>
+                    <i class="fa fa-sign-out m-0"></i>
                
                 </a>
             </li>

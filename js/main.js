@@ -155,18 +155,16 @@ let setCalendar = function () {
 
 let initTreeView = function () {
 
-  console.log("initTreeview");
-
   let ajaxTree = document.querySelectorAll('[role="tree"]');
-
 
   let ajaxTreeitem = document.querySelectorAll('[role="treeitem"]');
 
-  if (ajaxTreeitem.length) {
-  
+  if (ajaxTreeitem.length && ajaxTree.length) {
+    
     for (let i = 0; i < ajaxTree.length; i++) {
-      let at = new Tree(ajaxTree[i]);
+      at = new Tree(ajaxTree[i]);
       at.init();
+     
     }
 
     for (let i = 0; i < ajaxTreeitem.length; i++) {
@@ -175,30 +173,26 @@ let initTreeView = function () {
     }
 
     for (let i = 0; i < ajaxTreeitem.length; i++) {
-      ajaxTreeitem[i].addEventListener('click', function (event) {
+      ajaxTreeitem[i].addEventListener("click", (event) => {
         let treeitem = event.currentTarget;
-        let label = treeitem.getAttribute('aria-label');
+        let label = treeitem.getAttribute("aria-label");
         if (!label) {
           let child = treeitem.firstElementChild;
           label = child ? child.innerText : treeitem.innerText;
         }
-  
-        document.getElementById('last_action').value = label.trim();
-  
+
+        document.getElementById("last_action").value = label.trim();
+
         event.stopPropagation();
         event.preventDefault();
       });
     }
-
-
-
   }
 };
 
 // Global callback for ajax
 
 let globalJs = function () {
-  
   setContentAjax();
 
   if ($("#calendar").length) {

@@ -6281,12 +6281,20 @@ h5 {
 .nav > li a {
   text-decoration: none;
 }
-.nav > li > a {
+.nav > li > a.nav-link {
   font-size: 14px;
   color: #a7b1c2;
   font-weight: 400;
   padding: 12px 15px;
   display: block;
+}
+.top-navbar nav li a {
+  display: block;
+  padding: 0 12px;
+  text-align: center;
+}
+.top-navbar nav li a .fa {
+  display: inline;
 }
 .nav.navbar-right > li > a {
   color: #999c9e;
@@ -6472,7 +6480,7 @@ ul.nav-second-level {
   height: auto !important;
 }
 .nav-header a {
-  color: #DFE4ED;
+  color: #dfe4ed;
 }
 .nav-header .text-muted {
   color: #8095a8 !important;
@@ -6524,7 +6532,7 @@ ul.nav-second-level {
 .fa.arrow:before {
   content: "\f077";
 }
-a[aria-expanded=true] > .fa.arrow:before {
+a[aria-expanded="true"] > .fa.arrow:before {
   content: "\f078";
 }
 .nav-second-level li,
@@ -6550,7 +6558,7 @@ a[aria-expanded=true] > .fa.arrow:before {
 .fixed-sidebar.mini-navbar .nav-second-level li .nav-third-level li a {
   padding-left: 62px;
 }
-body:not(.mini-navbar ) .nav-second-level li:last-child {
+body:not(.mini-navbar) .nav-second-level li:last-child {
   padding-bottom: 10px;
 }
 body:not(.fixed-sidebar):not(.canvas-menu).mini-navbar .nav li:hover > .nav-second-level,
@@ -6649,7 +6657,7 @@ body.mini-navbar .navbar-default .nav > li > .nav-second-level li a {
   -moz-border-right-colors: none;
   -moz-border-top-colors: none;
   background: none;
-  border-color: #DDDDDD #DDDDDD rgba(0, 0, 0, 0);
+  border-color: #dddddd #dddddd rgba(0, 0, 0, 0);
   border-bottom: #f3f3f4;
   border-image: none;
   border-style: solid;
@@ -6819,14 +6827,25 @@ body.canvas-menu.mini-navbar nav.navbar-static-side {
   display: block;
   width: 220px;
 }
-.fixed-sidebar-sticky #wrapper {
-  height: 100%;
-}
-.fixed-sidebar-sticky .navbar-default {
+.navbar-default {
   background-color: #39363a;
   position: -webkit-sticky;
   position: sticky;
   top: 0;
+}
+.fixed-sidebar-sticky .navbar-static-side {
+  background-color: #39363a;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+}
+.fixed-sidebar-sticky.mini-navbar #page-wrapper {
+  margin-left: 60px;
+}
+@media (min-width: 768px) {
+  .fixed-sidebar-sticky #page-wrapper {
+    margin-left: 220px;
+  }
 }
 .top-navigation #page-wrapper {
   width: 100%;
@@ -9837,6 +9856,10 @@ body.full-height-layout #page-wrapper {
 #page-wrapper {
   min-height: 100vh;
 }
+#page-wrapper .alert {
+  margin-bottom: 0;
+  border-radius: 0 !important;
+}
 body.boxed-layout {
   background: url('patterns/shattered.png');
 }
@@ -9981,19 +10004,11 @@ video {
 /* WRAPPERS */
 #wrapper {
   width: 100%;
-  overflow-x: hidden;
-  display: -ms-flex;
-  display: -webkit-flex;
-  display: flex;
-}
-.wrapper {
-  padding: 0 20px;
 }
 .wrapper-content {
-  padding: 20px 10px 40px;
+  padding: 20px 20px 40px;
 }
 #page-wrapper {
-  padding: 0 15px;
   position: relative !important;
   flex-shrink: 1;
   width: calc(100% - 220px);
@@ -10035,11 +10050,7 @@ ol.unstyled {
 .footer {
   background: none repeat scroll 0 0 white;
   border-top: 1px solid #e7eaec;
-  bottom: 0;
-  left: 0;
   padding: 10px 20px;
-  position: absolute;
-  right: 0;
 }
 .footer.fixed_full {
   position: fixed;
@@ -15473,9 +15484,6 @@ h2 .fa {
   color: #fff;
 }
 /* Footer */
-.footer {
-  position: relative !important;
-}
 .text-copyright {
   color: #39363a;
 }
@@ -16010,10 +16018,8 @@ h2 .fa {
   opacity: 0.5;
 }
 .fc-timeline-event {
-  border-radius: 4px;
-  padding: 6px 8px;
-  margin: 4px 1px 0px 1px;
-  font-size: 16px;
+  margin: 2px;
+  font-size: 14px;
   text-align: center;
 }
 .fc-h-event {
