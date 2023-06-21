@@ -13,8 +13,8 @@
         <div id="content" class="wrapper wrapper-content">
            <!-- ajax content -->
         </div>
-        <?php include_once('inc/footer.php') ?>
     </div>
+    <?php include_once('inc/footer.php') ?>
 </div>
 
 <?php include_once('inc/bottom-script.php') ?>

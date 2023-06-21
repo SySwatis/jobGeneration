@@ -1,5 +1,8 @@
 // main.js
 
+// Scrolling vertical
+// param : cible de l'élément, rajoute l'ancre dans l'url
+
 scrollToElement = function (targetEl, windowHash) {
   $targetEl = $(targetEl);
   $("html, body")
@@ -16,7 +19,10 @@ scrollToElement = function (targetEl, windowHash) {
     );
 };
 
-// login
+// Login
+// la fonction scrollTo est utilisé pour le mobile
+// pour placer l'utilisateur au niveau du formulaire 
+// et mettre en vu le bouton "se connecter"
 
 $("#loginForm input").on("click", function (e) {
   e.preventDefault();
@@ -24,6 +30,8 @@ $("#loginForm input").on("click", function (e) {
 });
 
 // Ajax content by link
+// Injecte le contenu (ajax) en fonction du lien de l'attribut href
+// La classe no-ajax associé à la balise "a" désactive cette fonctionnalité
 
 setContentAjax = function () {
   $("a").on("click", function (event) {
@@ -35,6 +43,7 @@ setContentAjax = function () {
       ajaxUrl = $(this).attr("href");
 
       // Demo alert
+      // Affiche un message selon la page ou le contexte (success, error) au dessus du header
       if (ajaxUrl === "page/dashboard") {
         new ajaxInner("alert/warning", "#alert");
       }
@@ -52,6 +61,7 @@ setContentAjax = function () {
 };
 
 // Full Calendar
+// Boostrap : voir la section themeSystem & buttonIcons
 
 let setCalendar = function () {
   let calendarEl = document.getElementById("calendar");
@@ -82,6 +92,7 @@ let setCalendar = function () {
         eventElement.setAttribute("data-bs-html", "true");
 
         // Initialise le tooltip Bootstrap avec une classe personnalisée
+        // Ajoute les toolstip
         let tooltip = new bootstrap.Tooltip(eventElement, {
           template:
             '<div class="tooltip fullcalendar-tooltip" role="tooltip"><div class="tooltip-arrow"></div><div class="tooltip-inner"></div></div>',
@@ -153,6 +164,16 @@ let setCalendar = function () {
   }
 };
 
+// Tree View (w3c, aria)
+// Arborescence des fichiers pour la page document (file directory)
+//
+// Méthode pour instancier, le conteneur (tree) et les items (treeitem)
+// l'action permet de cibler le fichier cliqué et d'en afficher le nom.
+//
+// Cette fonction est employée lors du callBack ajax
+// js/tree.js et js/treeitem.js contiennent ces intances
+// Démo & doc ici : https://www.w3.org/WAI/ARIA/apg/patterns/treeview/examples/treeview-1b/
+
 let initTreeView = function () {
 
   let ajaxTree = document.querySelectorAll('[role="tree"]');
@@ -191,8 +212,11 @@ let initTreeView = function () {
 };
 
 // Global callback for ajax
+// Instance les plugins et/ou fonctionnalités dans le callBack ajax
+// une fois le contenu injecté
 
 let globalJs = function () {
+
   setContentAjax();
 
   if ($("#calendar").length) {
@@ -200,6 +224,7 @@ let globalJs = function () {
   }
 
   initTreeView();
+
 };
 
 // init
